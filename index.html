@@ -1,0 +1,946 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Heritage Hotel, being run in a part of Padam Palace" />
+<title>Iberry WiFi Security Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/prettyPhoto.css">
+<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.4.custom.min.css">
+<link rel="stylesheet" href="rs-plugin/css/settings.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/colors/turquoise.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+
+<!-- Javascripts --> 
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script> 
+<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
+<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>  
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script> 
+<script type="text/javascript" src="js/jquery.forms.js"></script> 
+<script type="text/javascript" src="js/jquery.sticky.js"></script> 
+<script type="text/javascript" src="js/waypoints.min.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
+<script type="text/javascript" src="js/jquery.gmap.min.js"></script> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+
+<style>
+  .testimonials-section {
+    padding: 80px 0;
+    background: #75cccf;
+    margin-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.lined-heading {
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.lined-heading span {
+    background: #f8f9fa;
+    padding: 0 20px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.lined-heading:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    z-index: 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    color: #75cccf;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.customer-info {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.customer-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 3px solid #75cccf;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.customer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.customer-details {
+  flex: 1;
+}
+
+.customer-name {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.customer-position {
+    color: #e2a20b;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* iberry choose */
+
+/* Styling for the section */
+.section-choose {
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Heading styles */
+.section-choose h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph styling */
+.section-choose p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Container for the service cards */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* Individual service card */
+.service-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px oklch(0.54 0.08 209.66 / 0.5);
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 100%;
+  height: 45%;
+}
+
+/* Hover effect for the service cards */
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card title (service name) */
+.service-card h3 {
+  color: #e2a20b;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Service description text */
+.service-card p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #e2a20b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #75cccf;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .section-choose h1 {
+    font-size: 2rem;
+  }
+
+  .section-choose p {
+    font-size: 1rem;
+  }
+}
+
+/* secong approach iberry */
+
+.container-approach {
+    background-color: #75cccf; /* Background color similar to the image */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.approach {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.approach .content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.approach .content h1 {
+    font-size: 4.5rem;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: #c28b09;
+}
+
+.approach .content p {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: ghostwhite;
+}
+
+.approach .divider {
+    height: 2px;
+    width: 60px;
+    background-color: seashell;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+}
+
+.feature .icon {
+    font-size: 4rem;
+    margin-bottom: -5px;
+}
+
+.feature h4 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+/* Style the list of services (checkpoints) */
+.checkpoints {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Two columns layout */
+  gap: 0.2rem;  /* Space between list items */
+  margin-top: 1rem;
+}
+
+/* Style for individual list items */
+.checkpoints li {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;  /* Align checkmark with text */
+}
+
+/* Add a checkmark with custom color */
+.checkpoints li::before {
+  content: "✔︎";  
+  margin-right: 8px;
+  color: #75cccf; 
+  font-size: 1.2rem; 
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- Top header -->
+<div id="top-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="th-text pull-left">
+          <div class="th-item"> <a href="call:+91 98550 21117"><i class="fa fa-phone"></i>+91 98550 21117</a> </div>
+          <div class="th-item"> <a href="mailto:info@iberrywifi.com"><i class="fa fa-envelope"></i> info@iberrywifi.com</a></div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="th-text pull-right">
+          <div class="th-item">
+            <div class="social-icons"> 
+              <a href="https://www.facebook.com/people/Iberry-Wi-fi-Solutions/61551759369319/?sk=friends_likes"><i class="fa fa-facebook"></i></a> 
+              <a href="https://www.instagram.com/iberrywifisolutions/"><i class="fa fa-instagram"></i></a> 
+              <a href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a> 
+              <!-- <a href="http://youtube.com/"><i class="fa fa-youtube-play"></i></a>  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <!-- Navigation -->
+  <div class="navbar yamm navbar-default" id="sticky">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="index.html" class="navbar-brand">         
+        <!-- Logo -->
+        <div id="logo"> 
+          <img id="default-logo" src="images/iberry-logo.png" alt="Heritagehotel" style="height: 84px;"> 
+          <img id="retina-logo" src="images/iberry-logo.png" alt="Heritagehotel" style="height:84px; width: 11pc; margin-top: -15px;"> 
+        </div>
+        </a> </div>
+      <div id="navbar-collapse-grid" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown active"> <a href="index.html">Home</a>
+          </li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Products<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="room-list.html">Firewall and hotspot Services</a></li>
+              <li><a href="room-detail.html">Software and Services</a></li>
+            </ul>
+          </li>
+          <li> <a href="gallery.html">Gallery</a></li>
+          <li> <a href="contact-01.html">Contact</a> </li>
+          <li style="height:80px;"><a href="https://www.google.com/maps/place/Iberry+Wifi+Corporation/@30.7371149,76.6781289,17z/data=!3m1!4b1!4m6!3m5!1s0x390fef200cac8599:0x470654270ca2bc93!8m2!3d30.7371149!4d76.6807038!16s%2Fg%2F11ghnbw2q4?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"> <img class="location" src="images/2.png"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Revolution Slider -->
+<section class="revolution-slider" id="revolution-slider">
+  <div class="bannercontainer">
+    <div class="banner">
+      <ul>
+        <!-- Slide 1 -->
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
+          <!-- Main Image --> 
+          <img src="images/slides/slide-bg.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->    
+             
+          <!-- Layer 1 
+          <div class="caption sft revolution-starhotel bigtext"  
+          				data-x="505" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Heritage Hotel <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>-->
+          <!-- Layer 2 
+          <div class="caption sft revolution-starhotel smalltext"  
+          				data-x="605" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+						<span>And we like to keep it that way!</span></div>-->
+        <!-- Layer 3 -->
+                  <div class="caption sft"  
+          				data-x="775" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+						<a href="room-list.html" class="button btn btn-purple btn-lg">See Products</a> 
+                  </div>
+        </li>
+         <!-- Slide 2 -->
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
+          <!-- Main Image --> 
+          <img src="images/slides/slide-bg01.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->    
+             
+          <!-- Layer 1 
+          <div class="caption sft revolution-starhotel bigtext"  
+          				data-x="505" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Heritage Hotel <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>-->
+          <!-- Layer 3 
+          <div class="caption sft revolution-starhotel smalltext"  
+          				data-x="605" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+						<span>And we like to keep it that way!</span></div>-->
+        <!-- Layer 3 -->
+                  <div class="caption sft"  
+          				data-x="775" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+						<a href="room-list.html" class="button btn btn-purple btn-lg">See rooms</a> 
+                  </div>
+        </li>
+		<!-- Slide 3 -->
+        <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000" > 
+          <!-- Main Image --> 
+          <img src="images/slides/slide-bg-02.jpg"  alt="slide-bg-02"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->   
+          <!-- Layer logo -->
+         <!-- <div class="caption sft revolution-starhotel layerLogo"  
+          				data-x="15" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+						<img alt="NauNabhhotel" src="images/logo-banner.jpg" id="default-logo">
+                        </div>  -->         
+          <!-- Layer 1 
+          <div class="caption sft revolution-starhotel bigtext"  
+          				data-x="585" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Maharaja room <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>-->
+          <!-- Layer 2 
+          <div class="caption sft revolution-starhotel smalltext"  
+          				data-x="682" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+						<span>&#8377; 6000,- a night this summer</span></div>-->
+        <!-- Layer 4 -->
+                  <div class="caption sft"  
+          				data-x="785" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+						<a href="room-detail.html" class="button btn btn-purple btn-lg">Book this room</a> 
+                  </div>
+        </li>
+ <!-- Slide 3 -->
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
+          <!-- Main Image --> 
+          <img src="images/slides/slidebg3.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->    
+             
+          <!-- Layer 1 
+          <div class="caption sft revolution-starhotel bigtext"  
+          				data-x="505" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+						<span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Heritage Hotel <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>-->
+          <!-- Layer 2 
+          <div class="caption sft revolution-starhotel smalltext"  
+          				data-x="705" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+						<span>Best Bar in Town!</span></div>-->
+        <!-- Layer 3 -->
+                  <div class="caption sft"  
+          				data-x="775" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+						<a href="contact-01.html" class="button btn btn-purple btn-lg">Contact Us</a> 
+                  </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- approach iberry -->
+<section class="container-approach">
+  <section class="approach">
+    <div class="content">
+        <h3>OUR APPROACH</h3>
+        <h1>Insight. Creativity. Technology.</h1>
+        <p>“Iberry WiFi corp is specialized in providing IT solutions of all types eg. Networking, Hotel WiFi management, VoIP setups, IP PBX setups, Structured Cabling, Turn Key IT projects and consulting. Call center Services eg. Inbound and outbound call centers. Trucking Dispatch and Brokerage services for Canada USA UK and Australia .” </p>
+        <div class="divider"></div>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <div class="icon">🛡️</div>
+            <h4>Firewall Hotspot Services</h4>
+            <p>A hotspot is a network node that provides internet connectivity using a Wi-Fi device such as a wireless router. Hotspots are typically used to provide guest access in public areas..</p>
+        </div>
+        <div class="feature">
+            <div class="icon">⚙️</div>
+            <h4>WiFi Management Services</h4>
+            <p>Wi-Fi management services allows local area networks (LANs) to operate without cables and wiring, making it a popular choice for home and business networks..</p>
+        </div>
+        <div class="feature">
+            <div class="icon">💼</div>
+            <h4>Hospitality Software Services</h4>
+            <p>Hospitality solutions power immersive, instant and safe connections for guests and staff. Hospitality establishments that transform thrive..</p>
+        </div>
+    </div>
+  </section>
+</section>
+
+
+<!-- Happy clients -->
+<section class="rooms mt50">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="lined-heading"><span>Our Happy Clients</span></h2>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/airport.jpg" alt="room 1" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>Chandigarh International Airport</h5>
+            </div>
+            <div class="content">
+              <p><span>"We have been using Iberry WiFi and Firewall system for over a year now and we are very happy with the service. We can also create targeted marketing campaigns based on the data we collect from the wifi users. Our organization gives best wishes to Iberry WiFi, highly efficient in protection of data of everyone, who wants to level up their security, it’s the best option."</p></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/mall.jpg" alt="room 2" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>VR Punjab Mall</h5>
+            </div>
+            <div class="content">
+              <p><span>"Iberry WiFi and Firewall security has been a game-changer for our shopping mall. We can easily manage and monitor our network across multiple channels. I can monitor the performance and usage of my devices, set bandwidth limits and firewall rules. I also appreciate the security features that protect my network from threats and attacks."</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/hotel.jpg" alt="room 3" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>The Best Western Hotel</h5>
+            </div>
+            <div class="content">
+              <p><span>"I’ve been using Iberry WiFi & Firewall system, we are using it for a few months now and I love how easy it is to use. It helps us to give more influence to our customers and create engaging interactions. It’s a game-changer for anyone who wants to grow their presence and connect with their teams."</p></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services provided -->
+<section class="usp mt100">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="lined-heading"><span>Best Services Provided By Iberry</span></h2>
+      </div>
+      
+      <div class="col-sm-3 bounceIn appear" data-start="0">
+        <div class="box-icon">      
+          <div class="circle">
+            <i class="fa fa-laptop fa-lg"></i>
+          </div>
+          <h3>IT CONSULTING SERVICES</h3>
+          <p>IT consulting services are advisory services that help clients assess different technology strategies and, in doing so, align their technology strategies with their business or process strategies...</p>
+          <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> </div>
+        </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="400">
+        <div class="box-icon">
+          <div class="circle"><i class="fa fa-cogs fa-lg"></i></div>
+          <h3>B.P.O AND K.P.O SERVICES</h3>
+          <p>BPO refers to Business Processing Outsourcing and KPO is Knowledge Processing Outsourcing. BPO primarily focuses on reducing costs, and KPO focuses on providing knowledge-based services...</p>
+          <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> </div>
+      </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="800">
+        <div class="box-icon">      
+          <div class="circle">
+            <i class="fa fa-code fa-lg"></i>
+          </div>
+          <h3>SOFTWARE DEVELOPMENT SERVICES</h3>
+          <p>Software development is the process of designing, creating, testing, and maintaining different software applications. It involves the application of various principle... </p>
+          <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> 
+        </div>
+      </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="1200">
+        <div class="box-icon">
+          <div class="circle">
+            <i class="fa fa-phone fa-lg"></i>
+          </div>
+            <h3>IP PBX AND VOIP SERVICES</h3>
+            <p>IP PBX is another way of referring to VoIP phone systems and is an internet-based phone service. PBX is the original phone system, using landlines to allow outbound and inbound calls. PBX systems also allow.</p>
+            <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt50">
+      <div class="col-sm-3 bounceIn appear" data-start="1600">
+        <div class="box-icon">
+          <div class="circle">
+            <i class="fa fa-wifi fa-lg"></i>
+          </div>
+            <h3>WIFI MANAGEMENT</h3>
+            <p>It may also see this tool called ‘managed Wi-Fi’ or a ‘network monitoring software.’ A WiFi management provides customized insight into various aspects of a network, like network security or the ability to manage connected devices including parental controls...</p>
+            <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> 
+        </div>
+      </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="2000">
+        <div class="box-icon">
+          <div class="circle">
+            <i class="fa fa-plug fa-lg"></i>
+          </div>
+            <h3>STRUCTURED CABILING</h3>
+            <p>Structured cabling is a standardized approach to cable installation that ensures compatibility and interoperability between different systems and devices. The goal of structured cabling is to enable telecommunications...</p>
+            <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>--> 
+        </div>
+      </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="2400">
+        <div class="box-icon">
+          <div class="circle"><i class="fa fa-users fa-lg"></i></div>
+          <h3>NETWORKING</h3>
+          <p>Networking is the process of making connections and building relationships. These connections can provide you with advice and contacts, which can help you make informed career decisions. Networking can even help you find unadvertised jobs/internships.</p>
+          <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>-->
+        </div>
+      </div>
+
+      <div class="col-sm-3 bounceIn appear" data-start="2800">
+        <div class="box-icon">
+          <div class="circle"><i class="fa fa-line-chart fa-lg"></i></div>
+          <h3>CONSULTING</h3>
+          <p>It offers advice and expertise to client organisations to help them improve their business performance. Their work can focus on operations, strategy, management, IT, finance, marketing, HR, and supply chain management across a wide range of industries and specialisms.</p>
+          <!--<a href="#">Read more<i class="fa fa-angle-right"></i></a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- best clients -->
+<!-- Why Choose Iberry Section -->
+<section class="section-choose">
+  <h1 class="lined-heading"><span>Give Smartness To your Business</span></h1>
+
+  <div class="services">
+    <!-- Service Card 1 -->
+    <div class="service-card">
+      <img src="images/clarks.jpg" alt="room 1" class="img-responsive" />
+      <h3>The Clark Inn</h3>
+      <p>We migrated our entire IT infrastructure to Iberry and we couldn’t be happier. Iberry WiFi Security has helped us reduce our costs, improve our performance, and scale our business. We can now focus on our core competencies and deliver value to our customers. </p>
+      <ul class="checkpoints">
+        <li>WiFi</li>
+        <li>Hotel Intercomm</li>
+        <li>Software Servicing</li>
+        <li>Structured Cabling</li>
+        <li>VOIP Services</li>
+        <li>IP PBX</li>
+      </ul>
+    </div>
+    
+    <!-- Service Card 2 -->
+    <div class="service-card">
+      <img src="images/Park.jpg" alt="room 1" class="img-responsive" />
+      <h3>Park Inn Hotel</h3>
+      <p>We have been using Intercom for our hotel chain for over a year and we are very impressed with the results. Intercom has improved our guest experience, staff performance, and revenue. Our guests love the ease of use and our staff can handle more requests which also increased our revenue.</p>
+      <ul class="checkpoints">
+        <li>Access Control</li>
+        <li>Wired Intercom Systems</li>
+        <li>Sound Quality</li>
+        <li>Video Quality</li>
+        <li>Enhanced Security</li>
+        <li>Improve Communication</li>
+      </ul>
+    </div>
+    
+    <!-- Service Card 3 -->
+    <div class="service-card">
+      <img src="images/dev.jpg" alt="room 1" class="img-responsive" />
+      <h3>Deventures Hotel</h3>
+      <p>That is the perfect cloud service for email marketing. It allows us to create personalized and automated campaigns that engage our customers and increase our conversions. Iberry WiFi Security is easy to use, integrates with our other tools, and provides us with insights.</p>
+      <ul class="checkpoints">
+        <li>Better Coverage</li>
+        <li>Bandwidth for Each User</li>
+        <li>Enhanced Security</li>
+        <li>Increased Capacity for More Connected Devices</li>
+        <li>Improved Speed</li>
+        <li>Low Latency for Gamers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <div class="container">
+      <h2 class="lined-heading"><span>What Our Clients Say</span></h2>
+      
+      <div class="testimonials-grid">
+          <div class="testimonial-card">
+              <div class="quote-icon">
+                  <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">Iberry WiFi Security is a powerful internet security suite that offers a firewall among a range of featured security protections. There's also anti-virus protection, but its multi-layered malware protection also protects against ransomware. Other features include anti-phishing, anti-fraud, and anti-theft options, as well as a performance optimizer.</p>
+              <div class="customer-info">
+                <div class="customer-image">
+                  <img src="/images/rev1.jpg" alt="Mr. Rajesh">
+                </div>
+                  <div class="customer-name">Mr. Vishal</div>
+                  <div class="customer-position">General Manager / Swan Hotel, Zirakpur</div>
+              </div>
+          </div>
+
+          <div class="testimonial-card">
+              <div class="quote-icon">
+                  <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">We chose Iberry WiFi Security for our hotel phone system because of their reliability, scalability, and affordability. Iberry's cloud-based platform allows us to connect our intercom devices with our other hotel systems, such as PMS, CRM, and POS. Iberry's platform also enables us to offer innovative features and services to our guests, such as voice-activated controls, smart room devices.</p>
+              <div class="customer-info">
+                <div class="customer-image">
+                  <img src="/images/rev2.jpg" alt="Mr. Rajesh">
+                </div>
+                  <div class="customer-name">Mr. Rajesh</div>
+                  <div class="customer-position">Owner / The Best Western Hotel, Mohali</div>
+              </div>
+          </div>
+
+          <div class="testimonial-card">
+              <div class="quote-icon">
+                  <i class="fa fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">Iberry give us to develop ourself in market. Your team has been a pleasure to work with, professional and timely. The only delay in work that we have experienced has been due to our own lack of organization managing our projects, not yours. Job well done and I hope we can continue to grow together.</p>
+              <div class="customer-info">
+                <div class="customer-image">
+                  <img src="/images/rev3.jpg" alt="Mr. Rajesh">
+                </div>
+                  <div class="customer-name">Mr. N.P Singh</div>
+                  <div class="customer-position">General Manager / Park Inn Hotel</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Call To Action -->
+<section id="call-to-action" class="mt100">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <h2>What are you waiting for? Experience the Luxury of Safe and Reliable Connectivity..</h2>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="http://hotelnaunabh.com/index.html#revolution-slider" class="btn btn-default btn-lg pull-right">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <h4>About Iberry WiFi Security Solutions</h4>
+        <p>Iberry WiFi Corp is specialized in providing IT solutions.</p><br><br>
+          <div class="cards">
+          <h4>Credit Cards Accepted</h4>
+        <i class="fa fa-cc-mastercard"></i>
+        <i class="fa fa-cc-visa"></i>
+        <i class="fa fa-cc-amex"></i>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <h4>Contact US</h4>
+        <p>Do let us serve you the best!</p>
+       <div id="messagecontact"></div>
+        <form role="form" method="post" action="php/contact_footer.php" name="contactform" id="contactformfooter">
+        <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input type="text"  name="name"  id="name" value="" class="form-control" placeholder="Your Name">
+          </div>
+          </div>
+          <div class="col-sm-6">
+          <div class="form-group">
+            <input type="email" name="email" id="email" value="" class="form-control" placeholder="E-mail">
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+           <textarea class="form-control" placeholder="Your message" id="comments" rows="1" name="comments"></textarea>
+          </div>
+          <button type="submit" class="btn btn-lg btn-black btn-block">Send message</button>
+        </form>
+      </div>
+      
+      <div class="col-md-3 col-sm-3">
+        <h4>Address</h4>
+        <address>
+        <strong>Iberry WiFi Security Solutions</strong><br>
+          F-298, Phase – 8B, Sector – 74,<br>
+          Industrial Area, Punjab, India<br><br>
+          <abbr title="Phone">P:</abbr> <a href="call:+91 9855021117">+91 98550 21117, +44 7908013322</a><br>
+          <abbr title="Email">E:</abbr> <a href="mailto:info@iberrywifi.in">info@iberrywifi.in</a><br>
+          <abbr title="Website">W:</abbr> <a href="http://www.hotelnaunabh.com" target="_blank">www.hotelnaunabh.com</a><br>
+        </address>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12"> <p class="text-center">&copy; <span id="copyR"> </span> hotelnaunabh All Rights Reserved</p> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Go-top Button -->
+<div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+<script>
+$('#copyR').html(new Date().getFullYear());
+</script>
+</body>
+</html>
