@@ -31,9 +31,9 @@ header, .navbar-nav .dropdown-menu, .blog-author img, .comment .avatar img, asid
 .room-thumb .main .price, .comment, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th, .panel-default > .panel-heading {
 	background-color: rgba(90, 186, 198, 0.05);
 }
-.parallax-effect .color-overlay {
+/* .parallax-effect .color-overlay {
 	background-color: rgba(90, 186, 198, 0.3);
-}
+} */
 /* Header
 -------------------------------------------------- */
 /* Navigation text colors */
