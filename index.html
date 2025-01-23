@@ -367,6 +367,19 @@
   font-size: 1.2rem; 
 }
 
+/* Hide the Login link on mobile */
+.navbar-login-link {
+  display: inline-block; /* Default to visible on larger screens */
+}
+
+/* For mobile (screen width 767px or less), hide the Login link */
+@media (min-width: 350px) and (max-width: 767px) {
+  .navbar-login-link {
+    display: none !important; 
+  }
+}
+
+
 
 
 </style>
@@ -408,7 +421,16 @@
   <div class="navbar yamm navbar-default" id="sticky">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!-- login button -->
+        <a href="https://ibudha.com/dev/mikifi/login" data-target="#navbar-collapse-grid" class="navbar-toggle">
+          <i class="fa fa-sign-in" style="font-size: 20px;"></i> <!-- Login Icon -->
+        </a>
+        <!-- hamburger icon -->
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle" style="height: 41px;"> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+        </button>
         <a href="index.html" class="navbar-brand">         
         <!-- Logo -->
         <div id="logo"> 
@@ -429,7 +451,7 @@
           </li>
           <li> <a href="pricing.html">Pricing</a></li>
           <li> <a href="contact-01.html">Contact</a> </li>
-          <li> <a href="https://ibudha.com/dev/mikifi/login">Login</a> </li>
+          <li class="navbar-login-link"> <a href="https://ibudha.com/dev/mikifi/login">Login</a> </li>
           <li style="height:80px;"><a href="https://www.google.com/maps/place/Iberry+Wifi+Corporation/@30.7371149,76.6781289,17z/data=!3m1!4b1!4m6!3m5!1s0x390fef200cac8599:0x470654270ca2bc93!8m2!3d30.7371149!4d76.6807038!16s%2Fg%2F11ghnbw2q4?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"> <img class="location" src="images/2.png"></a></li>
         </ul>
       </div>
@@ -489,11 +511,9 @@
                   </div>
         </li>
  <!-- Slide 3 -->
-        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
-          <!-- Main Image --> 
-          <img src="images/banner4.avif" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+        <!-- <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
+          <img src="images/services.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
           
-        <!-- Layer 3 -->
           <div class="caption sft"  
           data-x="775" 
           data-y="175" 
@@ -502,7 +522,7 @@
           data-easing="easeOutBack">
             <a href="contact-01.html" class="button btn btn-purple btn-lg">Contact Us</a> 
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
