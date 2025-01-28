@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	
 
 	// Your e-mailadress.
-	$recipient = "support@iberrywifi.in";
+	$recipient = "sachdevagarima25@gmail.com";
 
 	// Mail subject
 	$subject = "You've been contacted by $name";
