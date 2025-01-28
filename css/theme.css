@@ -612,7 +612,7 @@ header nav {
 /* Logo */
 header #logo {
 	float: left;
-	padding: 15px 60px 14px 0;
+	padding: 15px 20px 14px 0;
 	border-right: 1px solid #e1e1e1;
 	max-width: 95%;
 	height: 84px;
