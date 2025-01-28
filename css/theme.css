@@ -762,7 +762,7 @@ header #logo {
 	-moz-transition: all linear 0.3s;
 	-o-transition: all linear 0.3s;
 	transition: all linear 0.3s;
-	padding: 5px 60px 4px 0; 
+	padding: 5px 20px 4px 0; 
 }
 .navbar.shrink .navbar-nav > li > a {
 	padding-top: 22px;
