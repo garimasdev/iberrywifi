@@ -254,8 +254,8 @@
   content: '';
   position: absolute;
   bottom: -8px; /* Adjust distance between the text and the line */
-  left: 30px;
-  width: 100%; /* Adjust the length of the line */
+  left: 195px;
+  width: 50%; /* Adjust the length of the line */
   height: 4px; /* Thickness of the line */
   background-color: #5db3b6; /* Line color (same as the text color) */
 }
@@ -266,35 +266,17 @@
 
 
 /* how it wworks  */
-/* General Styles */
-.mb-16 {
-  margin-bottom: 4rem;
-}
 
-.industries-header {
-  text-align: center;
-  color: #5db3b6;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
 
-/* Grid Layout */
-.grid {
+.grid-how {
   display: grid;
-  gap: 2rem;
-}
-
-.grid-cols-1 {
+  gap: 6rem;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  
 }
 
-.sm\:grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.lg\:grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
 
 /* Step Styles */
 .how-it-works-step {
@@ -332,8 +314,8 @@
 
 /* Image Styles */
 .how-it-works-step img {
-  width: 6rem;
-  height: 6rem;
+  width: 90%;
+  height: 60%;
   object-fit: cover;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -344,18 +326,6 @@
   transform: rotate(12deg);
 }
 
-/* Text Styles */
-h4 {
-  color: #5db3b6;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  color: #4a4a4a;
-  font-size: 1rem;
-}
 
 /* Responsive Adjustments */
 @media (min-width: 640px) {
@@ -521,7 +491,7 @@ p {
    <!-- How It Works -->
 <div class="mb-16">
   <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">How It Works</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+  <div class="grid-how gap-8">
     <!-- Step 1 -->
     <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
       <img src="images/intercom2.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
