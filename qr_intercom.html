@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
 
 <!-- Javascripts --> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script> 
@@ -49,6 +50,219 @@
     <![endif]-->
 
 
+
+
+<style>
+  
+
+  .industries-box{
+    width: 250px;
+  }
+
+  .fas {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.text-5xl {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #ffffff, #f7fafc);
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+
+.mb-16 {
+  margin-bottom: 18rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.md\:grid-cols-4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-6 {
+  gap: 5.5rem;
+}
+
+.space-y-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prose {
+  max-width: none;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-md:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-lg {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.text-white {
+  color: white;
+}
+
+.text-gray-600 {
+  color: #4a5568;
+}
+
+.industries-header {
+  position: relative;
+}
+
+.industries-header::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Adjust distance between the text and the line */
+  left: 30px;
+  width: 100%; /* Adjust the length of the line */
+  height: 4px; /* Thickness of the line */
+  background-color: #5db3b6; /* Line color (same as the text color) */
+}
+
+
+</style>
+</head>
 <body>
 
 <!-- Top header -->
@@ -170,148 +384,160 @@
     </div>
     </div>
 </section>
-        
-<!-- QR Intercom System Section -->
-<section class="room-types" style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9f8f9 100%);">
-    <div class="container">
-      <!-- Animated Header -->
-      <div class="row">
-        <div class="col-md-12 text-center wow fadeInDown">
-          <h2 style="font-size: 2.8em; color: #333; margin-bottom: 50px;">
-            <span style="background: linear-gradient(120deg, #75cccf, #e2a20b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-              Smart QR Intercom System
-            </span>
-          </h2>
-        </div>
+     
+
+<section class="bg-gradient-to-b from-white to-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0">
+      <h2 class="text-4xl font-bold text-[#5db3b6] mb-2">QR-Based Intercom System</h2>
+      <p class="text-xl text-[#e2a20b]">Revolutionizing Communication for Modern Businesses</p>
+    </div>
+
+    <!-- Introduction with Image -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="prose max-w-none">
+        <h3 class="text-2xl font-bold text-[#5db3b6] mb-4">Introduction</h3>
+        <p class="text-gray-700">At <strong>Iberry WiFi Corporation</strong>, we're revolutionizing the way businesses communicate with their clients. Our <strong>QR-based intercom system</strong> eliminates the need for toll-free numbers or complex IVR setups.</p>
+        <p class="text-gray-700">With just a simple QR code or URL, your clients can connect directly to your intercom or IVR system.</p>
       </div>
-      
-      <!-- Premium Pricing Cards -->
-      <div class="row">
-        <div class="col-md-4 wow fadeInLeft">
-          <div style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; margin: 15px;">
-            <div style="background: #75cccf; padding: 20px; text-align: center;">
-              <h3 style="color: white; font-size: 24px;">Monthly Plan</h3>
-            </div>
-            <div style="padding: 30px; text-align: center;">
-              <div style="font-size: 3em; color: #75cccf; font-weight: bold;">₹699</div>
-              <p style="color: #666;">per month</p>
-              <div style="margin-top: 20px;">
-                <a href="#" class="btn btn-primary" style="background: #75cccf; border: none; padding: 12px 30px; border-radius: 25px;">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 wow fadeInUp">
-          <div style="background: linear-gradient(135deg, #75cccf, #4ca1a4); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(117,204,207,0.3); transform: translateY(-20px); margin: 15px;">
-            <div style="background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+'); padding: 20px; text-align: center;">
-              <h3 style="color: white; font-size: 24px;">Yearly Plan</h3>
-              <div style="background: #e2a20b; display: inline-block; padding: 5px 15px; border-radius: 15px; color: white; font-size: 0.9em; margin-top: 10px;">Best Value</div>
-            </div>
-            <div style="padding: 30px; text-align: center; color: white;">
-              <div style="font-size: 3em; font-weight: bold;">2 Months</div>
-              <div style="font-size: 2em; margin-top: -5px;">FREE</div>
-              <p>on annual subscription</p>
-              <div style="margin-top: 20px;">
-                <a href="#" class="btn" style="background: white; color: #75cccf; padding: 12px 30px; border-radius: 25px; font-weight: bold;">Save Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-4 wow fadeInRight">
-          <div style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; margin: 15px;">
-            <div style="background: #e2a20b; padding: 20px; text-align: center;">
-              <h3 style="color: white; font-size: 24px;">Setup Cost</h3>
-            </div>
-            <div style="padding: 30px; text-align: center;">
-              <div style="font-size: 3em; color: #e2a20b; font-weight: bold;">₹20,000</div>
-              <p style="color: #666;">one-time payment</p>
-              <div style="margin-top: 20px;">
-                <a href="#" class="btn" style="background: #e2a20b; color: white; padding: 12px 30px; border-radius: 25px;">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img src="/images/intercom2.png" alt="QR Intercom System" class="w-full h-full object-cover" />
       </div>
-  
-      <!-- Interactive Features -->
-      <div class="row" style="margin-top: 70px;">
-        <div class="col-md-6 wow fadeInLeft">
-          <div style="background: white; border-radius: 15px; padding: 30px; margin: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: linear-gradient(135deg, rgba(117,204,207,0.1), rgba(117,204,207,0.3)); border-radius: 0 0 0 100%;"></div>
-            <i class="fa fa-phone" style="font-size: 3em; color: #75cccf; margin-bottom: 20px;"></i>
-            <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #333;">IPPBX & VOIP Integration</h4>
-            <p style="color: #666; line-height: 1.6;">Advanced QR-based calling system with seamless hotel integration. Scan, connect, and communicate instantly!</p>
-          </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8">How It Works</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-[#e2a20b] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Generate Your QR Code or URL</h4>
+          <p class="text-gray-600">We create a unique QR code and URL for your business, customized with your preferred IVR options.</p>
         </div>
-        
-        <div class="col-md-6 wow fadeInRight">
-          <div style="background: white; border-radius: 15px; padding: 30px; margin: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: linear-gradient(135deg, rgba(226,162,11,0.1), rgba(226,162,11,0.3)); border-radius: 0 0 0 100%;"></div>
-            <i class="fa fa-cutlery" style="font-size: 3em; color: #e2a20b; margin-bottom: 20px;"></i>
-            <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #333;">Garden & Room Service</h4>
-            <p style="color: #666; line-height: 1.6;">Order food and beverages from anywhere in the hotel. Quick, convenient, and contactless service!</p>
-          </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-[#e2a20b] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Share with Clients</h4>
+          <p class="text-gray-600">Send the QR code or URL to your clients via SMS, WhatsApp, email, or print materials.</p>
         </div>
-      </div>
-  
-      <div class="row">
-        <div class="col-md-6 wow fadeInLeft">
-          <div style="background: white; border-radius: 15px; padding: 30px; margin: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: linear-gradient(135deg, rgba(117,204,207,0.1), rgba(117,204,207,0.3)); border-radius: 0 0 0 100%;"></div>
-            <i class="fa fa-bell" style="font-size: 3em; color: #75cccf; margin-bottom: 20px;"></i>
-            <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #333;">Elevator Emergency System</h4>
-            <p style="color: #666; line-height: 1.6;">24/7 emergency support with integrated food ordering. Safety meets convenience!</p>
-          </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-[#e2a20b] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Scan & Connect</h4>
+          <p class="text-gray-600">Clients scan the QR code or click the link to access a user-friendly interface.</p>
         </div>
-        
-        <div class="col-md-6 wow fadeInRight">
-          <div style="background: white; border-radius: 15px; padding: 30px; margin: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: linear-gradient(135deg, rgba(226,162,11,0.1), rgba(226,162,11,0.3)); border-radius: 0 0 0 100%;"></div>
-            <i class="fa fa-key" style="font-size: 3em; color: #e2a20b; margin-bottom: 20px;"></i>
-            <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #333;">Key Assistance</h4>
-            <p style="color: #666; line-height: 1.6;">Instant support for key-related issues. Quick response, no waiting!</p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Benefits Section -->
-      <div class="row" style="margin-top: 70px;">
-        <div class="col-md-12 wow fadeInUp">
-          <div style="background: linear-gradient(135deg, #75cccf, #4ca1a4); border-radius: 15px; padding: 40px; color: white; text-align: center; position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+'); opacity: 0.1;"></div>
-            <h3 style="font-size: 2em; margin-bottom: 30px; position: relative;">Why Choose Our QR Intercom System?</h3>
-            <div class="row">
-              <div class="col-md-4">
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 10px;">
-                  <i class="fa fa-rocket" style="font-size: 2em; margin-bottom: 15px;"></i>
-                  <h4>Easy Setup</h4>
-                  <p>Quick installation and seamless integration</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 10px;">
-                  <i class="fa fa-clock-o" style="font-size: 2em; margin-bottom: 15px;"></i>
-                  <h4>24/7 Support</h4>
-                  <p>Round-the-clock technical assistance</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 10px;">
-                  <i class="fa fa-star" style="font-size: 2em; margin-bottom: 15px;"></i>
-                  <h4>Premium Features</h4>
-                  <p>Regular updates and new capabilities</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-[#e2a20b] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Seamless Communication</h4>
+          <p class="text-gray-600">The system connects them to the right department without toll-free numbers.</p>
         </div>
       </div>
     </div>
+
+    <!-- Features with Image -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img src="/images/intercom1.png" alt="Key Features" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-[#5db3b6] mb-4">Key Features</h3>
+        <ul class="space-y-4">
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">No Toll-Free Numbers Required:</strong> Save costs by eliminating expensive toll-free numbers.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">User-Friendly Interface:</strong> Simple, intuitive menu for a smooth experience.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Customizable IVR Options:</strong> Tailor options to match your business needs.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mb-16 section-industries">
+      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">Industries We Serve</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Hotels & Restaurants -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
+          <div class="mb-4">
+            <i class="fas fa-hotel text-[#5db3b6] text-5xl"></i>
+          </div>
+          <hr>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Hotels & Restaurants</h4>
+          <p class="text-gray-600">Let guests easily contact reception, room service, or support with a simple scan.</p>
+        </div>
+    
+        <!-- Hospitals & Clinics -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
+          <div class="mb-4">
+            <i class="fas fa-hospital text-[#5db3b6] text-5xl"></i>
+          </div>
+          <hr>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Hospitals & Clinics</h4>
+          <p class="text-gray-600">Enable patients to connect with appointments, billing, or emergency services effortlessly.</p>
+        </div>
+    
+        <!-- Schools & Universities -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
+          <div class="mb-4">
+            <i class="fas fa-school text-[#5db3b6] text-5xl"></i>
+          </div>
+          <hr>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Schools & Universities</h4>
+          <p class="text-gray-600">Provide students and parents with quick access to administration, support, or faculty.</p>
+        </div>
+    
+        <!-- Retail & Malls -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
+          <div class="mb-4">
+            <i class="fas fa-store text-[#5db3b6] text-5xl"></i>
+          </div>
+          <hr>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Retail & Malls</h4>
+          <p class="text-gray-600">Enhance customer service by allowing shoppers to connect with support or store managers.</p>
+        </div>
+    
+        <!-- Corporate Offices -->
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
+          <div class="mb-4">
+            <i class="fas fa-building text-[#5db3b6] text-5xl"></i>
+          </div>
+          <hr>
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Corporate Offices</h4>
+          <p class="text-gray-600">Streamline internal and external communication with a unified intercom system.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- FAQs -->
+    <div>
+      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8">FAQs</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-md transition-all duration-300">
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Do clients need to download an app to use this system?</h4>
+          <p class="text-gray-600">No! Our QR-based intercom system works directly through a web interface—no apps or downloads required.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-md transition-all duration-300">
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Can I customize the IVR options?</h4>
+          <p class="text-gray-600">Yes, you can fully customize the options to match your business needs (e.g., sales, support, extensions).</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-md transition-all duration-300">
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Is this system compatible with all devices?</h4>
+          <p class="text-gray-600">Absolutely! The system works on any smartphone or device with a camera and internet connection.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-md transition-all duration-300">
+          <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">How do I share the QR code or URL with clients?</h4>
+          <p class="text-gray-600">You can share it via SMS, WhatsApp, email, or even print it on physical materials like brochures or posters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-        
-        <!-- Call To Action -->
+
+
+
+<!-- Call To Action -->
 <section id="call-to-action" class="mt100">
     <div class="container">
       <div class="row">
