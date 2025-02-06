@@ -132,8 +132,8 @@
     /* VPN Section Modern Styling */
 section {
     font-family: 'Arial', sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1600px;
+    margin: 0 -60px;
     padding: 40px 20px;
 }
 
@@ -191,6 +191,8 @@ section h2::after {
     color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: justify;
+    font-size: 15px;
 }
 
 .text-content ul {
@@ -280,7 +282,7 @@ section h2::after {
     width: 1300px;
     margin: auto;
     gap: 50px;
-    margin-left: -100px;
+    margin-left: -45px;
 }
 .feature {
     background: #fff;
@@ -316,6 +318,113 @@ section h2::after {
     font-size: 15px;
     color: #666;
 }
+
+
+/* VPN Solutions Section */
+.vpn-solutions-section {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+
+.vpn-solutions-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.vpn-solutions-section p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.vpn-solutions-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vpn-solutions-section ul li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.vpn-solutions-section ul li strong {
+  color: #000;
+}
+
+.vpn-solutions-section .vpn-image {
+  width: 92%;
+  max-width: 100%;
+  height: 500px;
+  display: block;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vpn-solutions-section .row {
+    flex-direction: column-reverse;
+  }
+
+  .vpn-solutions-section h2 {
+    text-align: center;
+  }
+
+  .vpn-solutions-section .vpn-image {
+    margin-top: 30px;
+  }
+}
+
+/* VPN Services for Clients Section */
+.vpn-services-clients-section {
+  padding: 60px 40px 20px 33px;
+  background-color: #f8f8f8;
+}
+
+.vpn-services-clients-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.vpn-services-clients-section p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.vpn-services-clients-section .vpn-image {
+  width: 95%;
+  max-width: 100%;
+  height: 400px;
+  display: block;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vpn-services-clients-section .row {
+    flex-direction: column-reverse;
+  }
+
+  .vpn-services-clients-section h2 {
+    text-align: center;
+  }
+
+  .vpn-services-clients-section .vpn-image {
+    margin-top: 30px;
+  }
+}
+
 
 </style>
 
@@ -517,6 +626,36 @@ section h2::after {
             </div>
         </section>
 
+
+
+    <!-- vpn solutions -->
+    <section id="vpn-solutions" class="vpn-solutions-section">
+        <div class="container">
+        <div class="row">
+            <!-- Content on the left -->
+            <div class="col-lg-6">
+            <h2>VPN Solutions by iBerry WiFi</h2>
+            <p>
+                At <strong style="color: #75cccf;">IBerry WiFi</strong> , we provide top-notch VPN solutions that ensure secure and anonymous connectivity. Our VPN services guarantee privacy and protection by encrypting your internet connection, safeguarding your personal information from prying eyes. Whether you're browsing the web, streaming, or accessing sensitive business data, our VPN solutions provide the reliability and security you need.
+            </p>
+            <ul>
+                <li><strong>Enhanced Security:</strong> Military-grade encryption to protect your data from cyber threats.</li>
+                <li><strong>Privacy Protection:</strong> Stay anonymous online by masking your IP address and location.</li>
+                <li><strong>Global Access:</strong> Access restricted content from anywhere in the world with our reliable VPN servers.</li>
+                <li><strong>Fast Speeds:</strong> Enjoy seamless browsing and streaming with minimal lag, thanks to optimized VPN servers.</li>
+                <li><strong>Multiple Device Support:</strong> Connect multiple devices simultaneously to your VPN account.</li>
+            </ul>
+            </div>
+    
+            <!-- Image on the right -->
+            <div class="col-lg-6">
+            <img src="images/vpn2.png" alt="VPN Solutions" class="vpn-image">
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
         <!-- Our VPN Solutions Section -->
         <section class="vpn-section">
             <h2>Our VPN Solutions Include:</h2>
@@ -576,6 +715,30 @@ section h2::after {
             </div>
         </section>
 
+        <!-- Clients section -->
+        <section id="vpn-services-clients" class="vpn-services-clients-section">
+            <div class="container">
+              <div class="row">
+                <!-- Content on the left -->
+                <div class="col-lg-6">
+                  <h2>Reliable VPN Services for Various Clients</h2>
+                  <p>
+                    <strong style="color: #75cccf;">IBerry WiFi</strong> offers VPN solutions that cater to businesses, individuals, and organizations worldwide. Whether you're a remote worker, a global enterprise, or a content creator, our VPN services are tailored to meet the unique needs of each client. With an emphasis on security, speed, and reliability, we ensure that our VPN solutions can help you access content, protect your sensitive data, and maintain privacy online, no matter where you are.
+                  </p>
+                  <p>
+                    Our VPN services are trusted by businesses across industries including finance, healthcare, and technology. We offer custom solutions that help our clients maintain a secure connection for internal communications, protect sensitive customer data, and comply with industry regulations. <strong style="color: #75cccf;">IBerry WiFi</strong> is dedicated to providing seamless, encrypted connections to ensure smooth operations and online privacy, whether you're in the office or working remotely.
+                  </p>
+                </div>
+          
+                <!-- Image on the right -->
+                <div class="image-container">
+                  <img src="images/business.jpeg" alt="Business VPN Solutions" class="vpn-image">
+                </div>
+              </div>
+            </div>
+        </section>
+          
+
         <!-- Call to Action Section -->
         <section>
             <h2>Ready to Secure Your Corporate Network?</h2>
@@ -591,3 +754,4 @@ section h2::after {
         </div>
     </div>
 </section>
+

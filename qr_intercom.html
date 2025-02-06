@@ -343,6 +343,138 @@
 
 
 
+
+/* benefits for business*/
+/* Benefits Section */
+.benefits-section {
+  background-color: #545454;
+  padding: 40px 20px;
+  width: 1200px;
+  margin-left: -200px;
+}
+
+.container-benefits {
+  width: 1400px;
+  margin-left: -10px;
+}
+
+
+h3.section-title {
+  margin-left: -200px;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 36px;
+  text-transform: uppercase;  /* Makes it more bold and impactful */
+  letter-spacing: 2px;  /* Adds some space between the letters for a more refined look */
+  padding-bottom: 10px;  /* Adds space under the heading */
+  font-family: serif;  /* Clean and modern font */
+  
+  background: linear-gradient(90deg, #75cccf 25%, #e2a20b 70%);  /* Gradient from your color palette */
+  -webkit-background-clip: text; /* Clips the background gradient to the text */
+  color: transparent;  /* Makes the text color transparent so the gradient shows through */
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  /* Adds a soft shadow to give it depth */
+}
+
+/* Adding a stylish underline */
+h3.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: #e2a20b;  /* Uses your second color for the underline */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h3.section-title {
+    font-size: 28px;
+    letter-spacing: 1.5px;  /* Adjust letter-spacing for smaller screens */
+  }
+}
+
+
+/* Layout for Text and Image */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.benefit-paragraph {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+  margin-left: -170px;
+  height: 300px;
+  width: 600px;
+}
+
+.benefit-paragraph strong {
+  color: #5db3b6;
+  font-weight: bold;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: -145px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 30px 10px;
+  }
+
+  h3.section-title {
+    font-size: 28px;
+  }
+
+  .benefit-paragraph {
+    font-size: 16px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-content {
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -481,7 +613,7 @@
       <div class="prose max-w-none">
         <h3 class="text-2xl font-bold text-[#5db3b6] mb-4">Introduction</h3>
         <p class="text-gray-700">At <strong>Iberry WiFi Corporation</strong>, we're revolutionizing the way businesses communicate with their clients. Our <strong>QR-based intercom system</strong> eliminates the need for toll-free numbers or complex IVR setups.</p>
-        <p class="text-gray-700">With just a simple QR code or URL, your clients can connect directly to your intercom or IVR system.</p>
+        <p class="text-gray-700">With just a simple QR code or URL, your clients can connect directly to your intercom or IVR system, choosing options like sales, support, or dialing an extension. Whether you’re a hotel, restaurant, hospital, school, or any other business, our system enhances customer experience while streamlining your communication process.</p>
       </div>
       <div class="rounded-xl overflow-hidden shadow-lg">
         <img src="/images/intercom2.png" alt="QR Intercom System" class="w-full h-full object-cover" />
@@ -489,46 +621,46 @@
     </div>
 
    <!-- How It Works -->
-<div class="mb-16">
-  <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">How It Works</h3>
-  <div class="grid-how gap-8">
-    <!-- Step 1 -->
-    <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
-      <img src="images/intercom2.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
-      <div>
-        <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Generate Your QR Code or URL</h4>
-        <p class="text-gray-600 text-center">We create a unique QR code and URL for your business, customized with your preferred IVR options.</p>
-      </div>
-    </div>
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">How It Works</h3>
+      <div class="grid-how gap-8">
+        <!-- Step 1 -->
+        <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
+          <img src="images/intercom2.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
+          <div>
+            <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Generate Your QR Code or URL</h4>
+            <p class="text-gray-600 text-center">We create a unique QR code and URL for your business, customized with your preferred IVR options.</p>
+          </div>
+        </div>
 
-    <!-- Step 2 -->
-    <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
-      <img src="images/qr5.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
-      <div>
-        <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Share with Clients</h4>
-        <p class="text-gray-600 text-center">Send the QR code or URL to your clients via SMS, WhatsApp, email, or print materials.</p>
-      </div>
-    </div>
+        <!-- Step 2 -->
+        <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
+          <img src="images/qr5.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
+          <div>
+            <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Share with Clients</h4>
+            <p class="text-gray-600 text-center">Send the QR code or URL to your clients via SMS, WhatsApp, email, or even print it on brochures, menus, or posters.</p>
+          </div>
+        </div>
 
-    <!-- Step 3 -->
-    <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
-      <img src="images/qr3.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
-      <div>
-        <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Scan & Connect</h4>
-        <p class="text-gray-600 text-center">Clients scan the QR code or click the link to access a user-friendly interface.</p>
-      </div>
-    </div>
+        <!-- Step 3 -->
+        <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
+          <img src="images/qr3.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
+          <div>
+            <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Scan & Connect</h4>
+            <p class="text-gray-600 text-center">Clients simply scan the QR code or click the link to access a user-friendly interface. They can select the desired option (e.g., sales, support) or dial an extension directly.</p>
+          </div>
+        </div>
 
-    <!-- Step 4 -->
-    <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
-      <img src="images/intercom.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
-      <div>
-        <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Seamless Communication</h4>
-        <p class="text-gray-600 text-center">The system connects them to the right department without toll-free numbers.</p>
+        <!-- Step 4 -->
+        <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
+          <img src="images/intercom.png" alt="QR Code" class="w-24 h-24 object-cover rounded-lg mb-4 transition-all duration-500 transform hover:rotate-12" />
+          <div>
+            <h4 class="text-lg font-semibold text-[#5db3b6] mb-2 text-center">Seamless Communication</h4>
+            <p class="text-gray-600 text-center">The system connects them to the right department or person without the need for toll-free numbers or additional apps.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     
 
@@ -549,9 +681,52 @@
           <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
             <strong class="text-[#5db3b6]">Customizable IVR Options:</strong> Tailor options to match your business needs.
           </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Easy Sharing:</strong> Share the QR code or URL via SMS, WhatsApp, email, or print media.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Cross-Platform Compatibility:</strong> Works on any smartphone or device with a camera and internet connection.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Analytics & Insights:</strong> Track usage and gather insights to improve customer communication.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Scalable Solution:</strong> Easily scale the system as your business grows, adding new users and features.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">High-Level Security:</strong> End-to-end encryption ensures secure communication and data privacy for your customers.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">24/7 Availability:</strong> Customers can reach you anytime with the always-available intercom system, no matter the time zone.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Seamless Integration:</strong> Integrate easily with other CRM, support, and communication tools your business uses.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+            <strong class="text-[#5db3b6]">Instant Notifications:</strong> Get immediate alerts when customers engage with your intercom system.
+          </li>
         </ul>
       </div>
     </div>
+
+    <!-- benefits  -->
+    <!-- First Section - Image on the Left -->
+    <section class="benefits-section">
+      <div class="container-benefits">
+        <h3 class="section-title">Unlocking Business Potential</h3>
+        <div class="content">
+          <div class="image-content">
+            <img src="images/intercom2.png" alt="QR Intercom System" />
+          </div>
+          <div class="text-content">
+            <p class="benefit-paragraph">
+              At <strong>iBerry WiFi</strong>, we provide a <strong>QR-Based Intercom System</strong> designed to enhance customer engagement and streamline communication for businesses across various industries. Our system offers a <strong>modern and hassle-free way for clients to connect with your team</strong>, significantly improving the <strong>customer experience</strong>. By eliminating the need for <strong>toll-free numbers</strong>, businesses can achieve a <strong>cost-effective solution</strong> while reducing communication expenses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- industries we serve -->
     <section class="mb-16 section-industries">
@@ -605,6 +780,24 @@
           <hr>
           <h4 class="text-lg font-semibold text-[#5db3b6] mb-2">Corporate Offices</h4>
           <p class="text-gray-600">Streamline internal and external communication with a unified intercom system.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Second Section - Image on the Right -->
+    <section class="benefits-section">
+      <div class="container-benefits">
+        <h3 class="section-title">Smart Solutions for Seamless Service</h3>
+        <div class="content">
+          <div class="text-content">
+            <p class="benefit-paragraph" style="margin-left: 20px;">
+              The intuitive design ensures that clients are directed to the appropriate department instantly, reducing <strong>wait times</strong> and boosting <strong>efficiency</strong>. This technology is highly <strong>versatile</strong>, making it perfect for a wide range of applications, including <strong>hotels, restaurants, hospitals, schools, malls, and more</strong>, ensuring that your business can cater to a diverse client base. By adopting our QR-based intercom system, you can <strong>boost your brand image</strong> by showcasing your business as <strong>tech-savvy, forward-thinking, and customer-focused</strong>.
+            </p>
+          </div>
+          <div class="image-content" style="margin-left: -280px !important">
+            <img src="images/intercom3.webp" alt="QR Intercom System" style="max-width: 60%;"/>
+          </div>
         </div>
       </div>
     </section>
