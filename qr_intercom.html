@@ -53,6 +53,45 @@
 
 
 <style>
+
+  /* buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #e2a20b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #75cccf;
+  }
+
+
+
+
+  section h1, 
+  section h2 {
+      color: #75cccf;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+  }
+
+  section h1::after,
+  section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #d69a0b;
+  }
   
 
   .industries-box{
@@ -474,6 +513,272 @@ h3.section-title::after {
 
 
 
+/* industries we serve */
+
+/* Section Layout */
+.introduction-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Header */
+.text-center h1 {
+  font-size: 2.8rem;
+  color: #75cccf;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-center h2 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Text and Image */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Text Content */
+.text-content h3 {
+  font-size: 2rem;
+  color: #75cccf;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.text-content h3::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #e2a20b;
+  bottom: -10px;
+  left: 0;
+}
+
+.text-content strong {
+  color: #75cccf;
+}
+
+/* Image Styling */
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+  filter: brightness(95%);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .text-center h1 {
+    font-size: 2.4rem;
+  }
+
+  .text-center h2 {
+    font-size: 1.3rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .image-content img {
+    max-height: 300px;
+    object-position: center;
+  }
+}
+
+/* Subtle Animation for Image */
+.image-content img {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.text-content p {
+  font-size: medium;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+/* key features */
+/* Section Styling */
+.key-features {
+  padding: 60px 80px;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 1200px;
+  margin-left: -200px;
+  margin-bottom: 120px;
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 4.5rem;
+  color: #75cccf;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #e2a20b;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Features List */
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.feature-item:hover .feature-content h3 {
+  color: #e2a20b;
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+}
+
+.icon {
+  font-size: 5rem;
+  color: #75cccf;
+  margin-right: 30px;
+  transition: color 0.3s ease;
+}
+
+.feature-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.feature-content p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+/* Hover Effects */
+.feature-item:hover .icon {
+  color: #e2a20b;
+}
+
+.feature-item:hover .feature-content p {
+  color: #777;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .features-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
 
 </style>
 </head>
@@ -576,7 +881,7 @@ h3.section-title::after {
                         data-speed="1000" 
                         data-start="1900" 
                         data-easing="easeOutBack">
-                        <a href="firewall-list.html" class="button btn btn-purple btn-lg">Shop Products</a> 
+                        <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a> 
                     </div>
         </li>
             <!-- Slide 2 -->
@@ -591,7 +896,7 @@ h3.section-title::after {
                         data-speed="1000" 
                         data-start="1900" 
                         data-easing="easeOutBack">
-                        <a href="firewall-list.html" class="button btn btn-purple btn-lg">Shop Products</a> 
+                        <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a> 
                     </div>
         </li>
         </ul>
@@ -601,28 +906,37 @@ h3.section-title::after {
      
 
 <section class="bg-gradient-to-b from-white to-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <!-- Header -->
-    <div class="text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0">
-      <h2 class="text-4xl font-bold text-[#5db3b6] mb-2">QR-Based Intercom System</h2>
-      <p class="text-xl text-[#e2a20b]">Revolutionizing Communication for Modern Businesses</p>
-    </div>
+    
 
-    <!-- Introduction with Image -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="prose max-w-none">
-        <h3 class="text-2xl font-bold text-[#5db3b6] mb-4">Introduction</h3>
-        <p class="text-gray-700">At <strong>Iberry WiFi Corporation</strong>, we're revolutionizing the way businesses communicate with their clients. Our <strong>QR-based intercom system</strong> eliminates the need for toll-free numbers or complex IVR setups.</p>
-        <p class="text-gray-700">With just a simple QR code or URL, your clients can connect directly to your intercom or IVR system, choosing options like sales, support, or dialing an extension. Whether you’re a hotel, restaurant, hospital, school, or any other business, our system enhances customer experience while streamlining your communication process.</p>
+    <section class="introduction-section">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h1>QR-Based Intercom System</h1>
+          <h2>Revolutionizing Communication for Modern Businesses</h2>
+        </div>
+    
+        <div class="grid-container">
+          <div class="text-content">
+            <h3>Introduction</h3>
+            <p>At <strong>Iberry WiFi Corporation</strong>, we're revolutionizing the way businesses communicate with their clients. Our <strong>QR-based intercom system</strong> eliminates the need for toll-free numbers or complex IVR setups.</p>
+            <p>With just a simple QR code or URL, your clients can connect directly to your intercom or IVR system, choosing options like sales, support, or dialing an extension. Whether you’re a hotel, restaurant, hospital, school, or any other business, our system enhances customer experience while streamlining your communication process.</p>
+            <p>Ready to transform your customer communication? <strong><a href="contact-01.html">Contact Iberry WiFi Corporation today</a></strong> to get started with our QR-based intercom system. Simplify connections, enhance customer experience, and save costs—all with a single scan!</p>
+            <a class="btn btn-default btn-lg pull-left">Contact Us</a>
+          </div>
+          <div class="image-content">
+            <img src="/images/intercom2.png" alt="QR Intercom System" />
+          </div>
+        </div>
       </div>
-      <div class="rounded-xl overflow-hidden shadow-lg">
-        <img src="/images/intercom2.png" alt="QR Intercom System" class="w-full h-full object-cover" />
-      </div>
-    </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4">
+    
+    
 
    <!-- How It Works -->
     <div class="mb-16">
-      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">How It Works</h3>
+      <h1>How It Works</h1>
       <div class="grid-how gap-8">
         <!-- Step 1 -->
         <div class="how-it-works-step bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col items-center justify-center">
@@ -665,49 +979,126 @@ h3.section-title::after {
     
 
     <!-- Features with Image -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="rounded-xl overflow-hidden shadow-lg">
-        <img src="/images/intercom1.png" alt="Key Features" class="w-full h-full object-cover" />
+    <section class="key-features">
+      <div class="features-container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-list">
+
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-phone-slash"></i>
+            </div>
+            <div class="feature-content">
+              <h3>No Toll-Free Numbers Required</h3>
+              <p>Save costs by eliminating expensive toll-free numbers.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <div class="feature-content">
+              <h3>User-Friendly Interface</h3>
+              <p>Simple, intuitive menu for a smooth experience.</p>
+            </div>
+          </div>
+
+          <!-- <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Customizable IVR Options</h3>
+              <p>Tailor options to match your business needs.</p>
+            </div>
+          </div> -->
+
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Easy Sharing</h3>
+              <p>Share the QR code or URL via SMS, WhatsApp, email, or print media.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Cross-Platform Compatibility</h3>
+              <p>Works on any smartphone or device with a camera and internet connection.</p>
+            </div>
+          </div>
+    
+          <!-- <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Analytics & Insights</h3>
+              <p>Track usage and gather insights to improve customer communication.</p>
+            </div>
+          </div> -->
+    
+          <!-- <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-expand-alt"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Scalable Solution</h3>
+              <p>Easily scale the system as your business grows, adding new users and features.</p>
+            </div>
+          </div> -->
+    
+          <!-- <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="feature-content">
+              <h3>High-Level Security</h3>
+              <p>End-to-end encryption ensures secure communication and data privacy for your customers.</p>
+            </div>
+          </div> -->
+    
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="feature-content">
+              <h3>24/7 Availability</h3>
+              <p>Customers can reach you anytime with the always-available intercom system, no matter the time zone.</p>
+            </div>
+          </div>
+    
+          <!-- <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Seamless Integration</h3>
+              <p>Integrate easily with other CRM, support, and communication tools your business uses.</p>
+            </div>
+          </div> -->
+    
+          <div class="feature-item">
+            <div class="icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Instant Notifications</h3>
+              <p>Get immediate alerts when customers engage with your intercom system.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div>
-        <h3 class="text-2xl font-bold text-[#5db3b6] mb-4">Key Features</h3>
-        <ul class="space-y-4">
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">No Toll-Free Numbers Required:</strong> Save costs by eliminating expensive toll-free numbers.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">User-Friendly Interface:</strong> Simple, intuitive menu for a smooth experience.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Customizable IVR Options:</strong> Tailor options to match your business needs.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Easy Sharing:</strong> Share the QR code or URL via SMS, WhatsApp, email, or print media.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Cross-Platform Compatibility:</strong> Works on any smartphone or device with a camera and internet connection.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Analytics & Insights:</strong> Track usage and gather insights to improve customer communication.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Scalable Solution:</strong> Easily scale the system as your business grows, adding new users and features.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">High-Level Security:</strong> End-to-end encryption ensures secure communication and data privacy for your customers.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">24/7 Availability:</strong> Customers can reach you anytime with the always-available intercom system, no matter the time zone.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Seamless Integration:</strong> Integrate easily with other CRM, support, and communication tools your business uses.
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-            <strong class="text-[#5db3b6]">Instant Notifications:</strong> Get immediate alerts when customers engage with your intercom system.
-          </li>
-        </ul>
-      </div>
-    </div>
+    </section>
+
+
 
     <!-- benefits  -->
     <!-- First Section - Image on the Left -->
@@ -730,7 +1121,7 @@ h3.section-title::after {
 
     <!-- industries we serve -->
     <section class="mb-16 section-industries">
-      <h3 class="text-2xl font-bold text-[#5db3b6] mb-8 industries-header">Industries We Serve</h3>
+      <h1>Industries We Serve</h1>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Hotels & Restaurants -->
         <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 industries-box">
