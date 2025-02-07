@@ -10,6 +10,8 @@
 <link rel="shortcut icon" href="favicon.ico" style="border-radius: 10px;">
 
 <!-- Stylesheets -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -49,6 +51,557 @@
     <![endif]-->
 
 
+  
+    <style>
+      /* General styles for the intro section */
+  /* General styles for the intro section */
+  .intro-section {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 50px;
+  }
+  
+  .intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  section h1, 
+  section h2 {
+      color: #75cccf;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+  }
+  
+  section h1::after,
+  section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #d69a0b;
+  }
+  
+  .text-content p, 
+  .text-content ul {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+      font-size: 15px;
+  }
+  
+  
+  .section-title p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  /* Row and Column Layout */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+  }
+  
+  .col-md-6 {
+    width: 48%; /* Adjust the width of each section */
+    padding: 15px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .image-left {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-left:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Content Styling */
+  .intro-content {
+    text-align: left;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  /* Animation for Fade-In */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title h1 {
+      font-size: 28px;
+    }
+  
+    .section-title p {
+      font-size: 16px;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-md-6 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .intro-content {
+      font-size: 16px;
+      margin: 0 20px;
+    }
+  
+    .image-left {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  
+  /* Service Card Styles */
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Service Image */
+  .service-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid #75cccf;
+  }
+  
+  /* Service Content */
+  .service-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .service-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .service-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .row {
+      justify-content: center;
+    }
+  
+    .col-md-4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-title h1 {
+      font-size: 28px;
+    }
+  
+    .section-title h2 {
+      font-size: 16px;
+    }
+  
+    .service-content h3 {
+      font-size: 20px;
+    }
+  
+    .service-content p {
+      font-size: 14px;
+    }
+  }
+  
+  
+  
+  /* Benefits Section */
+  .benefits-section {
+    background-color: #f4f7fc;
+    padding: 60px 30px;
+    text-align: center;
+  }
+  
+  .benefit-item {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 270px;
+  }
+  
+  .benefit-item i {
+    font-size: 40px;
+    color: #75cccf;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .benefit-item h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .benefit-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-item:hover i {
+    color: #e2a20b;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .benefit-item {
+      max-width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  
+  
+  
+  
+  /* industries serve */
+  /* Industries Section Styles */
+  .industries-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f6f9fc 0%, #edf1f7 100%);
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .industries-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: radial-gradient(circle at 0% 0%, rgba(117, 204, 207, 0.1) 20%, transparent 70%),
+                  radial-gradient(circle at 100% 100%, rgba(44, 62, 80, 0.05) 20%, transparent 70%);
+      pointer-events: none;
+  }
+  
+  .industry-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+      position: relative;
+  }
+  
+  .industry-section-title h1 {
+      font-size: 50px;
+      background: linear-gradient(135deg, #d69a0b 30%, #65bec1 69%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-top: -65px;
+      margin-bottom: 75px;
+  }
+  
+  .industry-section-title h2 {
+      font-size: 25px;
+      color: #6c757d;
+      font-weight: 300;
+      margin: 0;
+      margin-top: -60px;
+      margin-bottom: 70px;
+  }
+  
+  .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      position: relative;
+  }
+  
+  .industry-item {
+      position: relative;
+      padding: 40px 30px;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .industry-item::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: 0;
+  }
+  
+  .industry-item:hover::before {
+      opacity: 1;
+      transform: scale(1.02);
+  }
+  
+  .industry-item i {
+      position: relative;
+      z-index: 1;
+      font-size: 5.5em;
+      margin-bottom: 25px;
+      display: inline-block;
+      background: linear-gradient(135deg, #75cccf 0%, #5fb9bc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.4s ease;
+  }
+  
+  .industry-item:hover i {
+      transform: scale(1.1) rotate(5deg);
+      background: none;
+      -webkit-text-fill-color: #d69a0b;
+  }
+  
+  .industry-item h4 {
+      position: relative;
+      z-index: 1;
+      font-size: 22px;
+      color: #2c3e50;
+      margin: 0 0 15px 0;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+  }
+  
+  .industry-item p {
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+      color: #6c757d;
+      line-height: 1.7;
+      margin: 0;
+      transition: transform 0.3s ease;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+  }
+  
+  .industry-item:hover {
+      animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+      .industries-section {
+          padding: 70px 0;
+      }
+  
+      .section-title h1 {
+          font-size: 34px;
+      }
+  
+      .section-title h2 {
+          font-size: 18px;
+      }
+  
+      .industry-grid {
+          gap: 30px;
+      }
+  
+      .industry-item {
+          padding: 30px 20px;
+      }
+  }
+  
+  
+  
+  
+  /* why choose us */
+  /* Section Styling */
+  .why-choose-section {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+  }
+  
+  .why-choose-section .section-title h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+  }
+  
+  .why-choose-section .content {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+  }
+  
+  .why-choose-section .content p {
+      margin-bottom: 20px;
+  }
+  
+  .why-choose-section .content strong {
+      font-weight: 600;
+  }
+  
+  .why-choose-section .image-container img {
+      width: 100%;
+      margin-top: 120px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .why-choose-section .row {
+          flex-direction: column;
+      }
+  
+      .why-choose-section .col-md-6 {
+          margin-bottom: 30px;
+      }
+  }
+  
+  
+
+
+  /* Additional styles for WiFi page */
+.service-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-item i {
+    background: linear-gradient(135deg, #75cccf 0%, #5fb9bc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover i {
+    background: linear-gradient(135deg, #d69a0b 0%, #e2a20b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+}
+
+.industry-item i {
+    font-size: 4em;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #75cccf 0%, #5fb9bc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.industry-section-title h1 {
+    background: linear-gradient(135deg, #75cccf 30%, #d69a0b 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+  </style>
+  
+  
 
 </head>
 
@@ -113,6 +666,8 @@
               <li><a href="firewall-list.html">Firewall Services</a></li>
               <li><a href="vpn.html">VPN Services</a></li>
               <li><a href="ipbx.html">IPBX & Intercom Services</a></li>
+              <li><a href="wifi.html">WiFi Solutions</a></li>
+              <li><a href="cctv.html">CCTV Services</a></li>
               <!-- <li><a href="software-list.html">VOIP & IPPBX Services</a></li>
               <li><a href="firewall-list.html">WiFi Solutions</a></li>
               <li><a href="software-list.html">Cabling Networking</a></li> -->
@@ -205,7 +760,183 @@
 
 
 
-  
+<!-- Introduction Section -->
+<section class="intro-section">
+  <div class="intro-container">
+      <div class="section-title">
+          <h1>Professional WiFi Solutions</h1>
+          <h2>Fast, Secure, and Reliable Connectivity</h2>
+      </div>
+      <div class="row">
+          <div class="col-md-6 image-container">
+              <img src="images/wifi.png" alt="WiFi Solutions" class="image-left">
+          </div>
+          <div class="col-md-6 intro-content text-content">
+              <p>In today's connected world, a strong and reliable WiFi network is essential for homes, businesses, and public spaces. At <strong style="color: #5db3b6;">Iberry WiFi Corporation</strong>, we provide <strong style="color: #5db3b6;">professional WiFi installation services</strong> to ensure your network delivers fast, secure, and uninterrupted connectivity.</p>
+              <p>Whether you need access points installed, a full network setup, or an upgrade to your existing infrastructure, our team of experts is here to help. We understand that every space has unique requirements, so we ensure that our solutions are tailored to meet your specific needs while delivering optimal performance.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Core Services Section -->
+<section class="service-section">
+  <div class="container">
+      <div class="section-title">
+          <h1>Our WiFi Installation Services</h1>
+          <h2>Comprehensive Solutions for Every Need</h2>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi2.png" alt="Access Point Installation">
+                  </div>
+                  <div class="service-content">
+                      <h3>Access Point Installation</h3>
+                      <p>Strategic placement of access points for maximum coverage and minimal dead zones. Perfect for large homes, offices, hotels, and public spaces.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi4.png" alt="Network Setup">
+                  </div>
+                  <div class="service-content">
+                      <h3>Network Setup & Configuration</h3>
+                      <p>Full setup of routers, switches, and networking equipment with custom configurations to optimize speed, security, and performance.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi3.png" alt="Mesh WiFi Systems">
+                  </div>
+                  <div class="service-content">
+                      <h3>Mesh WiFi Systems</h3>
+                      <p>Install mesh networks for seamless coverage across large areas. Perfect for multi-story buildings, warehouses, and outdoor spaces.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="section-title">
+                  <h2>Why Choose Iberry WiFi's Installation Services?</h2>
+              </div>
+              <div class="text-content">
+                  <p>Our certified technicians have years of experience in designing and installing WiFi networks for various industries. We take pride in delivering customized solutions that meet your specific needs, whether it's a small home network or a large-scale business setup.</p>
+                  <p>We use only top-tier access points, routers, and networking hardware to ensure optimal performance. Our team ensures your new WiFi network integrates smoothly with your existing infrastructure, minimizing any disruption to your operations.</p>
+                  <p>From installation to maintenance, we're here to provide ongoing support whenever you need it. Our commitment to excellence means you can rely on us for all your WiFi networking needs, both now and in the future.</p>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="image-container">
+                  <img src="images/wifisol.png" alt="Professional WiFi Installation">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>  
+
+
+
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+      <div class="section-title">
+          <h1>Key Benefits</h1>
+          <h2>Why Choose Professional WiFi Installation</h2>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="benefit-item">
+                  <i class="fa fa-bolt"></i>
+                  <h4>Faster Speeds</h4>
+                  <p>Optimized networks delivering lightning-fast internet connectivity</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="benefit-item">
+                  <i class="fa fa-wifi"></i>
+                  <h4>Wider Coverage</h4>
+                  <p>Eliminate dead zones with strategically placed access points</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="benefit-item">
+                  <i class="fa fa-shield"></i>
+                  <h4>Enhanced Security</h4>
+                  <p>Protect your network from unauthorized access and cyber threats</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="benefit-item">
+                  <i class="fa fa-expand"></i>
+                  <h4>Scalability</h4>
+                  <p>Easily expand your network as your needs grow</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section class="industries-section">
+  <div class="container">
+      <div class="industry-section-title">
+          <h1>Industries We Serve</h1>
+          <h2>Tailored WiFi solutions for every sector</h2>
+      </div>
+      <div class="industry-grid">
+          <div class="industry-item">
+            <i class="bi bi-house-door-fill"></i>
+              <h4>Hospitality</h4>
+              <p>Provide guests with fast and secure WiFi in hotels, resorts, and restaurants</p>
+          </div>
+          
+          <div class="industry-item">
+              <i class="fa fa-hospital-o fa-2x"></i>
+              <h4>Healthcare</h4>
+              <p>Ensure reliable connectivity for staff, patients, and medical devices</p>
+          </div>
+          
+          <div class="industry-item">
+              <i class="fa fa-graduation-cap fa-2x"></i>
+              <h4>Education</h4>
+              <p>Support online learning and campus-wide connectivity for schools and universities</p>
+          </div>
+          
+          <div class="industry-item">
+              <i class="fa fa-shopping-cart fa-2x"></i>
+              <h4>Retail</h4>
+              <p>Enhance customer experience with seamless WiFi in stores and malls</p>
+          </div>
+
+          <div class="industry-item">
+              <i class="fa fa-building fa-2x"></i>
+              <h4>Corporate Offices</h4>
+              <p>Enable productivity with robust and secure WiFi networks for businesses</p>
+          </div>
+
+          <div class="industry-item">
+              <i class="fa fa-home fa-2x"></i>
+              <h4>Residential</h4>
+              <p>Enjoy uninterrupted streaming, gaming, and smart home connectivity</p>
+          </div>
+      </div>
+  </div>
+</section>
 
 
 
