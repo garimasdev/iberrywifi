@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $API = new RouterosAPI();
 
     $routerIP = "139.59.74.160"; // Change to your MikroTik router IP
-    $username = "treeohotels25@gmail.com"; // MikroTik username
-    $password = "Bhupa@898"; // MikroTik password
+    $username = "Email"; // MikroTik username
+    $password = "email@898"; // MikroTik password
 
     $recipient = "support@iberrywifi.in"; // Change to recipient's email
     $subject = "Contact Form Submission";
@@ -37,7 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Failed to connect to MikroTik API!";
     }
-} else {
-    echo "Invalid request.";
-}
 ?>
