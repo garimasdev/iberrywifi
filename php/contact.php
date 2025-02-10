@@ -20,7 +20,7 @@ if ($email == null || $phone == null || $message == null) {
     echo '<div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             Attention! All fields are required.</div>';
-    header("Location: /index.html?status=error");
+    header("Location: /contact-01.html?status=error");
     exit();
 }
 if ($_POST['verify'] != '2')
