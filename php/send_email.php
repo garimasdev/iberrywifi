@@ -14,7 +14,7 @@ $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
 
 
-$recipient = "support@iberrywifi.in"; // Change to recipient's email
+$recipient = "sachdevagarima25@gmail.com"; // Change to recipient's email
 $subject = "Test Email from MikroTik API";
 $body = "You have received a new message from the contact form:\n\n".
         "Email: $email\n".
