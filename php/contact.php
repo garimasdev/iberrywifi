@@ -10,13 +10,13 @@ $password = "Email@898"; // MikroTik password
 
 
 // Get form data
+$name = isset($_POST['name']) ? $_POST['name'] : null;
 $email = isset($_POST['email']) ? $_POST['email'] : null;
-$phone = isset($_POST['phone']) ? $_POST['phone'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
 $verify = isset($_POST['verify']) ? $_POST['verify'] : null;
 
 // Validate form data
-if ($email == null || $phone == null || $message == null) {
+if ($name == null || $email == null || $message == null) {
     echo '<div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             Attention! All fields are required.</div>';
