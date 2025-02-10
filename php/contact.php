@@ -13,6 +13,7 @@ $password = "Email@898"; // MikroTik password
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
+$verify = isset($_POST['verify']) ? $_POST['verify'] : null;
 
 // Validate form data
 if ($email == null || $phone == null || $message == null) {
@@ -22,6 +23,12 @@ if ($email == null || $phone == null || $message == null) {
     header("Location: /index.html?status=error");
     exit();
 }
+if ($_POST['verify'] != '2')
+		{
+		echo '<div class="alert alert-danger alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please give the right answer to the question.</div>';
+		exit();
+		}
 
 $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";

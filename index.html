@@ -1269,9 +1269,9 @@ function toggleIcons() {
     const status = urlParams.get('status');
 
     if (status === 'success') {
-      alert("Your message has been sent successfully!");
+      // alert("Your message has been sent successfully!");
       // Optionally, you can display a success message within the page:
-      // document.getElementById("status-message").innerText = "Your message has been sent successfully!";
+      document.getElementById("status-message").innerText = "Your message has been sent successfully!";
     } else if (status === 'error') {
       alert("There was an issue sending your message. Please try again.");
     }

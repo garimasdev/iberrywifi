@@ -140,7 +140,7 @@
         <p>Do let us serve you the best!</p>
         <form class="clearfix mt50" role="form" method="post" action="php/contact.php" name="contactform" id="contactform">
           <!-- Error message -->
-		  <div id="message"></div>
+          <div id="status-message" class="alert alert-info"></div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -287,6 +287,27 @@
 </footer>
 
 <!-- Go-top Button -->
-<div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div><script>$('#copyR').html(new Date().getFullYear());</script>
+<div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
+<script>$('#copyR').html(new Date().getFullYear());</script>
+
+<script>
+  window.onload = function() {
+    // Check if the "status" query parameter is present
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    if (status === 'success') {
+      // Display success message in the page
+      document.getElementById("status-message").innerText = "Your message has been sent successfully!";
+      document.getElementById("status-message").classList.add("alert-success");
+    } else if (status === 'error') {
+      document.getElementById("status-message").innerText = "There was an issue sending your message. Please try again.";
+      document.getElementById("status-message").classList.add("alert-danger");
+    }
+  };
+</script>
+
+
 </body>
 </html>
