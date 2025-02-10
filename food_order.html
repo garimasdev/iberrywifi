@@ -53,6 +53,11 @@
 
   
     <style>
+    /* Base styles */
+    .navbar-nav {
+      margin-right: -3px;
+    }
+
       /* General styles for the intro section */
   /* General styles for the intro section */
   .intro-section {
@@ -728,7 +733,145 @@
     font-size: 16px;
 }
 
-  </style>
+   /* Style the contact form */
+    .contact-form-container {
+      position: absolute; 
+      right: 20px; 
+      top: 50px; 
+      background-color: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button.btn-primary {
+      width: 100%;
+      padding: 12px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.btn-primary:hover {
+      background-color: #75cccf;
+    }
+
+
+@media (max-width: 767px) {
+  /* Adjust position and size for mobile */
+  .contact-form-container {
+    position: absolute;
+    right: 20px;
+    top: -16px;
+    width: 150px;
+    margin: 0 auto;
+  }
+  
+  /* Adjust the form input and button width */
+  .form-input {
+    width: 109%;
+    padding: 4px;
+    font-size: 10px;
+    margin: 4px 0;
+  }
+
+  button.btn-primary {
+    padding: 4px;
+    font-size: 10px;
+  }
+}
+
+  /* Tablet Responsiveness (for devices between 768px and 1024px) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .contact-form-container {
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      width: 40%;
+    }
+    
+    .form-input {
+      padding: 12px;
+      font-size: 16px;
+    }
+    
+    button.btn-primary {
+      padding: 14px;
+      font-size: 16px;
+    }
+  }
+
+
+
+
+
+  /* floating contact icon */
+  /* Floating Icon Button */
+.floating-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Move the icon to the left side */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.floating-icon i {
+    font-size: 28px;
+    background-color: #5db3b6;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hidden container for additional icons */
+.floating-icons-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling the individual icons */
+.floating-icons-container a {
+    color: white;
+    /* padding: 10px; */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.floating-icons-container a:hover {
+    transform: scale(1.1);
+}
+
+/* Toggle icons */
+.floating-icon.open .floating-icons-container {
+    display: flex;
+}
+
+.floating-icon.open i {
+    transform: rotate(45deg);
+}
+
+
+</style>
   
   
 
@@ -805,12 +948,17 @@
           </li>
           <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Software Services<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="software-list.html">Software and Services</a></li>
+              
               <li><a href="qr_intercom.html">QR Intercom System</a></li>
               <li><a href="food_order.html">Food Ordering System</a></li>
             </ul>
           </li>
-          <li> <a href="pricing.html">Pricing</a></li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Pricing<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="pricing.html">Firewall & Hotspot Pricing</a></li>
+              <li><a href="software-list.html">Software & Services Pricing</a></li>
+            </ul>
+          </li>
           <li> <a href="contact-01.html">Contact</a> </li>
           <li class="navbar-login-link"> <a href="https://ibudha.com/dev/mikifi/login">Login</a> </li>
           <li style="height:80px;"><a href="https://www.google.com/maps/place/Iberry+Wifi+Corporation/@30.7371149,76.6781289,17z/data=!3m1!4b1!4m6!3m5!1s0x390fef200cac8599:0x470654270ca2bc93!8m2!3d30.7371149!4d76.6807038!16s%2Fg%2F11ghnbw2q4?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"> <img class="location" src="images/2.png"></a></li>
@@ -832,16 +980,26 @@
           <img src="images/banner.jpg" style="opacity:0; height: 150px;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
           <!-- Layers -->    
         <!-- Layer 3 -->
-                  <div class="caption sft"  
-          				data-x="775" 
-                        data-y="175" 
-                        data-speed="1000" 
-                        data-start="1900" 
-                        data-easing="easeOutBack"
-                        style="height: 150px;">
-						<a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a> 
-                  </div>
-        </li>
+        <div class="caption sft"  
+            data-x="775" 
+            data-y="175" 
+            data-speed="1000" 
+            data-start="1900" 
+            data-easing="easeOutBack"
+            style="height: 150px;">
+            <!-- <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a>  -->
+        </div>
+        <!-- Contact Form (Positioned to the right of the banner) -->
+        <div id="status-message"></div>
+        <div class="contact-form-container">
+          <form action="php/send_email.php" method="post" class="contact-form">
+            <input type="email" name="email" placeholder="Your Email" required class="form-input">
+            <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
+            <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
+            <button type="submit" class="btn btn-primary">Contact Us</button>
+          </form>
+        </div>
+      </li>
       </ul>
     </div>
   </div>
@@ -1148,8 +1306,49 @@
 </div>
 </footer>
 
+<!-- floating contact icon -->
+<div class="floating-icon">
+  <i class="fas fa-headset" onclick="toggleIcons()"></i>
+  <div class="floating-icons-container">
+      <a href="https://wa.me/9855021117" class="whatsapp-icon" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="tel:9855021117" class="call-icon" target="_blank">
+          <i class="fa fa-phone"></i>
+      </a>
+  </div>
+</div>
+
+
 <!-- Go-top Button -->
 <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+<script>
+$('#copyR').html(new Date().getFullYear());
+
+// Function to toggle the icons container visibility
+function toggleIcons() {
+    const iconContainer = document.querySelector('.floating-icon');
+    iconContainer.classList.toggle('open');
+}
+
+</script>
+
+
+<script>
+  window.onload = function() {
+    // Check if the "status" query parameter is present
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    if (status === 'success') {
+      // alert("Your message has been sent successfully!");
+      // Optionally, you can display a success message within the page:
+      document.getElementById("status-message").innerText = "Your message has been sent successfully!";
+    } else if (status === 'error') {
+      alert("There was an issue sending your message. Please try again.");
+    }
+  };
+</script>
 <script>
 $('#copyR').html(new Date().getFullYear());
 </script>
