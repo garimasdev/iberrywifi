@@ -15,6 +15,14 @@ $email = isset($_POST['email']) ? $_POST['email'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
 $verify = isset($_POST['verify']) ? $_POST['verify'] : null;
 
+
+// Debugging: Check what is being received from the form
+error_log("Name: " . print_r($name, true));
+error_log("Email: " . print_r($email, true));
+error_log("Message: " . print_r($message, true));
+error_log("Verify: " . print_r($verify, true));
+
+
 // Validate form data
 // if ($name == null || $email == null || $message == null) {
 //     echo '<div class="alert alert-danger alert-dismissable">
@@ -48,6 +56,9 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     
     // Read the response (to ensure the email is sent)
     $API->read();
+	$response = $API->read();
+	error_log("MikroTik API Response: " . print_r($response, true));
+
     
     // Email sent successfully
     header("Location: /contact-01.html?status=success");
