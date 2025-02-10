@@ -14,7 +14,7 @@ $routerIP = "139.59.74.160"; // Change to your MikroTik router IP
 $username = "Email"; // MikroTik username
 $password = "email@898"; // MikroTik password
 
-$recipient = "support@iberrywifi.in"; // Change to recipient's email
+$recipient = "sachdevagarima25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";
 $body = "You have received a new message from the contact form:\n\n".
             "Email: $email\n".
