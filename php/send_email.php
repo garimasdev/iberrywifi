@@ -31,13 +31,15 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     
     $API->read();
     
-    echo "Email sent successfully!";
+    // echo "Email sent successfully!";
     header("Location: /index.html?status=success");
+    exit;
     
     $API->disconnect();
 } else {
-    echo "Failed to connect to MikroTik API!";
+    // echo "Failed to connect to MikroTik API!";
     header("Location: /index.html?status=error");
+    exit;
 
 }
 ?>
