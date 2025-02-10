@@ -33,8 +33,8 @@ if ($_POST['verify'] != '2')
 $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";
 $body = "You have received a new message from the contact form:\n\n".
+		"Name: $name\n\n".
         "Email: $email\n".
-        "Phone: $phone\n\n".
         "Message:\n$message";
 
 // Connect to MikroTik API and send email
