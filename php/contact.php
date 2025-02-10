@@ -16,19 +16,19 @@ $message = isset($_POST['message']) ? $_POST['message'] : null;
 $verify = isset($_POST['verify']) ? $_POST['verify'] : null;
 
 // Validate form data
-if ($name == null || $email == null || $message == null) {
-    echo '<div class="alert alert-danger alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            Attention! All fields are required.</div>';
-    header("Location: /contact-01.html?status=error");
-    exit();
-}
-if ($_POST['verify'] != '2')
-		{
-		echo '<div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please give the right answer to the question.</div>';
-		exit();
-		}
+// if ($name == null || $email == null || $message == null) {
+//     echo '<div class="alert alert-danger alert-dismissable">
+//             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+//             Attention! All fields are required.</div>';
+//     header("Location: /contact-01.html?status=error");
+//     exit();
+// }
+// if ($_POST['verify'] != '2')
+// 		{
+// 		echo '<div class="alert alert-danger alert-dismissable">
+//   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Attention! Please give the right answer to the question.</div>';
+// 		exit();
+// 		}
 
 $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";
