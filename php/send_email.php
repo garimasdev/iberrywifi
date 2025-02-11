@@ -44,7 +44,7 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
 		{
 		echo "<p>Oops! Something went wrong and we couldn't send your message.</p>";
 		}
-    // header("Location: /index.html?status=success");
+    header("Location: /index.html?status=success");
     exit;
     
     $API->disconnect();
