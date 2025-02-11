@@ -32,7 +32,19 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     $API->read();
     
     // echo "Email sent successfully!";
-    header("Location: /index.html?status=success");
+
+    if (mail($recipient, $subject, $body))
+		{
+		echo "<h1>Email Sent Successfully!</h1>";
+		echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
+		echo "<p>Thanks <strong>$name</strong>, your message has been sent to us.</p>";
+		echo '</div>';
+		}
+	  else
+		{
+		echo "<p>Oops! Something went wrong and we couldn't send your message.</p>";
+		}
+    // header("Location: /index.html?status=success");
     exit;
     
     $API->disconnect();
