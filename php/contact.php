@@ -9,6 +9,13 @@ $username = "email"; // MikroTik username
 $password = "Email@898"; // MikroTik password
 
 
+// Check if honeypot field is filled (spam submission)
+if (!empty($_POST['password'])) {
+    // Spam detected, exit the script without sending the email
+    header("Location: /index.html?status=spam");
+    exit;
+}
+
 // Get form data
 $name = isset($_POST['name']) ? $_POST['name'] : null;
 $email = isset($_POST['email']) ? $_POST['email'] : null;
