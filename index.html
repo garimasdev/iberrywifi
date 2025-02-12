@@ -56,9 +56,20 @@
       margin-right: -3px;
     }
 
-    /* Base styles */
-    .navbar-nav {
-      margin-right: -3px;
+    .mask-para {
+      margin: 0 0 10px;
+      width: 300px;
+      justify-content: center;
+      display: inline-flex;
+    }
+
+    .contentp {
+      margin: 0 0 10px;
+      justify-content: center;
+      display: flex;
+      color: #75cccf;
+      font-weight: 900;
+      font-size: larger;
     }
 
     /* Testimonials Section */
@@ -254,6 +265,7 @@
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s ease;
+        margin-right: 7pc;
     }
     
     .btn:hover {
@@ -551,6 +563,8 @@
     padding: 4px;
     font-size: 10px;
     margin: 4px 0;
+    position: relative;
+    top: -10px;
   }
 
   button.btn-primary {
@@ -636,6 +650,7 @@
 .floating-icon.open i {
     transform: rotate(45deg);
 }
+
 
 
 </style>
@@ -738,7 +753,7 @@
     <div class="banner">
       <ul>
         <!-- Slide 1 -->
-        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height: 250px;"> 
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height: 125%;"> 
           <!-- Main Image --> 
           <img src="images/banner.jpg" style="opacity:0; height: 150px;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
           <!-- Layers -->    
@@ -775,94 +790,104 @@
 <section class="rooms mt100">
   <div class="container">
     <div class="row room-list fadeIn appear"> 
-      <!-- Room -->
+      <!-- firewall -->
       <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/lite.jpeg" alt="Lite Plan" class="img-responsive" />
+        <div class="room-thumb"> <img src="images/firewall.jpg" alt="Lite Plan" class="img-responsive" />
           <div class="mask">
-            <div class="main">
-              <h5>Lite Plan</h5>
-              <div class="price">&#8377; 30000</div>
-            </div>
             <div class="content">
-              <p><span>For Small Organisation</span></p>
+             
+              <p class="contentp">Firewall & Hotspot Services</p>
               <div class="row">
                 <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    
-                    <li><i class="fa fa-check-circle"></i> Ideal for 30-40 rooms Hotel</li>
-                    <li><i class="fa fa-check-circle"></i> In Small Colleges</li>
-                    <li><i class="fa fa-check-circle"></i> In Small Restaurant</li>
-                  </ul>
-                </div>
-                <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle"></i> In Small Hospital</li>
-                    <li><i class="fa fa-check-circle"></i> In Schools</li>
-                    <li><i class="fa fa-check-circle"></i> And In cyber-cafe</li>
-                  </ul>
+                 <p class="mask-para">At Iberry WiFi Security, we offer affordable pricing plans and you'll also gain access to the latest advancements in network security and Wi-Fi management</p>
                 </div>
               </div>
-              <a href="firewall-list.html" class="btn btn-default btn-lg pull-right">See More</a>
+              <a href="firewall_hotspot.html" class="btn btn-default btn-lg pull-right">See More</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- Room -->
+      <!-- Vpn -->
       <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/medium.jpeg" alt="room 2" class="img-responsive" />
+        <div class="room-thumb"> <img src="images/vpn.jpeg" alt="Lite Plan" class="img-responsive" />
           <div class="mask">
-            <div class="main">
-              <h5>Medium Plan</h5>
-              <div class="price">&#8377; 50000</div>
-            </div>
             <div class="content">
-              <p><span>For Medium Organisation</span></p>
+             
+              <p class="contentp">VPN Solutions</p>
               <div class="row">
                 <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    
-                    <li><i class="fa fa-check-circle"></i> Ideal for 40-60 rooms Hotel</li>
-                    <li><i class="fa fa-check-circle"></i> In Big Colleges</li>
-                  </ul>
-                </div>
-                <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle"></i> In large Resturant</li>
-                    <li><i class="fa fa-check-circle"></i> In big Hospital</li>
-                  </ul>
+                 <p class="mask-para">At Iberry WiFi Security, we provide top-notch VPN solutions that guarantee privacy and protection by encrypting your internet connection, safeguarding your personal information from prying eyes.</p>
                 </div>
               </div>
-              <a href="firewall-list.html" class="btn btn-default btn-lg pull-right">See More</a>
+              <a href="vpn.html" class="btn btn-default btn-lg pull-right">See More</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- Room -->
-      <div class="col-sm-4 double executive">
-        <div class="room-thumb"> <img src="images/big.jpeg" alt="room 4" class="img-responsive" />
+      <!-- IPBX -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/voip.png" alt="Lite Plan" class="img-responsive" />
           <div class="mask">
-            <div class="main">
-              <h5>Standard Plan</h5>
-              <div class="price">&#8377; 99000</div>
-            </div>
             <div class="content">
-              <p><span>For Larger Organisation</span></p>
+             
+              <p class="contentp">IPBX & Intercom Services</p>
               <div class="row">
                 <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                   
-                    <li><i class="fa fa-check-circle"></i> Ideals in 5* Star Hotels</li>
-                    <li><i class="fa fa-check-circle"></i> In Larger Universities</li>
-                  </ul>
-                </div>
-                <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle"></i> In Larger Resturant</li>
-                    <li><i class="fa fa-check-circle"></i> In Larger Companies</li>
-                  </ul>
+                 <p class="mask-para">At Iberry WiFi Security, our certified technicians ensure that each installation is seamless and integrates effortlessly with your existing systems.</p>
                 </div>
               </div>
-              <a href="firewall-list.html" class="btn btn-default btn-lg pull-right">See More</a>
+              <a href="ipbx.html" class="btn btn-default btn-lg pull-right">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- wifi solutions -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/wifib3.png" alt="Lite Plan" class="img-responsive" />
+          <div class="mask">
+            <div class="content">
+              <p class="contentp">WiFi Services</p>
+              <div class="row">
+                <div class="col-xs-6">
+                 <p class="mask-para">At Iberry WiFi Security, we provide professional WiFi installation services to ensure your network delivers fast, secure, and uninterrupted connectivity.</p>
+                </div>
+              </div>
+              <a href="wifi.html" class="btn btn-default btn-lg pull-right">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cctv solutions -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/business.jpeg" alt="Lite Plan" class="img-responsive" />
+          <div class="mask">
+            <div class="content">
+             
+              <p class="contentp">Services</p>
+              <div class="row">
+                <div class="col-xs-6">
+                 <p class="mask-para">At Iberry WiFi Security, we provide professional WiFi installation services to ensure your network delivers fast, secure, and uninterrupted connectivity.</p>
+                </div>
+              </div>
+              <a href="wifi.html" class="btn btn-default btn-lg pull-right">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- solutions -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="images/cctv1.png" alt="Lite Plan" class="img-responsive" />
+          <div class="mask">
+            <div class="content">
+             
+              <p class="contentp">WiFi Services</p>
+              <div class="row">
+                <div class="col-xs-6">
+                 <p class="mask-para">At Iberry WiFi Security, we provide advanced CCTV solutions are designed to provide round-the-clock surveillance, ensuring peace of mind for homeowners, business owners, and public institutions</p>
+                </div>
+              </div>
+              <a href="cctv.html" class="btn btn-default btn-lg pull-right">See More</a>
             </div>
           </div>
         </div>
@@ -872,63 +897,35 @@
       <div class="col-sm-4 double executive">
         <div class="room-thumb"> <img src="images/qr.jpg" alt="room 4" class="img-responsive" />
           <div class="mask">
-            <div class="main">
-              <h5>Starter Plan</h5>
-              <div class="price">&#8377; 20000</div>
-            </div>
             <div class="content">
-              <p><span>Perfect for small establishments looking to streamline their operations</span></p>
+              <p class="contentp"><span>QR and IVR System</span></p>
               <div class="row">
                 <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                   
-                    <li><i class="fa fa-check-circle"></i> Food Menu</li>
-                    <li><i class="fa fa-check-circle"></i> Bar Menu (if bar is available in hotel)</li>
-                  </ul>
-                </div>
-                <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle"></i> Continental Breakfast Service</li>
-                    <li><i class="fa fa-check-circle"></i> Quick Lunch Service</li>
-                  </ul>
+                  <p class="mask-para">At Iberry WiFi Corporation, QR-based intercom system eliminates the need for toll-free numbers or complex IVR setups.</p>
                 </div>
               </div>
-              <a href="software-list.html" class="btn btn-default btn-lg pull-right">See More</a>
+              <a href="qr_intercom.html" class="btn btn-default btn-lg pull-right">See More</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- food order -->
       <div class="col-sm-4 double executive">
         <div class="room-thumb"> <img src="images/qr2.jpg" alt="room 4" class="img-responsive" />
           <div class="mask">
-            <div class="main">
-              <h5>Mediator Plan</h5>
-              <div class="price">&#8377; 30000</div>
-            </div>
             <div class="content">
-              <p><span>Comprehensive solution for growing establishments</span></p>
+              <p class="contentp">Food Ordering System</p>
               <div class="row">
                 <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                   
-                    <li><i class="fa fa-check-circle"></i> Food Menu Services</li>
-                    <li><i class="fa fa-check-circle"></i> Bar Menu Services</li>
-                    <li><i class="fa fa-check-circle"></i> Paid Services</li>
-                  </ul>
-                </div>
-                <div class="col-xs-6">
-                  <ul class="list-unstyled">
-                    <li><i class="fa fa-check-circle"></i> Complaints Services</li>
-                    <li><i class="fa fa-check-circle"></i> Free Services</li>
-                    <li><i class="fa fa-check-circle"></i> Menu Descriptions</li>
-                  </ul>
+                 <p class="mask-para">At Iberry WiFi Corporation, we’ve developed an innovative QR and URL-based food ordering system that transforms the way customers order food—whether they’re in hotel rooms, at restaurant tables, or in nearby outdoor areas.</p>
                 </div>
               </div>
-              <a href="software-list.html" class="btn btn-default btn-lg pull-right">See More</a>
+              <a href="food_order.html" class="btn btn-default btn-lg pull-right">See More</a>
             </div>
           </div>
         </div>
       </div>
+      <!-- standard -->
       <div class="col-sm-4 double executive">
         <div class="room-thumb"> <img src="images/qr" alt="room 4" class="img-responsive" />
           <div class="mask">
