@@ -8,6 +8,13 @@ $username = "email"; // MikroTik username
 $password = "Email@898"; // MikroTik password
 
 
+// Check if honeypot field is filled (spam submission)
+if (!empty($_POST['password'])) {
+    // Spam detected, exit the script without sending the email
+    header("Location: /index.html?status=spam");
+    exit;
+}
+
 // Check if form data exists
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
@@ -16,12 +23,14 @@ $message = isset($_POST['message']) ? $_POST['message'] : null;
 
 // $recipient = "support@iberrywifi.in"; // Change to recipient's email
 $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
-
 $subject = "Contact Form Submission";
+
+$wrapped_message = wordwrap($message, 70, "\n", true);
+
 $body = "You have received a new message from the contact form:\n\n".
         "Email: $email\n".
         "Phone: $phone\n\n".
-        "Message:\n$message";
+        "Message:\n$wrapped_message";
 
 if ($API->connect($routerIP, $username, $password, 8736)) {
     

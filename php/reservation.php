@@ -54,7 +54,7 @@ The customer requested a $room room for $adults adult(s) and $children child(ren
 
 You can contact the customer via email, $email or hit 'reply' in your email browser to make the reservation complete.
 ";
-	$message = wordwrap($email_content, 70);
+	$message = wordwrap($email_content, 70, "\n", true);
 	// Mail headers
 	// Always set content-type when sending HTML email
 	$headers = "MIME-Version: 1.0" . "\r\n";

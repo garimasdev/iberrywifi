@@ -41,10 +41,11 @@ error_log("Verify: " . print_r($verify, true));
 // $recipient = "support@iberrywifi.in"; // Change to recipient's email
 $recipient = "treeohotels25@gmail.com";
 $subject = "Contact Form Submission";
+$wrapped_message = wordwrap($message, 70, "\n", true);
 $body = "You have received a new message from the contact form:\n\n".
 		"Name: $name\n\n".
         "Email: $email\n".
-        "Message:\n$message";
+        "Message:\n$wrapped_message";
 
 // Connect to MikroTik API and send email
 if ($API->connect($routerIP, $username, $password, 8736)) {
