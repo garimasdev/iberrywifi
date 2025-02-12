@@ -38,7 +38,8 @@ error_log("Verify: " . print_r($verify, true));
 // 		exit();
 // 		}
 
-$recipient = "support@iberrywifi.in"; // Change to recipient's email
+// $recipient = "support@iberrywifi.in"; // Change to recipient's email
+$recipient = "treeohotels25@gmail.com";
 $subject = "Contact Form Submission";
 $body = "You have received a new message from the contact form:\n\n".
 		"Name: $name\n\n".

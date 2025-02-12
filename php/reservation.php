@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		}
 
 	// Your e-mailadress.
-	$to = "support@iberrywifi.in";
+	// $to = "support@iberrywifi.in";
+	$to = "treeohotels25@gmail.com";
 
 	// Mail subject
 	$subject = "Good news! A reservation has been requested by $email";
