@@ -517,7 +517,7 @@
     .contact-form-container {
       position: absolute; 
       right: 20px; 
-      top: 26px; 
+      top: 140px; 
       background-color: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
       padding: 20px;
       border-radius: 8px;
@@ -535,6 +535,7 @@
 
     button.btn-primary {
       width: 100%;
+      height: 40px;
       padding: 12px;
       background-color: #f39c12;
       color: white;
@@ -551,19 +552,25 @@
 
 
 @media (max-width: 767px) {
+
+  .mt100 {
+    margin-top: 450px !important;
+  }
   /* Adjust position and size for mobile */
   .contact-form-container {
     position: absolute;
-    right: 20px;
-    top: -16px;
+    right: 45px;
+    top: 380px;
     width: 150px;
     margin: 0 auto;
+    height: 310px;
+    width: 340px;
   }
   
   /* Adjust the form input and button width */
   .form-input {
-    width: 109%;
-    padding: 4px;
+    width: 100%;
+    padding: 8px;
     font-size: 10px;
     margin: 4px 0;
     position: relative;
@@ -572,7 +579,7 @@
 
   button.btn-primary {
     padding: 4px;
-    font-size: 10px;
+    font-size: 18px;
   }
 }
 
@@ -771,7 +778,7 @@
             <!-- <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a>  -->
         </div>
         <!-- Contact Form (Positioned to the right of the banner) -->
-        <div class="contact-form-container">
+        <!-- <div class="contact-form-container">
           <div id="status-message" style="color: linen; display: none"></div>
           <form action="php/send_email.php" method="post" class="contact-form">
             <input type="email" name="email" placeholder="Your Email" required class="form-input">
@@ -782,10 +789,27 @@
             <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
             <button type="submit" class="btn btn-primary">Contact Us</button>
           </form>
-        </div>
+        </div> -->
       </li>
       </ul>
     </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="contact-form-container">
+    <div id="status-message" style="color: linen; display: none"></div>
+    <form action="php/send_email.php" method="post" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required class="form-input">
+      <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
+      <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
+      <input type="text" name="password" style="display:none !important" class="form-input">
+      <input type="hidden" name="form_start_time" value="<?php echo time(); ?>">
+      <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
+      <button type="submit" class="btn btn-primary">Contact Us</button>
+    </form>
   </div>
 </section>
 
