@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
 
 <!-- Javascripts --> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script> 
@@ -774,7 +775,9 @@
             <input type="email" name="email" placeholder="Your Email" required class="form-input">
             <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
             <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
-            <input type="text" name="password" style="display:none" class="form-input">
+            <input type="text" name="password" style="display:none !important" class="form-input">
+            <input type="hidden" name="form_start_time" value="<?php echo time(); ?>">
+            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
             <button type="submit" class="btn btn-primary">Contact Us</button>
           </form>
         </div>

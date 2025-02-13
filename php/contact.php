@@ -48,7 +48,7 @@ if (empty($_POST['verify']) || $_POST['verify'] != '2') {
 $recipient = "treeohotels25@gmail.com";
 $subject = "Contact Form Submission";
 $wrapped_message = wordwrap($message, 70, "\n", true);
-$body = "You have received a new message from the contact form:\n\n".
+$body = "Contact: You have received a new message from the contact form:\n\n".
 		"Name: $name\n\n".
         "Email: $email\n".
         "Message:\n$wrapped_message";

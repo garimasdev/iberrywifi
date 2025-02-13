@@ -15,6 +15,15 @@ if (!empty($_POST['password'])) {
     exit;
 }
 
+
+$form_start_time = isset($_POST['form_start_time']) ? $_POST['form_start_time'] : null;
+if ($form_start_time && (time() - $form_start_time < 3)) {
+    // Spam detected: form submitted too quickly
+    header("Location: /index.html?status=spam");
+    exit;
+}
+
+
 // Check if form data exists
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
@@ -27,7 +36,7 @@ $subject = "Contact Form Submission";
 
 $wrapped_message = wordwrap($message, 70, "\n", true);
 
-$body = "You have received a new message from the contact form:\n\n".
+$body = "Short: You have received a new message from the short contact form:\n\n".
         "Email: $email\n".
         "Phone: $phone\n\n".
         "Message:\n$wrapped_message";
