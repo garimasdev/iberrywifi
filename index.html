@@ -551,7 +551,41 @@
     }
 
 
-@media (max-width: 767px) {
+@media (min-width: 360px) and (max-width: 741px) {
+  .mt100 {
+    margin-top: 450px !important;
+  }
+  /* Adjust position and size for mobile */
+  .contact-form-container {
+    position: absolute;
+    right: 10px;
+    top: 380px;
+    width: 150px;
+    margin: 0 auto;
+    height: 310px;
+    width: 340px;
+  }
+  
+  /* Adjust the form input and button width */
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 10px;
+    margin: 4px 0;
+    position: relative;
+    top: -10px;
+  }
+
+  button.btn-primary {
+    padding: 4px;
+    font-size: 18px;
+  }
+  
+}
+
+
+
+@media (min-width: 390px) and (max-width: 844px) {
 
   .mt100 {
     margin-top: 450px !important;
@@ -559,7 +593,7 @@
   /* Adjust position and size for mobile */
   .contact-form-container {
     position: absolute;
-    right: 45px;
+    right: 25px;
     top: 380px;
     width: 150px;
     margin: 0 auto;
@@ -806,7 +840,6 @@
       <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
       <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
       <input type="text" name="password" style="display:none !important" class="form-input">
-      <input type="hidden" name="form_start_time" value="<?php echo time(); ?>">
       <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
       <button type="submit" class="btn btn-primary">Contact Us</button>
     </form>

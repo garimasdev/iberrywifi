@@ -22,19 +22,9 @@ if(intval($response_keys["success"]) !== 1) {
 
 
 
-
-
 // Check if honeypot field is filled (spam submission)
 if (!empty($_POST['password'])) {
     // Spam detected, exit the script without sending the email
-    header("Location: /index.html?status=spam");
-    exit;
-}
-
-
-$form_start_time = isset($_POST['form_start_time']) ? $_POST['form_start_time'] : null;
-if ($form_start_time && (time() - $form_start_time < 3)) {
-    // Spam detected: form submitted too quickly
     header("Location: /index.html?status=spam");
     exit;
 }
