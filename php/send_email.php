@@ -8,6 +8,22 @@ $username = "email"; // MikroTik username
 $password = "Email@898"; // MikroTik password
 
 
+$recaptcha_secret = '6Lfw6dUqAAAAAMwaKEwgJ4OVLx5_dqPoGDdO9Vq-';
+$recaptcha_response = $_POST['g-recaptcha-response'];
+
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
+$response_keys = json_decode($response, true);
+
+if(intval($response_keys["success"]) !== 1) {
+    // CAPTCHA failed
+    header("Location: /index.html?status=error");
+    exit;
+}
+
+
+
+
+
 // Check if honeypot field is filled (spam submission)
 if (!empty($_POST['password'])) {
     // Spam detected, exit the script without sending the email
