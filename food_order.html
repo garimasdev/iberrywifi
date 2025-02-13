@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
 
 <!-- Javascripts --> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script> 
@@ -737,11 +738,12 @@
     .contact-form-container {
       position: absolute; 
       right: 20px; 
-      top: 50px; 
+      top: 140px; 
       background-color: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
       padding: 20px;
       border-radius: 8px;
-      width: 300px;
+      width: 340px;
+      height: 400px;
     }
 
     .form-input {
@@ -754,6 +756,7 @@
 
     button.btn-primary {
       width: 100%;
+      height: 40px;
       padding: 12px;
       background-color: #f39c12;
       color: white;
@@ -761,6 +764,7 @@
       border-radius: 4px;
       font-size: 16px;
       cursor: pointer;
+      margin-top: 15px;
     }
 
     button.btn-primary:hover {
@@ -768,27 +772,70 @@
     }
 
 
-@media (max-width: 767px) {
+
+@media (min-width: 360px) and (max-width: 741px) {
+  .mt100 {
+    margin-top: 450px !important;
+  }
   /* Adjust position and size for mobile */
   .contact-form-container {
     position: absolute;
-    right: 20px;
-    top: -16px;
+    right: 10px;
+    top: 380px;
     width: 150px;
     margin: 0 auto;
+    height: 310px;
+    width: 340px;
   }
   
   /* Adjust the form input and button width */
   .form-input {
-    width: 109%;
-    padding: 4px;
+    width: 100%;
+    padding: 8px;
     font-size: 10px;
     margin: 4px 0;
+    position: relative;
+    top: -10px;
   }
 
   button.btn-primary {
     padding: 4px;
+    font-size: 18px;
+  }
+  
+}
+
+
+
+@media (min-width: 390px) and (max-width: 844px) {
+
+  .mt100 {
+    margin-top: 450px !important;
+  }
+  /* Adjust position and size for mobile */
+  .contact-form-container {
+    position: absolute;
+    right: 25px;
+    top: 380px;
+    width: 150px;
+    margin: 0 auto;
+    height: 310px;
+    width: 340px;
+  }
+  
+  /* Adjust the form input and button width */
+  .form-input {
+    width: 100%;
+    padding: 8px;
     font-size: 10px;
+    margin: 4px 0;
+    position: relative;
+    top: -10px;
+  }
+
+  button.btn-primary {
+    padding: 4px;
+    font-size: 18px;
   }
 }
 
@@ -970,12 +1017,13 @@
 
 
 <!-- Revolution Slider -->
+<!-- Revolution Slider -->
 <section class="revolution-slider" id="revolution-slider">
   <div class="bannercontainer">
     <div class="banner">
       <ul>
         <!-- Slide 1 -->
-        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height: 250px;"> 
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height: 125%;"> 
           <!-- Main Image --> 
           <img src="images/banner.jpg" style="opacity:0; height: 150px;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
           <!-- Layers -->    
@@ -989,19 +1037,25 @@
             style="height: 150px;">
             <!-- <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a>  -->
         </div>
-        <!-- Contact Form (Positioned to the right of the banner) -->
-        <div id="status-message"></div>
-        <div class="contact-form-container">
-          <form action="php/send_email.php" method="post" class="contact-form">
-            <input type="email" name="email" placeholder="Your Email" required class="form-input">
-            <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
-            <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
-            <button type="submit" class="btn btn-primary">Contact Us</button>
-          </form>
-        </div>
       </li>
       </ul>
     </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="contact-form-container">
+    <div id="status-message" style="color: linen; display: none"></div>
+    <form action="php/send_email.php" method="post" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required class="form-input">
+      <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
+      <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
+      <input type="text" name="password" style="display:none !important" class="form-input">
+      <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
+      <button type="submit" class="btn btn-primary">Contact Us</button>
+    </form>
   </div>
 </section>
 

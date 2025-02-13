@@ -434,11 +434,12 @@
     .contact-form-container {
       position: absolute; 
       right: 20px; 
-      top: 50px; 
+      top: 140px; 
       background-color: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
       padding: 20px;
       border-radius: 8px;
-      width: 300px;
+      width: 340px;
+      height: 400px;
     }
 
     .form-input {
@@ -451,6 +452,7 @@
 
     button.btn-primary {
       width: 100%;
+      height: 40px;
       padding: 12px;
       background-color: #f39c12;
       color: white;
@@ -458,6 +460,7 @@
       border-radius: 4px;
       font-size: 16px;
       cursor: pointer;
+      margin-top: 15px;
     }
 
     button.btn-primary:hover {
@@ -465,27 +468,70 @@
     }
 
 
-@media (max-width: 767px) {
+
+@media (min-width: 360px) and (max-width: 741px) {
+  .mt100 {
+    margin-top: 450px !important;
+  }
   /* Adjust position and size for mobile */
   .contact-form-container {
     position: absolute;
-    right: 20px;
-    top: -16px;
+    right: 10px;
+    top: 380px;
     width: 150px;
     margin: 0 auto;
+    height: 310px;
+    width: 340px;
   }
   
   /* Adjust the form input and button width */
   .form-input {
-    width: 109%;
-    padding: 4px;
+    width: 100%;
+    padding: 8px;
     font-size: 10px;
     margin: 4px 0;
+    position: relative;
+    top: -10px;
   }
 
   button.btn-primary {
     padding: 4px;
+    font-size: 18px;
+  }
+  
+}
+
+
+
+@media (min-width: 390px) and (max-width: 844px) {
+
+  .mt100 {
+    margin-top: 450px !important;
+  }
+  /* Adjust position and size for mobile */
+  .contact-form-container {
+    position: absolute;
+    right: 25px;
+    top: 380px;
+    width: 150px;
+    margin: 0 auto;
+    height: 310px;
+    width: 340px;
+  }
+  
+  /* Adjust the form input and button width */
+  .form-input {
+    width: 100%;
+    padding: 8px;
     font-size: 10px;
+    margin: 4px 0;
+    position: relative;
+    top: -10px;
+  }
+
+  button.btn-primary {
+    padding: 4px;
+    font-size: 18px;
   }
 }
 
@@ -811,19 +857,6 @@
             style="height: 150px;">
             <!-- <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a>  -->
         </div>
-        <!-- Contact Form (Positioned to the right of the banner) -->
-        <!-- <div class="contact-form-container">
-          <div id="status-message" style="color: linen; display: none"></div>
-          <form action="php/send_email.php" method="post" class="contact-form">
-            <input type="email" name="email" placeholder="Your Email" required class="form-input">
-            <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
-            <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
-            <input type="text" name="password" style="display:none !important" class="form-input">
-            <input type="hidden" name="form_start_time" value="<?php echo time(); ?>">
-            <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
-            <button type="submit" class="btn btn-primary">Contact Us</button>
-          </form>
-        </div> -->
       </li>
       </ul>
     </div>
