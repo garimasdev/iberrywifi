@@ -1414,37 +1414,8 @@ function toggleIcons() {
     iconContainer.classList.toggle('open');
 }
 
-</script>
 
-
-<script>
-  window.onload = function() {
-    // Check if the "status" query parameter is present
-    const urlParams = new URLSearchParams(window.location.search);
-    const status = urlParams.get('status');
-
-    if (status === 'success') {
-      // alert("Your message has been sent successfully!");
-      // Optionally, you can display a success message within the page:
-      document.getElementById("status-message").innerText = "Your message has been sent successfully!";
-    } else if (status === 'error') {
-      alert("There was an issue sending your message. Please try again.");
-    }
-  };
-</script>
-<script>
-$('#copyR').html(new Date().getFullYear());
-
-// Function to toggle the icons container visibility
-function toggleIcons() {
-    const iconContainer = document.querySelector('.floating-icon');
-    iconContainer.classList.toggle('open');
-}
-
-</script>
-
-
-<script>
+// function for contact form 
   window.onload = function() {
     // Check if the "status" query parameter is present
     const urlParams = new URLSearchParams(window.location.search);
