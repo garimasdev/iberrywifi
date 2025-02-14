@@ -1067,7 +1067,7 @@
     <div id="status-message" style="color: linen; display: none"></div>
     <form action="php/send_email.php" method="post" class="contact-form">
       <input type="email" name="email" placeholder="Your Email" required class="form-input">
-      <input type="tel" name="phone" placeholder="Your Phone" required class="form-input">
+      <input type="tel" name="phone" placeholder="Your Phone" required class="form-input" maxlength="10" pattern="\d{10}">
       <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
       <input type="text" name="password" style="display:none !important" class="form-input">
       <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
