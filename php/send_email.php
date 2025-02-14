@@ -47,12 +47,12 @@ if (strlen($phone) > 10) {
 $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";
 
-$wrapped_message = wordwrap($message, 70, "\n", true);
+// $wrapped_message = wordwrap($message, 70, "\n", true);
 
 $body = "Short: You have received a new message from the short contact form:\n\n".
         "Email: $email\n".
         "Phone: $phone\n\n".
-        "Message:\n$wrapped_message";
+        "Message:\n$message";
 
 if ($API->connect($routerIP, $username, $password, 8736)) {
     
