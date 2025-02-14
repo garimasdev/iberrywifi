@@ -35,6 +35,13 @@ $email = isset($_POST['email']) ? $_POST['email'] : null;
 $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
 
+$phone = preg_replace('/\D/', '', $phone);
+
+if (strlen($phone) > 10) {
+    echo "Phone number cannot exceed 10 digits.";
+    exit; // Stop further processing
+}
+
 
 $recipient = "support@iberrywifi.in"; // Change to recipient's email
 // $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
