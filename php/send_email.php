@@ -36,8 +36,8 @@ $phone = isset($_POST['phone']) ? $_POST['phone'] : null;
 $message = isset($_POST['message']) ? $_POST['message'] : null;
 
 
-// $recipient = "support@iberrywifi.in"; // Change to recipient's email
-$recipient = "treeohotels25@gmail.com"; // Change to recipient's email
+$recipient = "support@iberrywifi.in"; // Change to recipient's email
+// $recipient = "treeohotels25@gmail.com"; // Change to recipient's email
 $subject = "Contact Form Submission";
 
 $wrapped_message = wordwrap($message, 70, "\n", true);
