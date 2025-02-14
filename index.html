@@ -871,9 +871,9 @@
   <div class="contact-form-container">
     <div id="status-message" style="color: linen; display: none"></div>
     <form action="php/send_email.php" method="post" class="contact-form">
-      <input type="email" name="email" placeholder="Your Email" required class="form-input" id="email">
+      <input type="email" name="email" placeholder="Your Email" required class="form-input" id="email" maxlength="20">
       <input type="tel" name="phone" placeholder="Your Phone" required class="form-input" maxlength="10" pattern="\d{10}">
-      <textarea name="message" placeholder="Your Message" required class="form-input"></textarea>
+      <textarea name="message" placeholder="Your Message" required class="form-input" maxlength="150"></textarea>
       <input type="text" name="password" style="display:none !important" class="form-input">
       <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
       <button type="submit" class="btn btn-primary">Contact Us</button>
@@ -1454,15 +1454,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     // Get the email input value
     const emailContent = document.getElementById('email').value;
     const phone = document.getElementById('phone').value.trim();
+    const message = document.querySelector('textarea[name="message"]').value.trim();
 
     
-    // Count the number of words in the email input
-    const wordCount = emailContent.trim().split(/\s+/).length;
+    // Count the number of words in the message input
+    const wordCount = message.split(/\s+/).filter(function(word) {
+      return word.length > 0;
+    }).length;
     const urlPattern = /https?:\/\/[^\s]+|www\.[^\s]+/;
     
     // If the number of words exceeds 50, prevent form submission
-    if (wordCount > 50 || phone.length > 10 || urlPattern.test(emailContent)) {
-      alert('Email content cannot exceed 50 words and phone number cannot exceed 10 digits..');
+    if (wordCount > 50 || phone.length > 10 || urlPattern.test(message)) {
+      alert('Message cannot exceed 50 words and phone number cannot exceed 10 digits..');
       e.preventDefault();  // Prevent form submission
     }
   });
