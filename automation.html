@@ -11,7 +11,8 @@
 
 <!-- Stylesheets -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<!-- Font Awesome 6 CDN Link -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -403,7 +404,7 @@
   
   .industry-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
       position: relative;
   }
@@ -466,12 +467,11 @@
   .industry-item p {
       position: relative;
       z-index: 1;
-      font-size: 15px;
+      font-size: 16px;
       color: #6c757d;
       line-height: 1.7;
       margin: 0;
       transition: transform 0.3s ease;
-      text-align: justify;
   }
   
   /* Floating Animation */
@@ -540,7 +540,7 @@
   
   .why-choose-section .image-container img {
       width: 100%;
-      margin-top: 120px;
+      margin-top: 35px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -694,45 +694,62 @@
 
 
 
-/* Adding FAQ specific styles */
-.faq-section {
-    background: #f9f9f9;
-    padding: 60px 0;
-    margin-top: 40px;
+ /* floating contact icon */
+  /* Floating Icon Button */
+  .floating-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Move the icon to the left side */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+.floating-icon i {
+    font-size: 28px;
+    background-color: #5db3b6;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.faq-item {
-    background: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* Hidden container for additional icons */
+.floating-icons-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.faq-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.faq-question {
-    font-weight: 600;
-    color: #333;
+/* Styling the individual icons */
+.floating-icons-container a {
+    color: white;
+    /* padding: 10px; */
+    border-radius: 50%;
     margin-bottom: 10px;
-    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.faq-answer {
-    color: #666;
-    line-height: 1.6;
-    font-size: 16px;
+.floating-icons-container a:hover {
+    transform: scale(1.1);
 }
+
+/* Toggle icons */
+.floating-icon.open .floating-icons-container {
+    display: flex;
+}
+
+.floating-icon.open i {
+    transform: rotate(45deg);
+}
+
+
+
 
    /* Style the contact form */
     .contact-form-container {
@@ -777,7 +794,6 @@
   .intro-section {
     margin-top: 320px;
   }
-  
   .mt100 {
     margin-top: 450px !important;
   }
@@ -1022,7 +1038,7 @@
 </header>
 
 
-<!-- Revolution Slider -->
+
 <!-- Revolution Slider -->
 <section class="revolution-slider" id="revolution-slider">
   <div class="bannercontainer">
@@ -1068,21 +1084,21 @@
 
 
 
-<!-- done -->
+<!-- DONE -->
 <!-- Introduction Section -->
 <section class="intro-section">
   <div class="intro-container">
       <div class="section-title">
-          <h1>Revolutionizing Food Ordering</h1>
-          <h2>Innovative QR and URL-Based System for Seamless Ordering</h2>
+          <h1>Automation Revolution Solutions</h1>
+          <h2>Transform Your Space with Seamless Automation: Bluetooth Beacons Meet LoRaWAN Innovation</h2>
       </div>
       <div class="row">
           <div class="col-md-6 image-container">
-              <img src="images/food4.webp" alt="Food Ordering System" class="image-left">
+              <img src="images/automation.webp" alt="WiFi Solutions" class="image-left">
           </div>
           <div class="col-md-6 intro-content text-content">
-            <p>In today’s fast-paced world, convenience and efficiency are essential to delivering exceptional customer experiences. At <strong style="color: #5db3b6;">Iberry WiFi Corporation</strong>, we’ve developed an <strong style="color: #5db3b6;">innovative QR and URL-based food ordering system</strong> that transforms the way customers order food—whether they’re in hotel rooms, at restaurant tables, or in nearby outdoor areas.</p>
-            <p>Our system eliminates the need for traditional menus, wait staff intervention, and long waiting times. With just a scan or a click, customers can browse menus, place orders, and make payments effortlessly. For businesses, this means streamlined operations, reduced costs, and happier customers.</p>
+            <p>Welcome to the future of smart living and working. At Iberry WiFi Security, we blend cutting-edge **Bluetooth beacon technology** and **LoRaWAN solutions** to create intelligent, responsive environments that adapt to your needs—whether at home, in the office, or across large campuses. Say goodbye to manual hassles and hello to *automagical* efficiency.</p>
+            <p>Office automation encompasses a range of technologies designed to streamline operations, enhance security, and improve efficiency within the workplace. Key examples include biometric attendance systems, beacon technology, and smart locks. Implementing these technologies can significantly improve operational efficiency, enhance security, and create a more responsive and adaptive office environment.</p>
           </div>
       </div>
   </div>
@@ -1090,202 +1106,220 @@
 
 
 
-
-
-<section class="why-choose-section">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-              <div class="section-title">
-                  <h2>How It Works For You?</h2>
-              </div>
-              <div class="text-content">
-                  <p><strong>Generate QR Codes & URLs:</strong> We create unique QR codes and URLs for your business, linked to your customized digital menu and ordering platform.</p>
-                  <p><strong>Display QR Codes:</strong> Place QR codes in hotel rooms, on restaurant tables, or in outdoor areas like parks and food courts.</p>
-                  <p><strong>Customers Scan or Click:</strong> Customers scan the QR code with their smartphone or click the URL to access your menu and ordering system.</p>
-                  <p><strong>Place Orders & Pay:</strong> Customers browse the menu, select items, and place orders directly through the platform. Integrated payment options make checkout quick and easy.</p>
-                  <p><strong>Order Fulfillment:</strong> Orders are sent directly to your kitchen or staff for preparation and delivery.</p>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="image-container">
-                  <img src="images/how.png" alt="Professional Food Ordering System">
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- done -->
-<!-- Key Features Section -->
-<section class="benefits-section">
+<!-- Core Services Section -->
+<!-- <section class="service-section">
   <div class="container">
       <div class="section-title">
-          <h1>Key Features of Our Food Ordering System</h1>
-          <h2>Why Choose Our Innovative Solution?</h2>
+          <h1>Our WiFi Installation Services</h1>
+          <h2>Comprehensive Solutions for Every Need</h2>
       </div>
       <div class="row">
           <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-bookmark"></i>
-                  <h4><strong>Customizable Digital Menus</strong></h4>
-                  <p>Showcase your offerings with high-quality images, descriptions, and pricing. Easily update menus in real-time.</p>
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi2.png" alt="Access Point Installation">
+                  </div>
+                  <div class="service-content">
+                      <h3>Access Point Installation</h3>
+                      <p>Strategic placement of access points for maximum coverage and minimal dead zones. Perfect for large homes, offices, hotels, and public spaces.</p>
+                  </div>
               </div>
           </div>
           <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-credit-card"></i>
-                  <h4><strong>Contactless Ordering & Payment</strong></h4>
-                  <p>Reduce physical contact and enhance safety with a fully contactless experience.</p>
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi4.png" alt="Network Setup">
+                  </div>
+                  <div class="service-content">
+                      <h3>Network Setup & Configuration</h3>
+                      <p>Full setup of routers, switches, and networking equipment with custom configurations to optimize speed, security, and performance.</p>
+                  </div>
               </div>
           </div>
           <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-clock"></i>
-                  <h4><strong>Real-Time Order Tracking</strong></h4>
-                  <p>Customers can track their order status, from preparation to delivery.</p>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-gift"></i>
-                  <h4><strong>Loyalty Programs & Promotions</strong></h4>
-                  <p>Integrate loyalty programs, discounts, and special offers to boost customer engagement.</p>
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="images/wifi3.png" alt="Mesh WiFi Systems">
+                  </div>
+                  <div class="service-content">
+                      <h3>Mesh WiFi Systems</h3>
+                      <p>Install mesh networks for seamless coverage across large areas. Perfect for multi-story buildings, warehouses, and outdoor spaces.</p>
+                  </div>
               </div>
           </div>
       </div>
   </div>
+</section> -->
+
+
+
+
+
+<!-- Industries we serve -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-title">
+            <h1>Industries We Revolutionize</h1>
+            <!-- <h2>Why Choose Our Comprehensive Solutions?</h2> -->
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-building"></i>
+                    <h4><strong>Offices</strong></h4>
+                    <p>Optimize workspace utilization, reduce energy waste, and enhance employee productivity</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-store"></i>
+                    <h4><strong>Retail</strong></h4>
+                    <p>Deliver personalized promotions via beacons and monitor inventory with LoRaWAN</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-heart-pulse"></i>
+                    <h4><strong>Healthcare</strong></h4>
+                    <p>Track medical equipment (BLE) and monitor patient outdoor areas (LoRaWAN)</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-home"></i>
+                    <h4><strong>Smart Homes</strong></h4>
+                    <p>Secure, energy-efficient living with voice-controlled convenience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+  
 
 
 
 
-<!-- done -->
 <!-- Why Choose Us Section -->
 <section class="why-choose-section">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-              <div class="section-title">
-                  <h2>Why Choose Iberry WiFi Corporation?</h2>
-              </div>
-              <div class="text-content">
-                  <p>Choosing <strong style="color: #5db3b6;">Iberry WiFi Corporation</strong> means opting for a partner that prioritizes innovation and customer satisfaction. We utilize state-of-the-art technology to streamline food ordering processes and elevate the overall dining experience. Our solutions are highly customizable, designed to cater to the specific requirements of any business, from quaint cafés to expansive hotel chains.</p>
-                  <p>Additionally, our systems are engineered for seamless integration, ensuring a smooth connection with your existing infrastructure, including POS systems and payment gateways. With our dedicated support team available around the clock, you can count on us for assistance with setup, customization, and any troubleshooting needs that may arise.</p>
-                  <p>By selecting <strong style="color: #5db3b6;">Iberry WiFi Corporation</strong>, you are investing in a reliable and efficient solution that enhances your business operations and boosts customer satisfaction.</p>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="image-container">
-                  <img src="images/food.png" alt="Professional Firewall Installation">
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-title">
+                    <h2>Why Collaborate with Us?</h2>
+                </div>
+                <div class="text-content">
+                    <p>Partnering with <strong style="color: #5db3b6;">Iberry WiFi Security</strong>, means receiving tailored designs that are specifically mapped to your unique workflow, ensuring that our solutions fit your needs perfectly. We provide end-to-end support, managing everything from installation to app integration, so you can focus on your core business. Our commitment to enterprise-grade security ensures that your data is protected through encrypted networks, giving you peace of mind. Additionally, we prioritize sustainability by helping you reduce energy bills and minimize your carbon footprint, making our solutions not only effective but also environmentally responsible.</p>
+                    <p>Our goal is to empower your business to succeed, and we're committed to helping you achieve your goals through our tailored approach and unwavering support. We provide 24/7 support, ensuring that our team is always ready to assist you with setup, maintenance, and any troubleshooting needs that may arise.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="images/automation2.webp" alt="Professional Firewall Installation">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
   
 
 
 
-<!-- done -->
+
 <!-- Industries Section -->
 <section class="industries-section">
-  <div class="container">
-      <div class="industry-section-title">
-          <h1>Industries We Serve</h1>
-          <h2>Personalized QR and URL-Based Food Ordering Solutions for Every Sector</h2>
-      </div>
-      <div class="industry-grid">
-          <div class="industry-item">
-              <i class="bi bi-house-door-fill fa-2x"></i>
-              <h4><strong>Hotels</strong></h4>
-              <p>Allow guests to order room service or dine at your restaurant without leaving their rooms. Enhance guest satisfaction with convenient modern order experience.</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-cutlery fa-2x"></i>
-              <h4><strong>Restaurants</strong></h4>
-              <p>Enable customers to order and pay directly from their tables, reducing wait times and improving table turnover. Offer contactless dining experience for added safety.</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-pagelines fa-2x"></i>
-              <h4><strong>Outdoor Food Orders</strong></h4>
-              <p>Set up QR codes in parks, food courts, or event venues to allow customers to order from nearby eateries. Expand your reach & attract more customers.</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-coffee fa-2x"></i>
-              <h4><strong>Cafes & Quick-Service Restaurants</strong></h4>
-              <p>Speed up order processing during peak hours with self-service ordering. Reduce queues and improve customer satisfaction.</p>
-          </div>
-      </div>
-  </div>
-</section>
-
+    <div class="container">
+        <div class="industry-section-title">
+            <h1>Industries We Serve</h1>
+            <h2>Personalized Firewall Solutions for Every Sector</h2>
+        </div>
+        <div class="industry-grid">
+            <div class="industry-item">
+                <i class="bi bi-house-door-fill"></i>
+                <h4><strong>Schools and Educational Institutions</strong></h4>
+                <p>Create a safe online environment for students by blocking inappropriate content, whitelisting educational websites and tools to support learning, and protecting against cyber threats with intrusion detection and prevention.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-hospital-o fa-2x"></i>
+                <h4><strong>Hotels and Resorts</strong></h4>
+                <p>Enhance guest experience with fast and secure Wi-Fi access, promote hotel amenities, events, or loyalty programs through splash pages, and safeguard your network from cyberattacks and unauthorized access.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-graduation-cap fa-2x"></i>
+                <h4><strong>Restaurants and Cafes</strong></h4>
+                <p>Attract customers with free Wi-Fi and display special offers or menus on the splash page, block access to bandwidth-heavy sites (e.g., video streaming) to ensure fair usage, and protect customer data and prevent network breaches.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-shopping-cart fa-2x"></i>
+                <h4><strong>Malls and Retail Centers</strong></h4>
+                <p>Provide shoppers with a seamless browsing experience while promoting store discounts and events, use category-based filtering to block harmful or inappropriate content, and detect and prevent cyber threats in real-time.</p>
+            </div>
+  
+            <div class="industry-item">
+                <i class="fa fa-building fa-2x"></i>
+                <h4><strong>Hospitals and Clinics</strong></h4>
+                <p>Offer patients and visitors secure internet access while displaying important health information or hospital policies, block access to non-medical or distracting websites in patient areas, and protect sensitive patient data with advanced intrusion detection and prevention.</p>
+            </div>
+  
+            <div class="industry-item">
+                <i class="fa fa-home fa-2x"></i>
+                <h4><strong>Corporate Offices</strong></h4>
+                <p>Provide employees and guests with secure Wi-Fi access while maintaining control over network usage, restrict access to non-work-related sites to improve productivity, and safeguard corporate data from cyber threats and breaches.</p>
+            </div>
+  
+            <!-- <div class="industry-item">
+                <i class="fa fa-map-marker fa-2x"></i>
+                <h4><strong>Public Spaces (Airports, Parks, Libraries)</strong></h4>
+                <p>Deliver reliable internet access to the public with customizable splash pages for announcements or advertisements, use category-based filtering to ensure a safe and family-friendly browsing experience, and protect users from malicious activities and cyberattacks.</p>
+            </div> -->
+        </div>
+    </div>
+  </section>
   
 
 
-<!-- done -->
-<!-- Features of food order -->
+
+  <!-- DONE -->
+<!-- why choose automation -->
 <section class="custom-why-choose-section">
-  <div class="container">
-      <div class="custom-row">
-          <div class="col-md-6 left-content">
-              <div class="section-title">
-                  <h2>Key Features Food Ordering System</h2>
-              </div>
-              <div class="text-content">
-                  <p>Implementing our solutions can significantly enhance your business operations and customer satisfaction. By offering a modern and hassle-free ordering experience, you can delight your customers and keep them coming back. Our system increases efficiency by reducing wait times, minimizing errors, and streamlining the order processing workflow.</p>
-                  <p>Additionally, you can achieve cost savings by cutting down on printing expenses for menus and decreasing the need for extra staff. Our platform also provides valuable data insights, allowing you to understand customer preferences and ordering patterns, which can help you optimize your menu offerings. Versatile in nature, our solutions are ideal for a variety of settings, including hotels, restaurants, cafes, food courts, and outdoor events, making it a perfect fit for any business looking to improve its service.
-              </div>
-          </div>
-          <div class="col-md-6 right-image">
-              <div class="image-container">
-                  <img src="images/food2.png" alt="Professional Firewall Installation">
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="custom-row">
+            <!-- First Section: BLE -->
+            <div class="col-md-6 left-content">
+                <div class="section-title">
+                    <h2>Why Choose Our Automation Solutions?</h2>
+                </div>
+                <div class="text-content">
+                    <p><strong style="color: #75cccf;">The Power of Combining BLE + LoRaWAN</strong> The Power of Combining BLE + LoRaWAN creates a robust 360° automation ecosystem. BLE excels in indoor precision, while LoRaWAN effectively manages broader outdoor areas. This synergy enables hybrid use cases, such as tracking tools in a warehouse, smart lighting with BLE and monitoring delivery trucks, for garden irrigation in a smart home with LoRaWAN. </p>
+                    <p><strong style="color: #5db3b6;">Bluetooth Low Energy (BLE) Beacons</strong> At Iberry Wifi Corporation, our Bluetooth Low Energy (BLE) beacons serve as your proximity-powered assistant, enabling smart lighting and climate control, indoor navigation, asset tracking, and personalized experiences that enhance user interaction. For instance, in an office setting, beacons can automatically adjust lighting and AV systems when a conference room is occupied, providing a seamless and efficient environment.</p>
+                </div>
+            </div>
+            <div class="col-md-6 right-image">
+                <div class="image-container">
+                    <img src="images/ble.webp" alt="Bluetooth Low Energy Beacons">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Second Section: LoRaWAN -->
+            <div class="col-md-6 left-image">
+                <div class="image-container">
+                    <img src="images/lora2.webp" alt="LoRaWAN Technology">
+                </div>
+            </div>
+            <div class="col-md-6 right-content">
+                <div class="text-content">
+                    <p><strong style="color: #5db3b6;">LoRaWAN (Long Range Wide Area Network)</strong> acts as the backbone of long-range automation, making it ideal for outdoor security, energy management, environmental monitoring, and smart agriculture. An example use case includes LoRaWAN sensors detecting a water leak in a smart home and instantly alerting your phone, even from miles away. This technology ensures effective monitoring and management across vast areas, providing peace of mind and convenience.</p>
+                    <p>Additionally, this reduces infrastructure costs by applying the right technology for specific tasks and offers future-proof flexibility, allowing seamless integration with existing systems like Alexa, Google Home, and various enterprise IoT platforms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-
-
-<!-- done -->
-<!-- FAQ Section -->
-<section class="faq-section">
-  <div class="container">
-      <div class="section-title">
-          <h1>Frequently Asked Questions</h1>
-          <h2>Common Questions About Our Food Ordering System</h2>
-      </div>
-      <div class="faq-container">
-          <div class="faq-item">
-              <div class="faq-question">Q: Do customers need to download an app to use this system?</div>
-              <div class="faq-answer">A: No! Our system works directly through a web interface—no apps or downloads required.</div>
-          </div>
-          <div class="faq-item">
-              <div class="faq-question">Q: Can I update my menu in real-time?</div>
-              <div class="faq-answer">A: Yes, you can easily update your menu, prices, and promotions in real-time through the admin panel.</div>
-          </div>
-          <div class="faq-item">
-              <div class="faq-question">Q: Is the system secure for payments?</div>
-              <div class="faq-answer">A: Absolutely! We integrate secure payment gateways to ensure safe and seamless transactions.</div>
-          </div>
-          <div class="faq-item">
-              <div class="faq-question">Q: How do I get started?</div>
-              <div class="faq-answer">A: Contact us to schedule a consultation. We’ll create a customized solution for your business and handle the setup from start to finish.</div>
-          </div>
-      </div>
-  </div>
-</section>
 
 
 
@@ -1409,8 +1443,6 @@ function toggleIcons() {
     }
   };
 </script>
-<script>
-$('#copyR').html(new Date().getFullYear());
-</script>
+
 </body>
 </html>
