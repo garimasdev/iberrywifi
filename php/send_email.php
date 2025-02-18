@@ -65,7 +65,7 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     $API->read();
     
     // echo "Email sent successfully!";
-    // header("Location: /index.html?status=success");
+    header("Location: /index.html?status=success");
     echo("Your mail has been sent successfully! We will contact you shortly.")
     $API->disconnect();
     exit;
