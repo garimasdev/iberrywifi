@@ -963,6 +963,7 @@ header #logo {
 	display: block;
 	position: relative;
 	width: 100%;
+	height: 90%;
 	border-bottom: 1px solid #ebebeb;
 }
 .room-thumb .main {
