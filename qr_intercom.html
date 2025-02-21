@@ -499,7 +499,7 @@ h3.section-title::after {
   }
 
   h3.section-title {
-    font-size: 28px;
+    margin-left: 0px;
   }
 
   .benefit-paragraph {
@@ -819,10 +819,6 @@ h3.section-title::after {
 
 
 @media (min-width: 360px) and (max-width: 741px) {
-  .introduction-section {
-    margin-top: 320px;
-  }
-
   .mt100 {
     margin-top: 450px !important;
   }
@@ -967,6 +963,199 @@ h3.section-title::after {
 }
 
 
+
+
+
+/* Mobile-first responsive styles */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  #top-header {
+    display: none; /* Hide top header on mobile */
+  }
+  
+  .navbar-brand {
+    padding: 5px;
+  }
+  
+  #logo img {
+    height: 60px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Revolution slider */
+  .revolution-slider {
+    height: auto !important;
+  }
+
+  /* Introduction section */
+  .introduction-section {
+    padding: 30px 15px;
+  }
+
+  .introduction-section h1 {
+    font-size: 2rem !important;
+  }
+
+  .introduction-section h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* How it works section */
+  .grid-how {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    padding: 0 15px;
+  }
+
+  .how-it-works-step {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Key features section */
+  .key-features {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 30px 15px !important;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .feature-item {
+    width: 100% !important;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  /* Benefits section */
+  .benefits-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 30px 15px !important;
+  }
+
+  .container-benefits {
+    width: 100% !important;
+  }
+
+  .benefit-paragraph {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: auto !important;
+  }
+
+  .image-content {
+    margin-left: 0 !important;
+  }
+
+  .image-content img {
+    max-width: 100% !important;
+    margin-left: 20px;
+  
+  }
+
+  .slick-img {
+    margin-left: 300px !important;
+  }
+  
+  /* Industries section */
+  .industries-box {
+    width: 100% !important;
+  }
+
+  .section-industries .grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 15px;
+  }
+
+  /* FAQs section */
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact form */
+  .contact-form-container {
+    position: relative !important;
+    width: 90% !important;
+    height: 100%;
+    margin: 20px auto !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
+  .form-input {
+    font-size: 16px !important; /* Better for mobile input */
+  }
+
+  /* General spacing adjustments */
+  .px-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mb-16 {
+    margin-bottom: 3rem;
+  }
+
+  .gap-6 {
+    gap: 2rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .key-features,
+  .benefits-section {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .container-benefits {
+    width: 100% !important;
+  }
+
+  .grid-how {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .industries-box {
+    width: 100% !important;
+  }
+}
+
+/* Additional performance optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.transition-all {
+  will-change: transform;
+}
+
+img {
+  content-visibility: auto;
+}
+
+
 </style>
 </head>
 <body>
@@ -1063,7 +1252,7 @@ h3.section-title::after {
 </header>
 
 
-<!-- Revolution Slider -->
+
 <!-- Revolution Slider -->
 <section class="revolution-slider" id="revolution-slider">
   <div class="bannercontainer">
@@ -1091,7 +1280,7 @@ h3.section-title::after {
 </section>
 
 
-
+<!-- contactus -->
 <section>
   <div class="contact-form-container">
     <div id="status-message" style="color: linen; display: none"></div>
@@ -1126,7 +1315,7 @@ h3.section-title::after {
             <a class="btn btn-default btn-lg pull-left">Contact Us</a>
           </div>
           <div class="image-content">
-            <img src="/images/intercom2.png" alt="QR Intercom System" />
+            <img src="/images/Intercom_qr.webp" alt="QR Intercom System" />
           </div>
         </div>
       </div>
@@ -1389,7 +1578,7 @@ h3.section-title::after {
             </p>
           </div>
           <div class="image-content" style="margin-left: -280px !important">
-            <img src="images/intercom3.webp" alt="QR Intercom System" style="max-width: 60%;"/>
+            <img class="slick-img" src="images/intercom3.webp" alt="QR Intercom System" style="max-width: 60%;"/>
           </div>
         </div>
       </div>
@@ -1424,7 +1613,7 @@ h3.section-title::after {
 
 
 <!-- Call To Action -->
-<section id="call-to-action" class="mt100">
+<section id="call-to-action">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-8 col-xs-12">
