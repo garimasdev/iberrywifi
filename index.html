@@ -875,7 +875,8 @@
 <!-- contact us -->
 <section>
   <div class="contact-form-container">
-    <form id="contact-form" action="php/send_email.php" method="post" class="contact-form form-inline reservation-horizontal clearfix">
+    <form id="reservationform" action="php/send_email.php" method="post" class="contact-form form-inline reservation-horizontal clearfix">
+      <div id="message"></div>
       <input type="email" name="email" placeholder="Your Email" required class="form-input" id="email" maxlength="20">
       <input type="tel" name="phone" placeholder="Your Phone" required class="form-input" maxlength="10" pattern="\d{10}">
       <textarea name="message" placeholder="Your Message" required class="form-input" maxlength="150"></textarea>

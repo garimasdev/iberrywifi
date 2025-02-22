@@ -63,15 +63,12 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     $API->write("=body={$body}", true);
     
     $API->read();
-    
-    // echo "Email sent successfully!";
-    header("Location: /index.html?status=success");
+
+    echo"<p>Your message has been sent successfully. We will contact you shortly!</p>";    
     $API->disconnect();
-    exit;
     
 } else {
-    // echo "Failed to connect to MikroTik API!";
-    header("Location: /index.html?status=error");
+    echo "<p>Oops! Something went wrong and we couldn't send your reservation.</p>";
     exit;
 
 }
