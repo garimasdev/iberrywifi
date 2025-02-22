@@ -875,8 +875,7 @@
 <!-- contact us -->
 <section>
   <div class="contact-form-container">
-    <div id="status-message" style="color: linen; display: none"></div>
-    <form action="php/send_email.php" method="post" class="contact-form form-inline reservation-horizontal clearfix">
+    <form id="contact-form" action="php/send_email.php" method="post" class="contact-form form-inline reservation-horizontal clearfix">
       <input type="email" name="email" placeholder="Your Email" required class="form-input" id="email" maxlength="20">
       <input type="tel" name="phone" placeholder="Your Phone" required class="form-input" maxlength="10" pattern="\d{10}">
       <textarea name="message" placeholder="Your Message" required class="form-input" maxlength="150"></textarea>
@@ -1461,43 +1460,24 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   });
 
 
- // Function to display messages based on URL status
- // Function to display messages based on URL status
-function showStatusMessage() {
+
+
+// Function to check for the status parameter and show an alert
+function showAlertOnLoad() {
+    // Get the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const status = urlParams.get('status');
 
-    // If there's a status in the URL, save it to sessionStorage
-    if (status) {
-        sessionStorage.setItem('formStatus', status);
-        // Remove the status from the URL to avoid showing it again on refresh
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }
-
-    // Retrieve the status from sessionStorage
-    const savedStatus = sessionStorage.getItem('formStatus');
-
-    if (savedStatus === 'success') {
+    // Show an alert based on the status
+    if (status === 'success') {
         alert('Your mail has been sent successfully! We will contact you shortly.');
-        // Clear the status from sessionStorage after displaying
-        sessionStorage.removeItem('formStatus');
-    } else if (savedStatus === 'error') {
+    } else if (status === 'error') {
         alert('Failed to send the email. Please try again later.');
-        sessionStorage.removeItem('formStatus');
-    } else if (savedStatus === 'captcha_error') {
-        alert('CAPTCHA verification failed. Please try again.');
-        sessionStorage.removeItem('formStatus');
-    } else if (savedStatus === 'spam') {
-        alert('Spam detected. Submission blocked.');
-        sessionStorage.removeItem('formStatus');
-    } else if (savedStatus === 'phone_error') {
-        alert('Phone number cannot exceed 10 digits.');
-        sessionStorage.removeItem('formStatus');
     }
 }
 
 // Run the function when the page loads
-window.onload = showStatusMessage;
+window.onload = showAlertOnLoad;
 </script>
 
 
