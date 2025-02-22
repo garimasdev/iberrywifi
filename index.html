@@ -1462,28 +1462,42 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
 
  // Function to display messages based on URL status
- function showStatusMessage() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const status = urlParams.get('status');
+ // Function to display messages based on URL status
+function showStatusMessage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
 
-            if (status === 'success') {
-                alert('Your mail has been sent successfully! We will contact you shortly.');
-                // Alternatively, display a message on the page:
-                document.getElementById('status-message').innerText = 'Your mail has been sent successfully! We will contact you shortly.';
-                document.getElementById('status-message').style.display = 'block';
-            } else if (status === 'error') {
-                alert('Failed to send the email. Please try again later.');
-            } else if (status === 'captcha_error') {
-                alert('CAPTCHA verification failed. Please try again.');
-            } else if (status === 'spam') {
-                alert('Spam detected. Submission blocked.');
-            } else if (status === 'phone_error') {
-                alert('Phone number cannot exceed 10 digits.');
-            }
-        }
+    // If there's a status in the URL, save it to sessionStorage
+    if (status) {
+        sessionStorage.setItem('formStatus', status);
+        // Remove the status from the URL to avoid showing it again on refresh
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
 
-        // Run the function when the page loads
-        window.onload = showStatusMessage;
+    // Retrieve the status from sessionStorage
+    const savedStatus = sessionStorage.getItem('formStatus');
+
+    if (savedStatus === 'success') {
+        alert('Your mail has been sent successfully! We will contact you shortly.');
+        // Clear the status from sessionStorage after displaying
+        sessionStorage.removeItem('formStatus');
+    } else if (savedStatus === 'error') {
+        alert('Failed to send the email. Please try again later.');
+        sessionStorage.removeItem('formStatus');
+    } else if (savedStatus === 'captcha_error') {
+        alert('CAPTCHA verification failed. Please try again.');
+        sessionStorage.removeItem('formStatus');
+    } else if (savedStatus === 'spam') {
+        alert('Spam detected. Submission blocked.');
+        sessionStorage.removeItem('formStatus');
+    } else if (savedStatus === 'phone_error') {
+        alert('Phone number cannot exceed 10 digits.');
+        sessionStorage.removeItem('formStatus');
+    }
+}
+
+// Run the function when the page loads
+window.onload = showStatusMessage;
 </script>
 
 
