@@ -1461,26 +1461,29 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   });
 
 
-// function for contact form 
-  window.onload = function() {
-    // Check if the "status" query parameter is present
-    const urlParams = new URLSearchParams(window.location.search);
-    const status = urlParams.get('status');
-    const statusMessageDiv = document.getElementById("status-message");
+ // Function to display messages based on URL status
+ function showStatusMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
 
-    if (status === 'success') {
-      alert("Your message has been sent successfully!");
-      statusMessageDiv.innerText = "Your message has been sent successfully!";
-      statusMessageDiv.style.display = "block";
-      // document.getElementById("status-message").innerText = "Your message has been sent successfully!";
-    } 
-    else if (status === 'error') {
-      alert("There was an issue sending your message. Please try again.");
-      statusMessageDiv.innerText = "There was an issue sending your message. Please try again.";
-      statusMessageDiv.style.display = "block"
-      // document.getElementById("status-message").innerText = "There was an issue sending your message. Please try again.";
-    }
-  };
+            if (status === 'success') {
+                alert('Your mail has been sent successfully! We will contact you shortly.');
+                // Alternatively, display a message on the page:
+                document.getElementById('status-message').innerText = 'Your mail has been sent successfully! We will contact you shortly.';
+                document.getElementById('status-message').style.display = 'block';
+            } else if (status === 'error') {
+                alert('Failed to send the email. Please try again later.');
+            } else if (status === 'captcha_error') {
+                alert('CAPTCHA verification failed. Please try again.');
+            } else if (status === 'spam') {
+                alert('Spam detected. Submission blocked.');
+            } else if (status === 'phone_error') {
+                alert('Phone number cannot exceed 10 digits.');
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = showStatusMessage;
 </script>
 
 
