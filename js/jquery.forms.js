@@ -25,6 +25,8 @@ jQuery(document).ready(function() {
                 if (data.match('success') != null) $('#reservationform .form-group, #reservationform .btn').slideUp('slow');
 
                 if (data.match('success') != null) $('#email').val('');
+                if (data.match('success') != null) $('#phone').val('');
+                if (data.match('success') != null) $('#message').val('');
 
             }
 
