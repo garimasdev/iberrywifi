@@ -69,7 +69,6 @@ if ($API->connect($routerIP, $username, $password, 8736)) {
     
 } else {
     echo "<p>Oops! Something went wrong and we couldn't send your reservation.</p>";
-    exit;
 
 }
 ?>
