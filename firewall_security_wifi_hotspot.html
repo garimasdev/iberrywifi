@@ -59,7 +59,7 @@
       margin-right: -3px;
     }
 
-      /* General styles for the intro section */
+
   /* General styles for the intro section */
   .intro-section {
     background-color: #f5f5f5;
@@ -307,17 +307,17 @@
   }
   
   .benefit-item i {
-    font-size: 40px;
+    font-size: 50px;
     color: #75cccf;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     transition: color 0.3s ease-in-out;
   }
   
   .benefit-item h4 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
   
   .benefit-item p {
@@ -539,6 +539,7 @@
   
   .why-choose-section .image-container img {
       width: 100%;
+      margin-top: 120px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -604,6 +605,151 @@
     -webkit-text-fill-color: transparent;
 }
   
+
+
+
+/* highlights of firewall */
+.custom-why-choose-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.custom-why-choose-section .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.custom-why-choose-section .text-content p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Row Layout Adjustment */
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left and Right Content */
+.left-content, .right-content {
+    padding: 15px;
+}
+
+.left-image, .right-image {
+    padding: 15px;
+}
+
+/* Left Content (Paragraphs) */
+.left-content {
+    order: 1; /* Order paragraphs to be first */
+}
+
+/* Right Image */
+.right-image {
+    order: 2; /* Image will be on the right side */
+}
+
+.left-image {
+    order: 3; /* Image will be on the left side */
+}
+
+.right-content {
+    order: 4; /* Paragraphs will be second on the right side */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .left-content, .right-content, .left-image, .right-image {
+        width: 100%;
+    }
+
+    .custom-why-choose-section .section-title h2 {
+        font-size: 28px;
+    }
+
+    .custom-why-choose-section .text-content p {
+        font-size: 16px;
+    }
+}
+
+
+
+ /* floating contact icon */
+  /* Floating Icon Button */
+  .floating-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Move the icon to the left side */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.floating-icon i {
+    font-size: 28px;
+    background-color: #5db3b6;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hidden container for additional icons */
+.floating-icons-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling the individual icons */
+.floating-icons-container a {
+    color: white;
+    /* padding: 10px; */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.floating-icons-container a:hover {
+    transform: scale(1.1);
+}
+
+/* Toggle icons */
+.floating-icon.open .floating-icons-container {
+    display: flex;
+}
+
+.floating-icon.open i {
+    transform: rotate(45deg);
+}
+
+
+
+
    /* Style the contact form */
     .contact-form-container {
       position: absolute; 
@@ -647,7 +793,7 @@
   .intro-section {
     margin-top: 320px;
   }
-  
+
   .mt100 {
     margin-top: 450px !important;
   }
@@ -734,73 +880,6 @@
   }
 
 
-
-  /* networks and wifi */
-  .network-header {
-    background-color: #75cccf;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .networkheader h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  .services-container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-  }
-
-  .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 1rem;
-  }
-
-  .service-card {
-      background: white;
-      border-radius: 10px;
-      padding: 2.5rem;
-      transition: transform 0.3s ease;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      border-top: 4px solid #d9a386;
-  }
-
-  .service-card:hover {
-      transform: translateY(-5px);
-  }
-
-  .service-card h3 {
-      color: #75cccf;
-      margin-bottom: 1rem;
-      font-size: 2.25rem;
-  }
-
-  .service-card p {
-      color: #666;
-      font-size: 1.5rem;
-  }
-
-  .accent-text {
-      color: #d9a386;
-      font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-      .network-header h1 {
-          font-size: 3rem;
-      }
-      
-      .services-grid {
-          grid-template-columns: 1fr;
-      }
-  }
 
 
 
@@ -924,13 +1003,13 @@
           <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Business Services<b class="caret"></b></a>
             <ul class="dropdown-menu">
               
-              <li><a href="firewall_hotspot.html">Firewall & Hotspot Services</a></li>
-              <li><a href="vpn.html">VPN Services</a></li>
-              <li><a href="ipbx.html">IPBX & Intercom Services</a></li>
-              <li><a href="wifi.html">WiFi Solutions</a></li>
-              <li><a href="cctv.html">CCTV Services</a></li>
+              <li><a href="firewall_security_wifi_hotspot.html">Firewall & Hotspot Services</a></li>
+              <li><a href="vpn_solutions.html">VPN Services</a></li>
+              <li><a href="intercom_ipbx.html">IPBX & Intercom Services</a></li>
+              <li><a href="wifi_installation.html">WiFi Installation Solutions</a></li>
+              <li><a href="camera_installation.html">Camera Installation Services</a></li>
               <li><a href="automation.html">Office & Home Automation Services</a></li>
-              <li><a href="digital.html">Digital Signage Solutions</a></li>
+              <li><a href="digital_signage.html">Digital Signage Solutions</a></li>
               <!-- <li><a href="software-list.html">VOIP & IPPBX Services</a></li>
               <li><a href="firewall-list.html">WiFi Solutions</a></li>
               <li><a href="software-list.html">Cabling Networking</a></li> -->
@@ -939,14 +1018,14 @@
           <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Software Services<b class="caret"></b></a>
             <ul class="dropdown-menu">
               
-              <li><a href="qr_intercom.html">QR Intercom System</a></li>
+              <li><a href="qr_code_intercom.html">QR Code Intercom System</a></li>
               <li><a href="food_order.html">Food Ordering System</a></li>
             </ul>
           </li>
           <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Pricing<b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="pricing.html">Firewall & Hotspot Pricing</a></li>
-              <li><a href="software-list.html">Software & Services Pricing</a></li>
+              <li><a href="hospitality_software.html">Hospitality Software & Services Pricing</a></li>
             </ul>
           </li>
           <li> <a href="contact-01.html">Contact</a> </li>
@@ -959,18 +1038,14 @@
 </header>
 
 
-<!-- Revolution Slider -->
+
 <!-- Revolution Slider -->
 <section class="revolution-slider" id="revolution-slider">
   <div class="bannercontainer">
     <div class="banner">
       <ul>
-        <!-- Slide 1 -->
         <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" style="height: 125%;"> 
-          <!-- Main Image --> 
           <img src="images/banner.jpg" style="opacity:0; height: 150px;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
-          <!-- Layers -->    
-        <!-- Layer 3 -->
         <div class="caption sft"  
             data-x="775" 
             data-y="175" 
@@ -978,7 +1053,6 @@
             data-start="1900" 
             data-easing="easeOutBack"
             style="height: 150px;">
-            <!-- <a href="firewall-list.html" class="button btn btn-warning btn-lg">Shop Products</a>  -->
         </div>
       </li>
       </ul>
@@ -1010,23 +1084,24 @@
 <section class="intro-section">
   <div class="intro-container">
       <div class="section-title">
-          <h1>Professional WiFi Solutions</h1>
-          <h2>Fast, Secure, and Reliable Connectivity</h2>
+          <h1>Firewall, Wi-Fi Hotspot Services</h1>
+          <h2>Splash Pages, Category-Based Filtering, and Intrusion Detection & Prevention</h2>
       </div>
       <div class="row">
           <div class="col-md-6 image-container">
-              <img src="images/wifi.png" alt="WiFi Solutions" class="image-left">
+              <img src="images/firewall.jpg" alt="WiFi Solutions" class="image-left">
           </div>
           <div class="col-md-6 intro-content text-content">
-              <p>In today's connected world, a strong and reliable WiFi network is essential for homes, businesses, and public spaces. At <strong style="color: #5db3b6;">Iberry WiFi Corporation</strong>, we provide <strong style="color: #5db3b6;">professional WiFi installation services</strong> to ensure your network delivers fast, secure, and uninterrupted connectivity.</p>
-              <p>Whether you need access points installed, a full network setup, or an upgrade to your existing infrastructure, our team of experts is here to help. We understand that every space has unique requirements, so we ensure that our solutions are tailored to meet your specific needs while delivering optimal performance.</p>
+            <p>In an increasingly connected world, providing secure, reliable, and controlled internet access is essential for businesses, educational institutions, and public spaces. Our <strong style="color: #5db3b6;">Firewall and Wi-Fi Hotspot Services</strong> go beyond basic connectivity by offering <strong style="color: #5db3b6;">Splash Pages, Category-Based Filtering, and Intrusion Detection & Prevention (IDPS)</strong>. Whether you’re a hotel, restaurant, mall, school, hospital, or corporate office, our solutions ensure a safe, seamless, and customizable internet experience.</p>
           </div>
       </div>
   </div>
 </section>
 
+
+
 <!-- Core Services Section -->
-<section class="service-section">
+<!-- <section class="service-section">
   <div class="container">
       <div class="section-title">
           <h1>Our WiFi Installation Services</h1>
@@ -1068,166 +1143,180 @@
           </div>
       </div>
   </div>
-</section>
+</section> -->
 
-
-<!-- Why Choose Us Section -->
-<section class="why-choose-section">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-              <div class="section-title">
-                  <h2>Why Choose Iberry WiFi's Installation Services?</h2>
-              </div>
-              <div class="text-content">
-                  <p>Our certified technicians have years of experience in designing and installing WiFi networks for various industries. We take pride in delivering customized solutions that meet your specific needs, whether it's a small home network or a large-scale business setup.</p>
-                  <p>We use only top-tier access points, routers, and networking hardware to ensure optimal performance. Our team ensures your new WiFi network integrates smoothly with your existing infrastructure, minimizing any disruption to your operations.</p>
-                  <p>From installation to maintenance, we're here to provide ongoing support whenever you need it. Our commitment to excellence means you can rely on us for all your WiFi networking needs, both now and in the future.</p>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="image-container">
-                  <img src="images/wifisol.png" alt="Professional WiFi Installation">
-              </div>
-          </div>
-      </div>
-  </div>
-</section>  
 
 
 
 
 <!-- Benefits Section -->
 <section class="benefits-section">
-  <div class="container">
-      <div class="section-title">
-          <h1>Key Benefits</h1>
-          <h2>Why Choose Professional WiFi Installation</h2>
-      </div>
-      <div class="row">
-          <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-bolt"></i>
-                  <h4>Faster Speeds</h4>
-                  <p>Optimized networks delivering lightning-fast internet connectivity</p>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-wifi"></i>
-                  <h4>Wider Coverage</h4>
-                  <p>Eliminate dead zones with strategically placed access points</p>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-shield"></i>
-                  <h4>Enhanced Security</h4>
-                  <p>Protect your network from unauthorized access and cyber threats</p>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="benefit-item">
-                  <i class="fa fa-expand"></i>
-                  <h4>Scalability</h4>
-                  <p>Easily expand your network as your needs grow</p>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="section-title">
+            <h1>Key Features of Our Firewall and Wi-Fi Hotspot Services</h1>
+            <h2>Why Choose Our Comprehensive Solutions?</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-shield"></i>
+                    <h4><strong>Advanced Firewall Protection</strong></h4>
+                    <p>Safeguard your network against cyber threats and malware with customizable security policies</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-file-text"></i>
+                    <h4><strong>Customizable Splash Pages</strong></h4>
+                    <p>Create impactful splash pages with your logo and promotional offers</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-plug"></i>
+                    <h4><strong>Scalable and Reliable Connectivity</strong></h4>
+                    <p>Handle heavy traffic in malls and hotels with reliable connectivity</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-item">
+                    <i class="fa fa-gavel"></i>
+                    <h4><strong>Compliance and Legal Protection</strong></h4>
+                    <p>Log user activity and display terms to ensure compliance and protection</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+  
+
+
+
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-title">
+                    <h2>Why Choose Iberry WiFi's Firewall Services?</h2>
+                </div>
+                <div class="text-content">
+                    <p>At <strong style="color: #5db3b6;">Iberry WiFi Security</strong>, we pride ourselves on delivering personalized solutions that cater to the unique needs of your business. Our team is dedicated to providing around-the-clock support, ensuring that any issues or concerns are addressed promptly and efficiently.</p>
+                    <p>We understand that budget is a crucial factor, which is why we offer affordable pricing plans with complete transparency—no hidden fees or surprises. By choosing <strong style="color: #5db3b6;">Iberry WiFi Security</strong>, you'll also gain access to the latest advancements in network security and Wi-Fi management, future-proofing your business and giving you a competitive edge.</p>
+                    <p>Our goal is to empower your business to succeed, and we're committed to helping you achieve your goals through our tailored approach and unwavering support. We provide 24/7 support, ensuring that our team is always ready to assist you with setup, maintenance, and any troubleshooting needs that may arise.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="images/firewall.png" alt="Professional Firewall Installation">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+
+
+
 
 <!-- Industries Section -->
 <section class="industries-section">
-  <div class="container">
-      <div class="industry-section-title">
-          <h1>Industries We Serve</h1>
-          <h2>Tailored WiFi solutions for every sector</h2>
-      </div>
-      <div class="industry-grid">
-          <div class="industry-item">
-            <i class="bi bi-house-door-fill"></i>
-              <h4>Hospitality</h4>
-              <p>Provide guests with fast and secure WiFi in hotels, resorts, and restaurants</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-hospital-o fa-2x"></i>
-              <h4>Healthcare</h4>
-              <p>Ensure reliable connectivity for staff, patients, and medical devices</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-graduation-cap fa-2x"></i>
-              <h4>Education</h4>
-              <p>Support online learning and campus-wide connectivity for schools and universities</p>
-          </div>
-          
-          <div class="industry-item">
-              <i class="fa fa-shopping-cart fa-2x"></i>
-              <h4>Retail</h4>
-              <p>Enhance customer experience with seamless WiFi in stores and malls</p>
-          </div>
-
-          <div class="industry-item">
-              <i class="fa fa-building fa-2x"></i>
-              <h4>Corporate Offices</h4>
-              <p>Enable productivity with robust and secure WiFi networks for businesses</p>
-          </div>
-
-          <div class="industry-item">
-              <i class="fa fa-home fa-2x"></i>
-              <h4>Residential</h4>
-              <p>Enjoy uninterrupted streaming, gaming, and smart home connectivity</p>
-          </div>
-      </div>
-  </div>
-</section>
-
-
-
-
-<!-- networks and firewall -->
-<section>
-  <div class="network-header">
-    <h1 style="color: lightslategray;">WiFi & Network Solutions</h1>
-    <h3>Delivering Excellence in Technology Infrastructure</h3>
-  </div>
-
-  <div class="services-container">
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Structured Cabling</h3>
-        <p>Professional building and campus telecommunication cabling infrastructure solutions designed for optimal performance and scalability.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Web Portal Development</h3>
-        <p>Custom web portal solutions tailored to your business needs, featuring modern design and robust functionality.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Customized Server Setup</h3>
-        <p>Expert server configuration and deployment services to ensure maximum efficiency and security for your operations.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>VPN Solutions</h3>
-        <p>Secure Virtual Private Network implementations for safe and reliable remote access to your network resources.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Point-to-Point Wireless Links</h3>
-        <p>High-speed wireless connectivity solutions extending up to 40km for seamless branch interconnection.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Bandwidth Solutions</h3>
-        <p>Flexible bandwidth options including <span class="accent-text">4Mbps</span> and <span class="accent-text">10Mbps</span> drops to meet your specific requirements.</p>
-      </div>
+    <div class="container">
+        <div class="industry-section-title">
+            <h1>Industries We Serve</h1>
+            <h2>Personalized Firewall Solutions for Every Sector</h2>
+        </div>
+        <div class="industry-grid">
+            <div class="industry-item">
+                <i class="bi bi-house-door-fill"></i>
+                <h4><strong>Schools and Educational Institutions</strong></h4>
+                <p>Create a safe online environment for students by blocking inappropriate content, whitelisting educational websites and tools to support learning, and protecting against cyber threats with intrusion detection and prevention.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-hospital-o fa-2x"></i>
+                <h4><strong>Hotels and Resorts</strong></h4>
+                <p>Enhance guest experience with fast and secure Wi-Fi access, promote hotel amenities, events, or loyalty programs through splash pages, and safeguard your network from cyberattacks and unauthorized access.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-graduation-cap fa-2x"></i>
+                <h4><strong>Restaurants and Cafes</strong></h4>
+                <p>Attract customers with free Wi-Fi and display special offers or menus on the splash page, block access to bandwidth-heavy sites (e.g., video streaming) to ensure fair usage, and protect customer data and prevent network breaches.</p>
+            </div>
+            
+            <div class="industry-item">
+                <i class="fa fa-shopping-cart fa-2x"></i>
+                <h4><strong>Malls and Retail Centers</strong></h4>
+                <p>Provide shoppers with a seamless browsing experience while promoting store discounts and events, use category-based filtering to block harmful or inappropriate content, and detect and prevent cyber threats in real-time.</p>
+            </div>
+  
+            <div class="industry-item">
+                <i class="fa fa-building fa-2x"></i>
+                <h4><strong>Hospitals and Clinics</strong></h4>
+                <p>Offer patients and visitors secure internet access while displaying important health information or hospital policies, block access to non-medical or distracting websites in patient areas, and protect sensitive patient data with advanced intrusion detection and prevention.</p>
+            </div>
+  
+            <div class="industry-item">
+                <i class="fa fa-home fa-2x"></i>
+                <h4><strong>Corporate Offices</strong></h4>
+                <p>Provide employees and guests with secure Wi-Fi access while maintaining control over network usage, restrict access to non-work-related sites to improve productivity, and safeguard corporate data from cyber threats and breaches.</p>
+            </div>
+  
+            <!-- <div class="industry-item">
+                <i class="fa fa-map-marker fa-2x"></i>
+                <h4><strong>Public Spaces (Airports, Parks, Libraries)</strong></h4>
+                <p>Deliver reliable internet access to the public with customizable splash pages for announcements or advertisements, use category-based filtering to ensure a safe and family-friendly browsing experience, and protect users from malicious activities and cyberattacks.</p>
+            </div> -->
+        </div>
     </div>
-  </div>
+  </section>
+  
+
+
+
+<!-- Features of firewall and hotspot -->
+<section class="custom-why-choose-section">
+    <div class="container">
+        <div class="custom-row">
+            <!-- First Section: Paragraphs on Left, Image on Right -->
+            <div class="col-md-6 left-content">
+                <div class="section-title">
+                    <h2>Highlights of Our Firewall and Wi-Fi Hotspot Services</h2>
+                </div>
+                <div class="text-content">
+                    <p><strong style="color: #5db3b6;">Category-Based Filtering</strong> is essential for various environments. In Schools and Educational Institutions, it allows the blocking of inappropriate content, such as adult websites, social media, and gaming sites, while whitelisting educational resources and approved websites to promote focused learning. This approach ensures compliance with regulations like the CIPA (Children’s Internet Protection Act). For Businesses and Corporates, it restricts access to non-work-related sites, including entertainment, shopping, and gambling, while permitting access to essential business tools and websites. In Public Spaces, it blocks malicious or harmful content to protect users and allows for customized filters based on the audience, such as family-friendly settings in malls.</p>
+
+                    <p><strong style="color: #5db3b6;">Intrusion Detection and Prevention System (IDPS)</strong> plays a crucial role in network security. It offers <strong>Real-Time Threat Detection</strong> to identify and block malicious activities, including DDoS attacks, malware, and unauthorized access attempts. The system features <strong>Automated Response</strong> capabilities that automatically mitigate threats by blocking suspicious IP addresses or traffic patterns. With <strong>Comprehensive Monitoring</strong>, it continuously observes network traffic for anomalies and potential breaches, while <strong>Custom Alerts</strong> provide instant notifications for critical security events.</p>
+                </div>
+            </div>
+            <div class="col-md-6 right-image">
+                <div class="image-container">
+                    <img src="images/firewall5.png" alt="Professional Firewall Installation">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Second Section: Paragraphs on Right, Image on Left -->
+            <div class="col-md-6 left-image">
+                <div class="image-container">
+                    <img src="images/firewall2.png" alt="Professional Firewall Installation">
+                </div>
+            </div>
+            <div class="col-md-6 right-content">
+                <div class="text-content">
+                    <p><strong style="color: #5db3b6;">Seamless Wi-Fi Access</strong> enhances user experience by providing hassle-free internet connectivity through multiple authentication options, such as social logins (Facebook, Google), SMS-based OTP (One-Time Password), and voucher codes for time-limited access. It also supports captive portals that redirect users to a splash page upon connection.</p>
+
+                    <p><strong style="color: #5db3b6;">User Management and Analytics</strong> enable tracking of user activity, session duration, and data usage. This feature provides valuable insights into customer behavior and preferences through detailed analytics, allowing for the setting of usage limits or time restrictions to promote fair usage policies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+
 
 
 
@@ -1350,8 +1439,6 @@ function toggleIcons() {
     }
   };
 </script>
-<script>
-$('#copyR').html(new Date().getFullYear());
-</script>
+
 </body>
 </html>
