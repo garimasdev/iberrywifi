@@ -7,10 +7,6 @@ $routerIP = "139.59.74.160"; // Change to your MikroTik router IP
 $username = "email"; // MikroTik username
 $password = "Email@898"; // MikroTik password
 
-
-// invisible captcha: iberrywifi.com
-// $recaptcha_secret = '6LcW5eEqAAAAAFcGaICiDP8eNUn4ebFORvTJ87a6-';
-
 // iberrywifi: checkbox captcha
 $recaptcha_secret = '6Lfw6dUqAAAAAMwaKEwgJ4OVLx5_dqPoGDdO9Vq-';
 $recaptcha_response = $_POST['g-recaptcha-response'];
