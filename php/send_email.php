@@ -8,12 +8,11 @@ $username = "email"; // MikroTik username
 $password = "Email@898"; // MikroTik password
 
 
-// invisible captcha
-// iberrywifi.com
-$recaptcha_secret = '6LcW5eEqAAAAAFcGaICiDP8eNUn4ebFORvTJ87a6-';
-// checkbox captcha
-// iberrywifi
-// $recaptcha_secret = '6Lfw6dUqAAAAAMwaKEwgJ4OVLx5_dqPoGDdO9Vq-';
+// invisible captcha: iberrywifi.com
+// $recaptcha_secret = '6LcW5eEqAAAAAFcGaICiDP8eNUn4ebFORvTJ87a6-';
+
+// iberrywifi: checkbox captcha
+$recaptcha_secret = '6Lfw6dUqAAAAAMwaKEwgJ4OVLx5_dqPoGDdO9Vq-';
 $recaptcha_response = $_POST['g-recaptcha-response'];
 
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
