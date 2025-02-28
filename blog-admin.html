@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .add-button {
+            margin-top: 10px;
+            background-color: #2ecc71;
+        }
+        .remove-button {
+            margin-top: 5px;
+            background-color: #e74c3c;
+        }
+        .subheading-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Admin Blog Post Creation</h2>
+    <form action="php/upload_blog.php" method="POST" enctype="multipart/form-data">
+        
+        <!-- Image Upload Section -->
+        <div class="form-group">
+            <label for="image">Blog Image</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="form-group">
+            <label for="main_heading">Main Heading</label>
+            <input type="text" id="main_heading" name="main_heading" placeholder="Enter the main heading" required>
+        </div>
+        <div class="form-group">
+            <label for="main_content">Main Content</label>
+            <textarea id="main_content" name="main_content" placeholder="Enter the main content" rows="6" required></textarea>
+        </div>
+
+        <!-- Subheading Sections -->
+        <div id="subheading-container">
+            <div class="subheading-section">
+                <div class="form-group">
+                    <label for="subheading[]">Subheading</label>
+                    <input type="text" name="subheading[]" placeholder="Enter a subheading">
+                </div>
+                <div class="form-group">
+                    <label for="subheading_content[]">Subheading Content</label>
+                    <textarea name="subheading_content[]" placeholder="Enter content for the subheading" rows="4"></textarea>
+                </div>
+                <button type="button" class="remove-button" onclick="removeSubheading(this)">Remove Subheading</button>
+            </div>
+        </div>
+
+        <!-- Button to Add New Subheading -->
+        <button type="button" class="add-button" onclick="addSubheading()">Add Another Subheading</button>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Post</button>
+    </form>
+</div>
+
+<script>
+    // Function to add a new subheading section
+    function addSubheading() {
+        const container = document.getElementById('subheading-container');
+
+        const subheadingSection = document.createElement('div');
+        subheadingSection.classList.add('subheading-section');
+
+        subheadingSection.innerHTML = `
+        <div class="form-group">
+            <label for="subheading[]">Subheading</label>
+            <input type="text" name="subheading[]" placeholder="Enter a subheading">
+        </div>
+        <div class="form-group">
+            <label for="subheading_content[]">Subheading Content</label>
+            <textarea name="subheading_content[]" placeholder="Enter content for the subheading" rows="4"></textarea>
+        </div>
+        <button type="button" class="remove-button" onclick="removeSubheading(this)">Remove Subheading</button>
+        `;
+
+        container.appendChild(subheadingSection);
+    }
+
+    // Function to remove a subheading section
+    function removeSubheading(button) {
+        const subheadingSection = button.parentElement;
+        subheadingSection.remove();
+    }
+</script>
+
+</body>
+</html>
