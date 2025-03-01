@@ -1,29 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "**"; // Database username
-$password = "******"; // Database password
-$dbname = "*****";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Fetch the latest blog post
-    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
-    $stmt->execute();
-    $post = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    // Fetch subheadings for the post
-    $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
-    $subheadingStmt->bindParam(':post_id', $post['id'], PDO::PARAM_INT);
-    $subheadingStmt->execute();
-    $subheadings = $subheadingStmt->fetchAll(PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
