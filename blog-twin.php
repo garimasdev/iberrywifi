@@ -536,7 +536,7 @@ try {
                     <!-- Article Section -->
                     <article class="article">
                         <div class="article-img">
-                            <img src="<?= htmlspecialchars('http://iberrywifi.com/uploads/' . $post['image']) ?>" alt="Blog Featured Image">
+                            <img src="<?= htmlspecialchars('http://iberrywifi.com/' . $post['image']) ?>" alt="Blog Featured Image">
                         </div>
                         <div class="article-title">
                             <h6><a href="#">Lifestyle</a></h6>
