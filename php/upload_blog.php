@@ -1,4 +1,10 @@
 <?php
+
+$servername = "localhost";  // Usually localhost for Plesk
+$username = "Blogs"; // Database username
+$password = "Bhupa@898"; // Database password
+$dbname = "admin_blog";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Handle image upload (same as before)
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
@@ -39,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Connect to SQLite database
     // Insert the data into the database
     try {
-        $conn = new PDO('sqlite:blog.db'); // Using SQLite database
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password); // Using SQLite database
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Insert main post 
@@ -55,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $content = htmlspecialchars($subheading_content[$i]);
                 
                 $subheading_stmt = $conn->prepare("INSERT INTO subheadings (post_id, subheading, content) VALUES (?, ?, ?)");
-                $subheading_stmt->bind_param("iss", $post_id, $subheading, $content);
+                $subheading_stmt->execute([$post_id, $subheading, $content]);
             }
         }
         echo "Post and subheadings added successfully!";
