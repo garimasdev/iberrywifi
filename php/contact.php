@@ -44,8 +44,8 @@ if (empty($_POST['verify']) || $_POST['verify'] != '2') {
     exit();
 }
 
-// $recipient = "support@iberrywifi.in"; // Change to recipient's email
-$recipient = "treeohotels25@gmail.com";
+$recipient = "support@iberrywifi.in"; // Change to recipient's email
+// $recipient = "treeohotels25@gmail.com";
 $subject = "Contact Form Submission";
 // $wrapped_message = wordwrap($message, 70, "\n", true);
 $body = "Contact: You have received a new message from the contact form:\n\n".
