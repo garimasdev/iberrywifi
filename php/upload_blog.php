@@ -58,8 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $subheading_stmt->bind_param("iss", $post_id, $subheading, $content);
             }
         }
-    }
         echo "Post and subheadings added successfully!";
+        header('Location: admin_dashboard.php');
+        exit();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
