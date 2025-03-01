@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
         echo "Post and subheadings added successfully!";
-        header('Location: admin_dashboard.php');
+        header('Location: blog-admin.html');
         exit();
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
