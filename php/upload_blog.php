@@ -16,11 +16,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         // Define allowed file types
         $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
-        
-        if (in_array($image_type, $allowed_types)) {
-            // Set the upload directory
-            $upload_dir = 'uploads/';
-            $image_path = $upload_dir . basename($image_name);
+
+        if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+            echo "Upload Error: " . $_FILES['image']['error'] . "<br>";
+        }
+
+        $upload_dir = 'uploads/';
+        if (!is_dir($upload_dir)) {
+            mkdir($upload_dir, 0777, true); // Create the directory if it doesn't exist
+        }
+
+        $image_path = $upload_dir . basename($image_name);
             
             // Move the uploaded file
             if (move_uploaded_file($image_tmp_name, $image_path)) {
