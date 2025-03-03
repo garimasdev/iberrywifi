@@ -627,7 +627,7 @@ try {
                                                 <h5><a href="post.php?id=<?php echo $post['id']; ?>"><?php echo htmlspecialchars($post['title']); ?></a></h5>
                                             </div>
                                             <div class="lpa-meta">
-                                                <a class="name" href="#"><?php echo htmlspecialchars($post['author']); ?></a>
+                                                <a class="name" href="#">Jaswinder Singh</a>
                                                 <a class="date" href="#"><?php echo date("d M Y", strtotime($post['date'])); ?></a>
                                             </div>
                                         </div>
