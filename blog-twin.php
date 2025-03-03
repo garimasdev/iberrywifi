@@ -9,10 +9,9 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Fetch the latest blog post
-    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC");
+    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
     $stmt->execute();
-    $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // $post = $stmt->fetch(PDO::FETCH_ASSOC);
+    $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // Fetch subheadings for the post
     $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
