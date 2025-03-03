@@ -17,10 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Define allowed file types
         $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
 
-        if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
-            echo "Upload Error: " . $_FILES['image']['error'] . "<br>";
-        }
-
         $upload_dir = 'uploads/';
         if (!is_dir($upload_dir)) {
             mkdir($upload_dir, 0777, true); // Create the directory if it doesn't exist
