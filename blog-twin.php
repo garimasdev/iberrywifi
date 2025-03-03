@@ -11,8 +11,13 @@ try {
     // Fetch the latest blog post
     $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC");
     $stmt->execute();
-    $post = $stmt->fetch(PDO::FETCH_ASSOC);
-    $posts = mysqli_fetch_all($postsResult, MYSQLI_ASSOC);
+    $post = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Fetch the latest post for the main article
+    $postStmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
+    $postStmt->execute();
+    $post = $postStmt->fetch(PDO::FETCH_ASSOC);
+
 
     // Fetch subheadings for the post
     $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
@@ -629,7 +634,7 @@ try {
                                             </div>
                                             <div class="lpa-meta">
                                                 <a class="name" href="#">Jaswinder Singh</a>
-                                                <a class="date" href="#"><?php echo date("d M Y", strtotime($post['date'])); ?></a>
+                                                <a class="date" href="#"><?php echo date("d M Y", strtotime($post['created_at'])); ?></a>
                                             </div>
                                         </div>
                                         <div class="lpa-right">
