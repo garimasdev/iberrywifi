@@ -9,9 +9,10 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Fetch the latest blog post
-    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
+    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC");
     $stmt->execute();
-    $post = $stmt->fetch(PDO::FETCH_ASSOC);
+    $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // Fetch subheadings for the post
     $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
@@ -616,71 +617,34 @@ try {
                     <!-- Latest Post Widget -->
                     <div class="widget widget-latest-post">
                         <div class="widget-title">
-                            <h3>Latest Post</h3>
+                            <h3>Latest Posts</h3>
                         </div>
                         <div class="widget-body">
-                            <div class="latest-post-aside media">
-                                <div class="lpa-left media-body">
-                                    <div class="lpa-title">
-                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                            <?php if ($posts): ?>
+                                <?php foreach ($posts as $post): ?>
+                                    <div class="latest-post-aside media">
+                                        <div class="lpa-left media-body">
+                                            <div class="lpa-title">
+                                                <h5><a href="post.php?id=<?php echo $post['id']; ?>"><?php echo htmlspecialchars($post['title']); ?></a></h5>
+                                            </div>
+                                            <div class="lpa-meta">
+                                                <a class="name" href="#"><?php echo htmlspecialchars($post['author']); ?></a>
+                                                <a class="date" href="#"><?php echo date("d M Y", strtotime($post['date'])); ?></a>
+                                            </div>
+                                        </div>
+                                        <div class="lpa-right">
+                                            <a href="post.php?id=<?php echo $post['id']; ?>">
+                                                <img src="<?php echo 'uploads/' . htmlspecialchars($post['image']); ?>" alt="Post Thumbnail">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="lpa-meta">
-                                        <a class="name" href="#">
-                                            Rachel Roth
-                                        </a>
-                                        <a class="date" href="#">
-                                            26 FEB 2020
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="lpa-right">
-                                    <a href="#">
-                                        <img src="https://www.bootdey.com/image/400x200/FFB6C1/000000" alt="Post Thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="latest-post-aside media">
-                                <div class="lpa-left media-body">
-                                    <div class="lpa-title">
-                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                    </div>
-                                    <div class="lpa-meta">
-                                        <a class="name" href="#">
-                                            Rachel Roth
-                                        </a>
-                                        <a class="date" href="#">
-                                            26 FEB 2020
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="lpa-right">
-                                    <a href="#">
-                                        <img src="https://www.bootdey.com/image/400x200/FFB6C1/000000" alt="Post Thumbnail">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="latest-post-aside media">
-                                <div class="lpa-left media-body">
-                                    <div class="lpa-title">
-                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                    </div>
-                                    <div class="lpa-meta">
-                                        <a class="name" href="#">
-                                            Rachel Roth
-                                        </a>
-                                        <a class="date" href="#">
-                                            26 FEB 2020
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="lpa-right">
-                                    <a href="#">
-                                        <img src="https://www.bootdey.com/image/400x200/FFB6C1/000000" alt="Post Thumbnail">
-                                    </a>
-                                </div>
-                            </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p>No posts found.</p>
+                            <?php endif; ?>
                         </div>
                     </div>
+
                     
                 </div>
             </div>
