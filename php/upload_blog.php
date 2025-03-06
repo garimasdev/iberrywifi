@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         if (in_array($image_type, $allowed_types)) {
             // Set the upload directory
-            $upload_dir = 'uploads/';
+            // $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/path/to/uploads/';
+            $upload_dir = '/var/www/vhosts/iberrywifi.com/httpdocs/uploads/';
             $image_path = $upload_dir . basename($image_name);
             
             // Move the uploaded file
