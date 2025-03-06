@@ -8,22 +8,53 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Fetch the latest blog post
-    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC");
+    // Check if a specific post ID is requested
+    if(isset($_GET['id']) && is_numeric($_GET['id'])) {
+        // Single post view
+        $post_id = $_GET['id'];
+        
+        // Fetch the specific post
+        $postStmt = $conn->prepare("SELECT * FROM posts WHERE id = :post_id");
+        $postStmt->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+        $postStmt->execute();
+        $post = $postStmt->fetch(PDO::FETCH_ASSOC);
+        
+        if(!$post) {
+            // Post not found, redirect to main blog page
+            header("Location: blog-twin.php");
+            exit;
+        }
+    } else {
+        // Main blog page - fetch latest post
+        $postStmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
+        $postStmt->execute();
+        $post = $postStmt->fetch(PDO::FETCH_ASSOC);
+        
+        if(!$post) {
+            // No posts exist
+            $post = null;
+        }
+    }
+    
+    // Fetch subheadings for the post (if we have a post)
+    if($post) {
+        $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
+        $subheadingStmt->bindParam(':post_id', $post['id'], PDO::PARAM_INT);
+        $subheadingStmt->execute();
+        $subheadings = $subheadingStmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        $subheadings = [];
+    }
+
+    // Fetch recent posts for sidebar (excluding current post if viewing a specific one)
+    if(isset($post_id)) {
+        $stmt = $conn->prepare("SELECT * FROM posts WHERE id != :current_id ORDER BY created_at DESC LIMIT 5");
+        $stmt->bindParam(':current_id', $post_id, PDO::PARAM_INT);
+    } else {
+        $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 5");
+    }
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    // Fetch the latest post for the main article
-    $postStmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
-    $postStmt->execute();
-    $post = $postStmt->fetch(PDO::FETCH_ASSOC);
-
-
-    // Fetch subheadings for the post
-    $subheadingStmt = $conn->prepare("SELECT * FROM subheadings WHERE post_id = :post_id");
-    $subheadingStmt->bindParam(':post_id', $post['id'], PDO::PARAM_INT);
-    $subheadingStmt->execute();
-    $subheadings = $subheadingStmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
@@ -630,7 +661,7 @@ try {
                                 <div class="latest-post-aside media">
                                     <div class="lpa-left media-body">
                                         <div class="lpa-title">
-                                            <h5><a href="post.php?id=<?php echo $recentPost['id']; ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
+                                            <h5><a href="blog-twin.php?id=<?php echo $recentPost['id']; ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
                                         </div>
                                         <div class="lpa-meta">
                                             <a class="name" href="#">Jaswinder Singh</a>
@@ -638,7 +669,7 @@ try {
                                         </div>
                                     </div>
                                     <div class="lpa-right">
-                                        <a href="post.php?id=<?php echo $recentPost['id']; ?>">
+                                        <a href="blog-twin.php?id=<?php echo $recentPost['id']; ?>">
                                         <img src="<?php echo htmlspecialchars('http://iberrywifi.com/' . $recentPost['image']); ?>" alt="Blog Featured Image">
                                         </a>
                                     </div>
