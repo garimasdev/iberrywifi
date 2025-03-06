@@ -11,7 +11,7 @@ try {
     // Fetch the latest blog post
     $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC");
     $stmt->execute();
-    $post = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Fetch the latest post for the main article
     $postStmt = $conn->prepare("SELECT * FROM posts ORDER BY created_at DESC LIMIT 1");
@@ -625,28 +625,28 @@ try {
                             <h3>Latest Posts</h3>
                         </div>
                         <div class="widget-body">
-                            <?php if ($posts): ?>
-                                <?php foreach ($posts as $post): ?>
-                                    <div class="latest-post-aside media">
-                                        <div class="lpa-left media-body">
-                                            <div class="lpa-title">
-                                                <h5><a href="post.php?id=<?php echo $post['id']; ?>"><?php echo htmlspecialchars($post['title']); ?></a></h5>
-                                            </div>
-                                            <div class="lpa-meta">
-                                                <a class="name" href="#">Jaswinder Singh</a>
-                                                <a class="date" href="#"><?php echo date("d M Y", strtotime($post['created_at'])); ?></a>
-                                            </div>
+                        <?php if (!empty($posts)): ?>
+                            <?php foreach ($posts as $recentPost): ?>
+                                <div class="latest-post-aside media">
+                                    <div class="lpa-left media-body">
+                                        <div class="lpa-title">
+                                            <h5><a href="post.php?id=<?php echo $recentPost['id']; ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
                                         </div>
-                                        <div class="lpa-right">
-                                            <a href="post.php?id=<?php echo $post['id']; ?>">
-                                                <img src="<?php echo 'uploads/' . htmlspecialchars($post['image']); ?>" alt="Post Thumbnail">
-                                            </a>
+                                        <div class="lpa-meta">
+                                            <a class="name" href="#">Jaswinder Singh</a>
+                                            <a class="date" href="#"><?php echo date("d M Y", strtotime($recentPost['created_at'])); ?></a>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <p>No posts found.</p>
-                            <?php endif; ?>
+                                    <div class="lpa-right">
+                                        <a href="post.php?id=<?php echo $recentPost['id']; ?>">
+                                        <img src="<?php echo htmlspecialchars('http://iberrywifi.com/' . $recentPost['image']); ?>" alt="Blog Featured Image">
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>No posts found.</p>
+                        <?php endif; ?>
                         </div>
                     </div>
 
