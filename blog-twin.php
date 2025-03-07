@@ -668,7 +668,7 @@ try {
                                             <h5><a href="blog-twin.php?id=<?php echo htmlspecialchars($recentPost['id']); ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
                                         </div>
                                         <div class="lpa-meta">
-                                            <a class="name" href="#">Iberry WiFi Team</a>
+                                            <a class="name" href="#">Iberry WiFi Team</a><br>
                                             <a class="date" href="#"><?php echo date("d M Y - h:i A", strtotime($recentPost['created_at'])); ?></a>
                                         </div>
                                     </div>
