@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // $upload_dir = '/var/www/vhosts/iberrywifi.com/httpdocs/uploads/';
             $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
             $image_path = $upload_dir . basename($image_name);
+
+            $db_image_path = 'uploads/' . basename($image_name);
             
             // Move the uploaded file
             if (move_uploaded_file($image_tmp_name, $image_path)) {
@@ -53,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Insert main post 
         $stmt = $conn->prepare("INSERT INTO posts (title, image, content) VALUES (?, ?, ?)");
-        $stmt->execute([$main_heading, $image_path, $main_content]);
+        $stmt->execute([$main_heading, $db_image_path, $main_content]);
 
         // Get the post ID of the inserted blog post
         $post_id = $conn->lastInsertId();
