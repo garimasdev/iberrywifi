@@ -581,7 +581,7 @@ try {
                             <div class="media">
                                 <div class="media-body">
                                     <label>Iberry WiFi Team</label>
-                                    <span><?= date("d M Y - h:i A", strtotime($post['created_at'])) ?></span>
+                                    <span><?= date("d M Y", strtotime($post['created_at'])) ?></span>
                                 </div>
                             </div>
                         </div>
@@ -669,7 +669,7 @@ try {
                                         </div>
                                         <div class="lpa-meta">
                                             <a class="name" href="#">Iberry WiFi Team</a><br>
-                                            <a class="date" href="#"><?php echo date("d M Y - h:i A", strtotime($recentPost['created_at'])); ?></a>
+                                            <a class="date" href="#"><?php echo date("d M Y", strtotime($recentPost['created_at'])); ?></a>
                                         </div>
                                     </div>
                                     <div class="lpa-right">
