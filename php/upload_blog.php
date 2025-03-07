@@ -20,8 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         if (in_array($image_type, $allowed_types)) {
             // Set the upload directory
-            // $upload_dir = '/uploads/';
-            // $upload_dir = '/var/www/vhosts/iberrywifi.com/httpdocs/uploads/';
             $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
             $image_path = $upload_dir . basename($image_name);
 
@@ -46,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $subheadings = isset($_POST['subheading']) ? $_POST['subheading'] : [];
     $subheading_content = isset($_POST['subheading_content']) ? $_POST['subheading_content'] : [];
 
-    // $conn = new mysqli("localhost", "username", "password", "database_name");
+   
     // Connect to SQLite database
     // Insert the data into the database
     try {

@@ -661,7 +661,7 @@ try {
                                 <div class="latest-post-aside media">
                                     <div class="lpa-left media-body">
                                         <div class="lpa-title">
-                                            <h5><a href="blog-twin.php?id=<?php echo $recentPost['id']; ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
+                                            <h5><a href="blog-twin.php?id=<?php echo htmlspecialchars($recentPost['id']); ?>"><?php echo htmlspecialchars($recentPost['title']); ?></a></h5>
                                         </div>
                                         <div class="lpa-meta">
                                             <a class="name" href="#">Jaswinder Singh</a>
@@ -669,8 +669,8 @@ try {
                                         </div>
                                     </div>
                                     <div class="lpa-right">
-                                        <a href="blog-twin.php?id=<?php echo $recentPost['id']; ?>">
-                                        <img src="<?php echo htmlspecialchars('http://iberrywifi.com/' . $recentPost['image']); ?>" alt="Blog Featured Image">
+                                        <a href="blog-twin.php?id=<?php echo htmlspecialchars($recentPost['id']); ?>">
+                                        <img src="<?php echo htmlspecialchars($recentPost['image']); ?>" alt="Blog Featured Image">
                                         </a>
                                     </div>
                                 </div>
