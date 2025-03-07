@@ -581,7 +581,7 @@ try {
                             <div class="media">
                                 <div class="media-body">
                                     <label>Iberry WiFi Team</label>
-                                    <span><?= date("d M Y at h:i A", strtotime($post['created_at'])) ?></span>
+                                    <span><?= date("d M Y - h:i A", strtotime($post['created_at'])) ?></span>
                                 </div>
                             </div>
                         </div>
