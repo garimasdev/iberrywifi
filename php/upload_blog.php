@@ -9,13 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $document_root = $_SERVER['DOCUMENT_ROOT'];
     $current_dir = __DIR__;
-    $upload_dir = $document_root . '/uploads/';
 
-    echo "<script>
-        alert('Document Root: " . $document_root . "');
-        alert('Current Directory: " . $current_dir . "');
-        alert('Upload Directory: " . $upload_dir . "');
-    </script>";
+    // Create a debug log on the page
+    echo "<div style='background:#f0f0f0;padding:10px;margin:10px;border:1px solid #ccc;'>";
+    echo "<h3>Debug Information:</h3>";
+    echo "Document Root: " . $document_root . "<br>";
+    echo "Current Directory: " . $current_dir . "<br>";
+
 
     // Handle image upload (same as before)
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
@@ -24,13 +24,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image_tmp_name = $image['tmp_name'];
         $image_type = $image['type'];
         $image_size = $image['size'];
+
+        echo "File name: " . $image_name . "<br>";
+        echo "Temporary path: " . $image_tmp_name . "<br>";
+        echo "File type: " . $image_type . "<br>";
+        echo "File size: " . $image_size . " bytes<br>";
         
         // Define allowed file types
         $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         
         if (in_array($image_type, $allowed_types)) {
             // Set the upload directory
-            $upload_dir = '/uploads/';
+            $upload_dir = 'uploads/';
             // $upload_dir = '/var/www/vhosts/iberrywifi.com/httpdocs/uploads/';
             // $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/iberrywifi.com/httpdocs/uploads/';
             $image_path = $upload_dir . basename($image_name);
