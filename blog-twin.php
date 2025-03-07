@@ -608,7 +608,7 @@ try {
                     <!-- Comment Form Section -->
                     <div class="contact-form article-comment">
                         <h4>Leave a Reply</h4>
-                        <form id="reservationform" role="form" action="php/send_email.php" method="post" name="reservationform" class="contact-form form-inline reservation-horizontal clearfix">
+                        <form id="reservationform" role="form" action="php/send_email.php" method="post" name="reservationform">
                             <div id="message" style="font-size: larger; color: black;"></div>
                             <div class="form-row">
                                 <div class="form-group name-field">
@@ -621,7 +621,6 @@ try {
                             <div class="form-group">
                                 <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
                             </div>
-                            
                             <div class="form-group">
                                 <div class="send">
                                     <button class="px-btn theme"><span>Submit</span> <i class="arrow"></i></button>
