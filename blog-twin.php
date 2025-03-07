@@ -608,18 +608,20 @@ try {
                     <!-- Comment Form Section -->
                     <div class="contact-form article-comment">
                         <h4>Leave a Reply</h4>
-                        <form id="contact-form" method="POST">
+                        <form id="reservationform" role="form" action="php/send_email.php" method="post" name="reservationform" class="contact-form form-inline reservation-horizontal clearfix">
+                            <div id="message" style="font-size: larger; color: black;"></div>
                             <div class="form-row">
                                 <div class="form-group name-field">
-                                    <input name="Name" id="name" placeholder="Name *" class="form-control" type="text">
+                                    <input name="Email" id="email" placeholder="Email *" class="form-control" type="email">
                                 </div>
                                 <div class="form-group email-field">
-                                    <input name="Email" id="email" placeholder="Email *" class="form-control" type="email">
+                                    <input name="Phone" id="phone" placeholder="Phone *" class="form-control" type="tel" maxlength="10" pattern="\d{10}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
                             <div class="form-group">
                                 <div class="send">
                                     <button class="px-btn theme"><span>Submit</span> <i class="arrow"></i></button>
