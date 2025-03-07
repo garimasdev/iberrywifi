@@ -669,7 +669,7 @@ try {
                                         </div>
                                         <div class="lpa-meta">
                                             <a class="name" href="#">Jaswinder Singh</a>
-                                            <a class="date" href="#"><?php echo date("d M Y", strtotime($recentPost['created_at'])); ?></a>
+                                            <a class="date" href="#"><?php echo date("d M Y - h:i A", strtotime($recentPost['created_at'])); ?></a>
                                         </div>
                                     </div>
                                     <div class="lpa-right">
