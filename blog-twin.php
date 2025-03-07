@@ -580,8 +580,8 @@ try {
                             <h2><?= htmlspecialchars($post['title']) ?></h2>
                             <div class="media">
                                 <div class="media-body">
-                                    <label>Jaswinder Singh</label>
-                                    <span><?= date("d M Y", strtotime($post['created_at'])) ?></span>
+                                    <label>Iberry WiFi Team</label>
+                                    <span><?= date("d M Y at h:i A", strtotime($post['created_at'])) ?></span>
                                 </div>
                             </div>
                         </div>
