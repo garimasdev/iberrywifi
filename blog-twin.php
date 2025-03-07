@@ -622,6 +622,9 @@ try {
                                 <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6Lfw6dUqAAAAAOnJZoEmDBHvMfsutGXjcZJv37lQ"></div>
+                            </div>
+                            <div class="form-group">
                                 <div class="send">
                                     <button class="px-btn theme"><span>Submit</span> <i class="arrow"></i></button>
                                 </div>
