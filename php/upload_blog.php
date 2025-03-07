@@ -6,6 +6,17 @@ $password = "Bhupa@898"; // Database password
 $dbname = "admin_blog";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $document_root = $_SERVER['DOCUMENT_ROOT'];
+    $current_dir = __DIR__;
+    $upload_dir = $document_root . '/uploads/';
+
+    echo "<script>
+        alert('Document Root: " . $document_root . "');
+        alert('Current Directory: " . $current_dir . "');
+        alert('Upload Directory: " . $upload_dir . "');
+    </script>";
+
     // Handle image upload (same as before)
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
         $image = $_FILES['image'];
@@ -15,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $image_size = $image['size'];
         
         // Define allowed file types
-        $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
+        $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         
         if (in_array($image_type, $allowed_types)) {
             // Set the upload directory
