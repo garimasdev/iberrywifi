@@ -80,12 +80,6 @@
         margin-top: 80px;
     }
     
-    .container {
-        width: 1250px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
     .lined-heading {
         text-align: center;
         position: relative;
@@ -185,6 +179,11 @@
     
     /* Media Queries for Mobile */
     @media (max-width: 768px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
         .testimonials-grid {
             grid-template-columns: 1fr;  /* Stack testimonials vertically */
         }
@@ -275,6 +274,11 @@
     
     /* Media Queries for Mobile */
     @media (max-width: 768px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
         .section-choose h1 {
             font-size: 2rem;
         }
@@ -374,6 +378,11 @@
     
     /* Mobile Styles */
     @media (max-width: 768px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
       .content {
         margin-top: -22px;
       }
@@ -414,13 +423,26 @@
     }
     
     @media (max-width: 767px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
         .navbar-login-link {
+            display: none !important;
+        }
+        .navbar-install-link {
             display: none !important;
         }
     }
     
     /* Button adjustments for better touch on mobile */
     @media (max-width: 768px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
         .btn {
             padding: 1rem 2rem;
             width: 50%;
@@ -470,6 +492,11 @@
 
 
 @media (min-width: 360px) and (max-width: 741px) {
+  .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
   .mt100 {
     margin-top: 450px !important;
   }
@@ -503,6 +530,23 @@
 
 
 @media (min-width: 430px) and (max-width: 932px) {
+  .container {
+        width: 1250px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    @media (min-width: 390px) and (max-width: 844px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
+      .navbar-install-link {
+            display: none !important;
+        }
+    }
+
   .contact-form-container {
     right: 42px !important;
   }
@@ -510,6 +554,11 @@
 
 
 @media (min-width: 390px) and (max-width: 844px) {
+  .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
 
   .mt100 {
     margin-top: 450px !important;
@@ -543,6 +592,23 @@
 
   /* Tablet Responsiveness (for devices between 768px and 1024px) */
   @media (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        width: 1250px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    @media (min-width: 390px) and (max-width: 844px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
+      .navbar-install-link {
+            display: none !important;
+        }
+    }
+
     .contact-form-container {
       position: absolute;
       right: 20px;
@@ -604,6 +670,11 @@
 
 
 @media (min-width: 360px) and (max-width: 741px) {
+  .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
   .mt100 {
     margin-top: 450px !important;
   }
@@ -638,6 +709,11 @@
 
 
 @media (min-width: 390px) and (max-width: 844px) {
+  .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
 
   .mt100 {
     margin-top: 450px !important;
@@ -671,6 +747,23 @@
 
   /* Tablet Responsiveness (for devices between 768px and 1024px) */
   @media (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        width: 1250px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    @media (min-width: 390px) and (max-width: 844px) {
+      .container {
+          width: 420px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
+      .navbar-install-link {
+            display: none !important;
+        }
+    }
+
     .contact-form-container {
       position: absolute;
       right: 20px;
@@ -792,6 +885,9 @@
         <a href="https://ibudha.com/dev/mikifi/login" data-target="#navbar-collapse-grid" class="navbar-toggle">
           <i class="fa fa-sign-in" style="font-size: 20px;"></i> <!-- Login Icon -->
         </a>
+        <a href="http://iberrywifi.com/uploads/ibudha_app.apk" data-target="#navbar-collapse-grid" class="navbar-toggle">
+          <i class="fa fa-download" style="font-size: 20px;"></i> <!-- Install Icon -->
+        </a>
         <!-- hamburger icon -->
         <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle" style="height: 41px;"> 
           <span class="icon-bar"></span> 
@@ -840,7 +936,7 @@
           <li class="navbar-login-link"> <a href="https://ibudha.com/dev/mikifi/login">Login</a> </li>
           <!-- ibudha apk -->
           <li class="navbar-install-link"> 
-            <a href="http://iberrywifi.com/uploads/ibudha_app.apk" id="install-icon" title="Install the App">
+            <a href="http://iberrywifi.com/uploads/ibudha_app.apk" title="Install the App">
               <i class="fa fa-download" style="font-size: 20px;"></i> <!-- Install Icon -->
             </a>
           </li>
