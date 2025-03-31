@@ -566,6 +566,9 @@ header nav {
 .navbar-default {
 	background-color: #fff;
 }
+.navbar-login-link {
+	display: inline-block;
+}
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
 	color: #5e5e5e;
 	background-color: transparent;
@@ -608,6 +611,11 @@ header nav {
 .navbar-default .navbar-nav .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .dropdown-menu > .disabled > a:focus {
 	color: #999999;
 }
+@media (max-width: 767px) {
+	.navbar-login-link {
+		display: none !important;
+	}
+}
  @media (min-width: 768px) {
 /* Logo */
 header #logo {
@@ -636,9 +644,11 @@ header #logo {
 .navbar-nav > li > a {
 	padding: 32px 20px;
 }
-.navbar-nav > li:first-child {
+
+
+/* .navbar-nav > li:first-child {
 	padding-left: 40px;
-}
+} */
 .navbar-nav .caret {
 	display: inline-block;
 	width: 0;
