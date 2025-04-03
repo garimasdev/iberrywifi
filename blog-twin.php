@@ -81,7 +81,8 @@ try {
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/colors/turquoise.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700" as="style" type="text/css" crossorigin="anonymous">
+
 
 
     <!-- Javascripts --> 
